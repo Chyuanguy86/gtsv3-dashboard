@@ -1,0 +1,349 @@
+{
+  "generated_at": "2026-04-25T22:10:03.852739+08:00",
+  "balance": 500.0,
+  "account": "46949518",
+  "open_trades": [
+    {
+      "pair": "EURUSD",
+      "side": "BUY",
+      "entry": 1.17014,
+      "sl": 1.16864,
+      "tp": 1.17314,
+      "pnl": 0,
+      "strategy": "Malaysian SNR STR-001"
+    }
+  ],
+  "watchlist": [
+    {
+      "pair": "XAUUSD",
+      "price": 4709.75,
+      "rsi": 50.6,
+      "regime": "trending_up",
+      "tradeable": true
+    },
+    {
+      "pair": "EURUSD",
+      "price": 1.17186,
+      "rsi": 62.39,
+      "regime": "trending_down",
+      "tradeable": true
+    },
+    {
+      "pair": "GBPUSD",
+      "price": 1.35308,
+      "rsi": 71.75,
+      "regime": "ranging",
+      "tradeable": true
+    },
+    {
+      "pair": "NZDUSD",
+      "price": 0.5879,
+      "rsi": 58.16,
+      "regime": "ranging",
+      "tradeable": true
+    },
+    {
+      "pair": "AUDUSD",
+      "price": 0.7148,
+      "rsi": 55.54,
+      "regime": "ranging",
+      "tradeable": false
+    },
+    {
+      "pair": "USDJPY",
+      "price": 159.348,
+      "rsi": 37.83,
+      "regime": "trending_down",
+      "tradeable": true
+    },
+    {
+      "pair": "USDCAD",
+      "price": 1.36692,
+      "rsi": 38.41,
+      "regime": "trending_up",
+      "tradeable": true
+    },
+    {
+      "pair": "USDCHF",
+      "price": 0.78498,
+      "rsi": 44.66,
+      "regime": "ranging",
+      "tradeable": true
+    }
+  ],
+  "models": [
+    {
+      "name": "Claude Sonnet 4.5",
+      "key": "claude",
+      "status": "UP",
+      "ms": 3953,
+      "role": "PRIMARY"
+    },
+    {
+      "name": "Gemini 2.5 Flash",
+      "key": "gemini",
+      "status": "UP",
+      "ms": 1458,
+      "role": "BACKUP 1"
+    },
+    {
+      "name": "Groq Llama 3.3",
+      "key": "groq",
+      "status": "UP",
+      "ms": 841,
+      "role": "BACKUP 2"
+    }
+  ],
+  "strategies": [
+    {
+      "id": "STR-001",
+      "name": "Malaysian SNR",
+      "status": "DEMO",
+      "scanner": "A"
+    },
+    {
+      "id": "STR-002",
+      "name": "EMA Crossover",
+      "status": "CODED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-003",
+      "name": "RSI Divergence",
+      "status": "DEMO",
+      "scanner": "B"
+    },
+    {
+      "id": "STR-004",
+      "name": "London Breakout with EMA Filter",
+      "status": "CODED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-005",
+      "name": "Moving Average Convergence Trend Following",
+      "status": "CODED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-006",
+      "name": "Supply/Demand Zone Rejection",
+      "status": "DEMO",
+      "scanner": "C"
+    },
+    {
+      "id": "STR-007",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-008",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-009",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-010",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-011",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-012",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    }
+  ],
+  "scanners": [
+    {
+      "id": "A",
+      "strategies": [
+        "STR-001"
+      ],
+      "last": "22:10"
+    },
+    {
+      "id": "B",
+      "strategies": [
+        "STR-003"
+      ],
+      "last": "22:10"
+    },
+    {
+      "id": "C",
+      "strategies": [
+        "STR-006"
+      ],
+      "last": "22:10"
+    },
+    {
+      "id": "D",
+      "strategies": [],
+      "last": "--"
+    },
+    {
+      "id": "E",
+      "strategies": [],
+      "last": "--"
+    }
+  ],
+  "departments": [
+    {
+      "name": "Memory & Recording",
+      "agents": [
+        "trade_journal",
+        "memory_agent"
+      ],
+      "ok": 2
+    },
+    {
+      "name": "Market Scanner",
+      "agents": [
+        "regime_detector",
+        "market_scanner",
+        "rule_manager",
+        "review_panel",
+        "portfolio_orchestrator",
+        "execution_agent",
+        "position_monitor"
+      ],
+      "ok": 7
+    },
+    {
+      "name": "Risk Control",
+      "agents": [
+        "correlation_guard",
+        "news_intelligence"
+      ],
+      "ok": 2
+    },
+    {
+      "name": "Strategy Researcher",
+      "agents": [
+        "source_agent",
+        "analysis_agent",
+        "coding_agent",
+        "professional_trader"
+      ],
+      "ok": 4
+    },
+    {
+      "name": "Performance",
+      "agents": [
+        "strategy_improver",
+        "performance_monitor"
+      ],
+      "ok": 2
+    },
+    {
+      "name": "Communications",
+      "agents": [
+        "comms_agent",
+        "manager_agent"
+      ],
+      "ok": 2
+    }
+  ],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "President Trump Speaks",
+      "impact": "MEDIUM"
+    }
+  ],
+  "log": [
+    {
+      "ts": "23:40",
+      "agent": "pipeline",
+      "msg": "raw=1 corr=1 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "23:01",
+      "agent": "pipeline",
+      "msg": "raw=1 corr=1 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "22:01",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "21:01",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "20:01",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "19:01",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "18:01",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "17:01",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "16:01",
+      "agent": "pipeline",
+      "msg": "raw=1 corr=1 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "15:36",
+      "agent": "pipeline",
+      "msg": "raw=0 corr=0 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "15:33",
+      "agent": "pipeline",
+      "msg": "raw=1 corr=1 reviewed=0 executed=0",
+      "ok": true
+    },
+    {
+      "ts": "15:02",
+      "agent": "pipeline",
+      "msg": "raw=2 reviewed=1 approved=1 executed=0",
+      "ok": true
+    }
+  ],
+  "risk": {
+    "daily_dd": 0.0,
+    "slots_used": 1,
+    "slots_total": 5,
+    "consec_losses": 0
+  }
+}
