@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T03:50:04.391498+08:00",
+  "generated_at": "2026-04-26T03:55:06.871783+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -89,8 +89,8 @@
     {
       "name": "Groq Llama 3.3",
       "key": "groq",
-      "status": "UP",
-      "ms": 855,
+      "status": "DOWN",
+      "ms": 0,
       "role": "BACKUP 2"
     }
   ],
@@ -174,21 +174,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "03:50"
+      "last": "03:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "03:50"
+      "last": "03:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "03:50"
+      "last": "03:55"
     },
     {
       "id": "D",
