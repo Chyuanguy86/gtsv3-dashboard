@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T07:40:05.285535+08:00",
+  "generated_at": "2026-04-26T07:45:04.822413+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -82,15 +82,15 @@
     {
       "name": "Gemini 2.5 Flash",
       "key": "gemini",
-      "status": "DOWN",
-      "ms": 0,
+      "status": "UP",
+      "ms": 4626,
       "role": "BACKUP 1"
     },
     {
       "name": "Groq Llama 3.3",
       "key": "groq",
-      "status": "DOWN",
-      "ms": 0,
+      "status": "UP",
+      "ms": 641,
       "role": "BACKUP 2"
     }
   ],
@@ -174,21 +174,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "07:40"
+      "last": "07:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "07:40"
+      "last": "07:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "07:40"
+      "last": "07:45"
     },
     {
       "id": "D",
