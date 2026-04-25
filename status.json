@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T05:30:05.805117+08:00",
+  "generated_at": "2026-04-26T05:35:04.250689+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -16,57 +16,57 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4709.75,
-      "rsi": 50.6,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17186,
-      "rsi": 62.39,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35308,
-      "rsi": 71.75,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5879,
-      "rsi": 58.16,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7148,
-      "rsi": 55.54,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.348,
-      "rsi": 37.83,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36692,
-      "rsi": 38.41,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78498,
-      "rsi": 44.66,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": true
     }
@@ -174,21 +174,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:30"
+      "last": "05:35"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:30"
+      "last": "05:35"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:30"
+      "last": "05:35"
     },
     {
       "id": "D",
