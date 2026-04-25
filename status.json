@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T23:55:03.877282+08:00",
+  "generated_at": "2026-04-26T00:00:08.095486+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -76,7 +76,7 @@
       "name": "Claude Sonnet 4.5",
       "key": "claude",
       "status": "UP",
-      "ms": 3992,
+      "ms": 3861,
       "role": "PRIMARY"
     },
     {
@@ -174,21 +174,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "23:55"
+      "last": "00:00"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "23:55"
+      "last": "00:00"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "23:55"
+      "last": "00:00"
     },
     {
       "id": "D",
@@ -258,14 +258,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "President Trump Speaks",
-      "impact": "MEDIUM"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
