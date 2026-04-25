@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T02:40:04.044498+08:00",
+  "generated_at": "2026-04-26T02:45:04.804111+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -75,8 +75,8 @@
     {
       "name": "Claude Sonnet 4.5",
       "key": "claude",
-      "status": "UP",
-      "ms": 3489,
+      "status": "DOWN",
+      "ms": 0,
       "role": "PRIMARY"
     },
     {
@@ -90,7 +90,7 @@
       "name": "Groq Llama 3.3",
       "key": "groq",
       "status": "UP",
-      "ms": 371,
+      "ms": 593,
       "role": "BACKUP 2"
     }
   ],
@@ -174,21 +174,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "02:40"
+      "last": "02:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "02:40"
+      "last": "02:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "02:40"
+      "last": "02:45"
     },
     {
       "id": "D",
