@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T13:45:04.680799+08:00",
+  "generated_at": "2026-04-26T13:50:04.853470+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -16,57 +16,57 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4709.75,
-      "rsi": 50.6,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17186,
-      "rsi": 62.39,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35308,
-      "rsi": 71.75,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5879,
-      "rsi": 58.16,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7148,
-      "rsi": 55.54,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.348,
-      "rsi": 37.83,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36692,
-      "rsi": 38.41,
+      "price": 0,
+      "rsi": 50,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78498,
-      "rsi": 44.66,
+      "price": 0,
+      "rsi": 50,
       "regime": "ranging",
       "tradeable": true
     }
@@ -76,7 +76,7 @@
       "name": "Claude Sonnet 4.5",
       "key": "claude",
       "status": "UP",
-      "ms": 3613,
+      "ms": 4032,
       "role": "PRIMARY"
     },
     {
@@ -174,21 +174,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "13:45"
+      "last": "13:50"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "13:45"
+      "last": "13:50"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "13:45"
+      "last": "13:50"
     },
     {
       "id": "D",
@@ -337,6 +337,69 @@
     "daily_dd": 0.0,
     "slots_used": 1,
     "slots_total": 5,
-    "consec_losses": 0
+    "consec_losses": 0,
+    "tier": "NORMAL",
+    "risk_mult": 1.0,
+    "can_trade": true,
+    "today_pnl": 0
+  },
+  "metrics": {
+    "total_trades": 0,
+    "win_rate": 0,
+    "expectancy": 0,
+    "profit_factor": 0,
+    "avg_r": 0,
+    "max_r": 0,
+    "min_r": 0,
+    "sharpe_estimate": 0,
+    "kelly_pct": 0
+  },
+  "shadow": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "expectancy": 0
+  },
+  "exposure": {
+    "EUR": 0.02,
+    "USD": -0.02
+  },
+  "weights": {
+    "STR-001": {
+      "name": "Malaysian SNR",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-26T04:00:01.126272+08:00"
+    },
+    "STR-003": {
+      "name": "RSI Divergence",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-26T04:00:01.127595+08:00"
+    },
+    "STR-006": {
+      "name": "Supply/Demand Zone Rejection",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-26T04:00:01.128081+08:00"
+    }
+  },
+  "decay": {
+    "last_run": "2026-04-26T06:00:01.261506+08:00",
+    "decaying": [],
+    "healthy": []
   }
 }
