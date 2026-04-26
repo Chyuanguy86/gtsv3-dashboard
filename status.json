@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T06:40:04.601189+08:00",
+  "generated_at": "2026-04-27T06:45:04.147361+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -16,57 +16,57 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4686.13,
-      "rsi": 41.36,
+      "price": 4684.615,
+      "rsi": 40.88,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.1708,
-      "rsi": 52.88,
+      "price": 1.17074,
+      "rsi": 52.39,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35148,
-      "rsi": 58.23,
+      "price": 1.35142,
+      "rsi": 57.95,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5872,
-      "rsi": 51.32,
+      "price": 0.58707,
+      "rsi": 50.34,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71446,
-      "rsi": 52.33,
+      "price": 0.71438,
+      "rsi": 51.69,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.577,
-      "rsi": 51.81,
+      "price": 159.588,
+      "rsi": 52.36,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36778,
-      "rsi": 46.43,
+      "price": 1.36776,
+      "rsi": 46.27,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78614,
-      "rsi": 53.47,
+      "price": 0.78617,
+      "rsi": 53.67,
       "regime": "ranging",
       "tradeable": true
     }
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "06:40"
+      "last": "06:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "06:40"
+      "last": "06:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "06:40"
+      "last": "06:45"
     },
     {
       "id": "D",
