@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T01:40:04.306403+08:00",
+  "generated_at": "2026-04-27T01:45:03.598066+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "01:40"
+      "last": "01:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "01:40"
+      "last": "01:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "01:40"
+      "last": "01:45"
     },
     {
       "id": "D",
@@ -271,26 +271,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Policy Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "Monetary Policy Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Outlook Report",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
