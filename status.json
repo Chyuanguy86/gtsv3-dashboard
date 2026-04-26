@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T19:50:04.329932+08:00",
+  "generated_at": "2026-04-26T19:55:04.232753+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -141,37 +141,37 @@
     {
       "id": "STR-007",
       "name": "Pending analysis",
-      "status": "SOURCED",
+      "status": "REJECTED",
       "scanner": ""
     },
     {
       "id": "STR-008",
       "name": "Pending analysis",
-      "status": "SOURCED",
+      "status": "REJECTED",
       "scanner": ""
     },
     {
       "id": "STR-009",
       "name": "Pending analysis",
-      "status": "SOURCED",
+      "status": "REJECTED",
       "scanner": ""
     },
     {
       "id": "STR-010",
       "name": "Pending analysis",
-      "status": "SOURCED",
+      "status": "REJECTED",
       "scanner": ""
     },
     {
       "id": "STR-011",
       "name": "Pending analysis",
-      "status": "SOURCED",
+      "status": "REJECTED",
       "scanner": ""
     },
     {
       "id": "STR-012",
       "name": "Pending analysis",
-      "status": "SOURCED",
+      "status": "REJECTED",
       "scanner": ""
     },
     {
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "19:50"
+      "last": "19:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "19:50"
+      "last": "19:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "19:50"
+      "last": "19:55"
     },
     {
       "id": "D",
