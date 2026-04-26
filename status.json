@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T05:05:03.989553+08:00",
+  "generated_at": "2026-04-27T05:10:03.806996+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -23,43 +23,43 @@
     },
     {
       "pair": "EURUSD",
-      "price": 1.16994,
-      "rsi": 47.08,
+      "price": 1.16998,
+      "rsi": 47.32,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35078,
-      "rsi": 54.57,
+      "price": 1.35087,
+      "rsi": 55.08,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58657,
-      "rsi": 46.23,
+      "price": 0.58716,
+      "rsi": 50.86,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71309,
-      "rsi": 42.61,
+      "price": 0.71324,
+      "rsi": 43.49,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.549,
-      "rsi": 50.41,
+      "price": 159.582,
+      "rsi": 52.01,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.3675,
-      "rsi": 44.05,
+      "price": 1.36796,
+      "rsi": 47.84,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:05"
+      "last": "05:10"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:05"
+      "last": "05:10"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:05"
+      "last": "05:10"
     },
     {
       "id": "D",
@@ -271,7 +271,26 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Policy Rate",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "Monetary Policy Statement",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Outlook Report",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
