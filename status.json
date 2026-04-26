@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T13:55:06.546160+08:00",
+  "generated_at": "2026-04-26T13:55:49.042908+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -92,6 +92,13 @@
       "status": "UP",
       "ms": 2221,
       "role": "BACKUP 2"
+    },
+    {
+      "name": "Mistral Small",
+      "key": "mistral",
+      "status": "UP",
+      "ms": 721,
+      "role": "BACKUP 3"
     }
   ],
   "strategies": [
