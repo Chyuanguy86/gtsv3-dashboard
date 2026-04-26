@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T03:55:04.442823+08:00",
+  "generated_at": "2026-04-27T04:00:07.988677+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "03:55"
+      "last": "04:00"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "03:55"
+      "last": "04:00"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "03:55"
+      "last": "04:00"
     },
     {
       "id": "D",
@@ -271,7 +271,26 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Policy Rate",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "Monetary Policy Statement",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Outlook Report",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -387,7 +406,7 @@
         "ranging": 1.0
       },
       "performance": {},
-      "updated": "2026-04-26T04:00:01.126272+08:00"
+      "updated": "2026-04-27T04:00:01.289870+08:00"
     },
     "STR-003": {
       "name": "RSI Divergence",
@@ -397,7 +416,7 @@
         "ranging": 1.0
       },
       "performance": {},
-      "updated": "2026-04-26T04:00:01.127595+08:00"
+      "updated": "2026-04-27T04:00:01.290926+08:00"
     },
     "STR-006": {
       "name": "Supply/Demand Zone Rejection",
@@ -407,7 +426,7 @@
         "ranging": 1.0
       },
       "performance": {},
-      "updated": "2026-04-26T04:00:01.128081+08:00"
+      "updated": "2026-04-27T04:00:01.291620+08:00"
     }
   },
   "decay": {
