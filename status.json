@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T06:50:04.475711+08:00",
+  "generated_at": "2026-04-27T06:55:03.925402+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -16,36 +16,36 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4684.96,
-      "rsi": 40.99,
+      "price": 4684.375,
+      "rsi": 40.81,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17074,
-      "rsi": 52.39,
+      "price": 1.17072,
+      "rsi": 52.23,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35152,
-      "rsi": 58.41,
+      "price": 1.35148,
+      "rsi": 58.23,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5872,
-      "rsi": 51.32,
+      "price": 0.58716,
+      "rsi": 51.02,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71444,
-      "rsi": 52.17,
+      "price": 0.71443,
+      "rsi": 52.09,
       "regime": "ranging",
       "tradeable": false
     },
@@ -58,15 +58,15 @@
     },
     {
       "pair": "USDCAD",
-      "price": 1.3677,
-      "rsi": 45.82,
+      "price": 1.36776,
+      "rsi": 46.27,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78622,
-      "rsi": 54.0,
+      "price": 0.78624,
+      "rsi": 54.13,
       "regime": "ranging",
       "tradeable": true
     }
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "06:50"
+      "last": "06:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "06:50"
+      "last": "06:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "06:50"
+      "last": "06:55"
     },
     {
       "id": "D",
@@ -399,23 +399,6 @@
       "performance": {},
       "updated": "2026-04-27T04:00:01.290926+08:00"
     },
-    "STR-006": {
-      "name": "Supply/Demand Zone Rejection",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-27T04:00:01.291620+08:00"
-    }
-  },
-  "decay": {
-    "last_run": "2026-04-27T06:00:01.218271+08:00",
-    "decaying": [],
-    "healthy": []
-  }
-}
     "STR-006": {
       "name": "Supply/Demand Zone Rejection",
       "weights": {
