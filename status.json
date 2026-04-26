@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T15:45:04.239955+08:00",
+  "generated_at": "2026-04-26T15:50:05.949472+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -76,7 +76,7 @@
       "name": "Claude Sonnet 4.5",
       "key": "claude",
       "status": "UP",
-      "ms": 3935,
+      "ms": 3751,
       "role": "PRIMARY"
     },
     {
@@ -173,6 +173,12 @@
       "name": "Pending analysis",
       "status": "SOURCED",
       "scanner": ""
+    },
+    {
+      "id": "STR-013",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
     }
   ],
   "scanners": [
@@ -181,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "15:45"
+      "last": "15:50"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "15:45"
+      "last": "15:50"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "15:45"
+      "last": "15:50"
     },
     {
       "id": "D",
