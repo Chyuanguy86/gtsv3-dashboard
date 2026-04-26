@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T17:50:04.723416+08:00",
+  "generated_at": "2026-04-26T17:55:03.966232+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [
@@ -76,7 +76,7 @@
       "name": "Claude Sonnet 4.5",
       "key": "claude",
       "status": "UP",
-      "ms": 3782,
+      "ms": 3975,
       "role": "PRIMARY"
     },
     {
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "17:50"
+      "last": "17:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "17:50"
+      "last": "17:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "17:50"
+      "last": "17:55"
     },
     {
       "id": "D",
