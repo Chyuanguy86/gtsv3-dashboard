@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-27T23:25:04.189575+08:00",
+  "generated_at": "2026-04-27T23:30:07.335141+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4673.96,
-      "rsi": 35.21,
+      "price": 4681.235,
+      "rsi": 38.57,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17328,
-      "rsi": 54.85,
+      "price": 1.17337,
+      "rsi": 55.58,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35503,
-      "rsi": 60.07,
+      "price": 1.35494,
+      "rsi": 59.48,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5915,
-      "rsi": 68.21,
+      "price": 0.59167,
+      "rsi": 70.17,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71894,
-      "rsi": 67.5,
+      "price": 0.71914,
+      "rsi": 69.76,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.27,
-      "rsi": 45.92,
+      "price": 159.262,
+      "rsi": 45.44,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.362,
-      "rsi": 33.24,
+      "price": 1.36188,
+      "rsi": 32.21,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.7847,
-      "rsi": 47.64,
+      "price": 0.78468,
+      "rsi": 47.46,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "23:25"
+      "last": "23:30"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "23:25"
+      "last": "23:30"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "23:25"
+      "last": "23:30"
     },
     {
       "id": "D",
@@ -285,26 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Policy Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "Monetary Policy Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Outlook Report",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
