@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T05:25:03.707697+08:00",
+  "generated_at": "2026-04-28T05:30:07.817429+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
@@ -20,36 +20,36 @@
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35378,
-      "rsi": 52.38,
+      "price": 1.35371,
+      "rsi": 51.95,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59084,
-      "rsi": 59.82,
+      "price": 0.59093,
+      "rsi": 60.6,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71857,
-      "rsi": 62.25,
+      "price": 0.71854,
+      "rsi": 61.83,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.426,
-      "rsi": 54.18,
+      "price": 159.432,
+      "rsi": 54.54,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36262,
-      "rsi": 41.03,
+      "price": 1.36272,
+      "rsi": 41.78,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:25"
+      "last": "05:30"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:25"
+      "last": "05:30"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:25"
+      "last": "05:30"
     },
     {
       "id": "D",
@@ -285,7 +285,44 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Press Conference",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "CB Consumer Confidence",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "NZD",
+      "title": "RBNZ Gov Breman Speaks",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "CPI m/m",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "CPI y/y",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "Trimmed Mean CPI m/m",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -426,4 +463,4 @@
     "decaying": [],
     "healthy": []
   }
-}
+}}
