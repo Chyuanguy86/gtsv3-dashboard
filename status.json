@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T05:20:07.037820+08:00",
+  "generated_at": "2026-04-28T05:25:03.707697+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
@@ -13,43 +13,43 @@
     },
     {
       "pair": "EURUSD",
-      "price": 1.17216,
-      "rsi": 46.81,
+      "price": 1.17214,
+      "rsi": 46.61,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35369,
-      "rsi": 51.82,
+      "price": 1.35378,
+      "rsi": 52.38,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59052,
-      "rsi": 55.99,
+      "price": 0.59084,
+      "rsi": 59.82,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7186,
-      "rsi": 62.51,
+      "price": 0.71857,
+      "rsi": 62.25,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.425,
-      "rsi": 54.11,
+      "price": 159.426,
+      "rsi": 54.18,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36266,
-      "rsi": 41.27,
+      "price": 1.36262,
+      "rsi": 41.03,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:20"
+      "last": "05:25"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:20"
+      "last": "05:25"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:20"
+      "last": "05:25"
     },
     {
       "id": "D",
@@ -285,44 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Press Conference",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "CB Consumer Confidence",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "NZD",
-      "title": "RBNZ Gov Breman Speaks",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "AUD",
-      "title": "CPI m/m",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "AUD",
-      "title": "CPI y/y",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "AUD",
-      "title": "Trimmed Mean CPI m/m",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
