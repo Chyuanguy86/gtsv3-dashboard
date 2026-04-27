@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-04-28T03:25:03.869448+08:00",
+  "generated_at": "2026-04-28T03:30:06.858903+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4682.665,
-      "rsi": 41.89,
+      "price": 4682.24,
+      "rsi": 41.62,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17244,
-      "rsi": 48.96,
+      "price": 1.17248,
+      "rsi": 49.27,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35366,
-      "rsi": 51.31,
+      "price": 1.3537,
+      "rsi": 51.53,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59114,
-      "rsi": 62.3,
+      "price": 0.59108,
+      "rsi": 61.88,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71886,
-      "rsi": 64.89,
+      "price": 0.71888,
+      "rsi": 65.03,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.385,
-      "rsi": 51.7,
+      "price": 159.383,
+      "rsi": 51.58,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36258,
-      "rsi": 39.47,
+      "price": 1.36267,
+      "rsi": 40.01,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "03:25"
+      "last": "03:30"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "03:25"
+      "last": "03:30"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "03:25"
+      "last": "03:30"
     },
     {
       "id": "D",
@@ -285,7 +285,44 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Press Conference",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "CB Consumer Confidence",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "NZD",
+      "title": "RBNZ Gov Breman Speaks",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "CPI m/m",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "CPI y/y",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "Trimmed Mean CPI m/m",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
