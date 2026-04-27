@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T14:20:04.314217+08:00",
+  "generated_at": "2026-04-27T14:25:03.939165+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -16,57 +16,57 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4712.23,
-      "rsi": 51.69,
+      "price": 4714.75,
+      "rsi": 52.67,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.1719,
-      "rsi": 55.72,
+      "price": 1.17188,
+      "rsi": 55.55,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35271,
-      "rsi": 57.28,
+      "price": 1.35268,
+      "rsi": 57.09,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58825,
-      "rsi": 54.74,
+      "price": 0.58834,
+      "rsi": 55.55,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71624,
-      "rsi": 58.31,
+      "price": 0.71638,
+      "rsi": 59.55,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.458,
-      "rsi": 49.51,
+      "price": 159.43,
+      "rsi": 48.09,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36624,
-      "rsi": 36.7,
+      "price": 1.3663,
+      "rsi": 37.15,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78565,
-      "rsi": 51.26,
+      "price": 0.78564,
+      "rsi": 51.19,
       "regime": "ranging",
       "tradeable": true
     }
@@ -211,21 +211,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "14:20"
+      "last": "14:25"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "14:20"
+      "last": "14:25"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "14:20"
+      "last": "14:25"
     },
     {
       "id": "D",
@@ -295,26 +295,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Policy Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "Monetary Policy Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "JPY",
-      "title": "BOJ Outlook Report",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
@@ -442,6 +423,23 @@
       "performance": {},
       "updated": "2026-04-27T04:00:01.290926+08:00"
     },
+    "STR-006": {
+      "name": "Supply/Demand Zone Rejection",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-27T04:00:01.291620+08:00"
+    }
+  },
+  "decay": {
+    "last_run": "2026-04-27T06:00:01.218271+08:00",
+    "decaying": [],
+    "healthy": []
+  }
+}
     "STR-006": {
       "name": "Supply/Demand Zone Rejection",
       "weights": {
