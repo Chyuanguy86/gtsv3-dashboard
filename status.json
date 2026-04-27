@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T05:55:03.816714+08:00",
+  "generated_at": "2026-04-28T06:00:07.748973+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
@@ -13,50 +13,50 @@
     },
     {
       "pair": "EURUSD",
-      "price": 1.17213,
-      "rsi": 46.51,
+      "price": 1.1722,
+      "rsi": 47.19,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
       "price": 1.35372,
-      "rsi": 52.01,
+      "rsi": 51.98,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59066,
-      "rsi": 57.67,
+      "price": 0.59068,
+      "rsi": 57.92,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71855,
-      "rsi": 61.97,
+      "price": 0.71862,
+      "rsi": 62.68,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.428,
-      "rsi": 54.3,
+      "price": 159.424,
+      "rsi": 53.97,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36268,
-      "rsi": 41.44,
+      "price": 1.36262,
+      "rsi": 41.02,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78492,
-      "rsi": 47.95,
+      "price": 0.78518,
+      "rsi": 50.52,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:55"
+      "last": "06:00"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:55"
+      "last": "06:00"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:55"
+      "last": "06:00"
     },
     {
       "id": "D",
@@ -422,7 +422,7 @@
     }
   },
   "decay": {
-    "last_run": "2026-04-27T06:00:01.218271+08:00",
+    "last_run": "2026-04-28T06:00:01.253422+08:00",
     "decaying": [],
     "healthy": []
   }
