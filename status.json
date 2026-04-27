@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T08:45:04.493577+08:00",
+  "generated_at": "2026-04-27T08:50:05.802954+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -16,15 +16,15 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4680.605,
-      "rsi": 39.65,
+      "price": 4682.58,
+      "rsi": 40.65,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17139,
-      "rsi": 56.99,
+      "price": 1.17141,
+      "rsi": 57.12,
       "regime": "trending_down",
       "tradeable": true
     },
@@ -37,15 +37,15 @@
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58785,
-      "rsi": 56.04,
+      "price": 0.58797,
+      "rsi": 56.81,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71524,
-      "rsi": 57.98,
+      "price": 0.71532,
+      "rsi": 58.49,
       "regime": "ranging",
       "tradeable": false
     },
@@ -58,8 +58,8 @@
     },
     {
       "pair": "USDCAD",
-      "price": 1.36714,
-      "rsi": 41.55,
+      "price": 1.36717,
+      "rsi": 41.75,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -187,21 +187,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "08:45"
+      "last": "08:50"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "08:45"
+      "last": "08:50"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "08:45"
+      "last": "08:50"
     },
     {
       "id": "D",
@@ -271,7 +271,26 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Policy Rate",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "Monetary Policy Statement",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Outlook Report",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
