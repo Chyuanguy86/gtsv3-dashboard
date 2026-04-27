@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-28T03:55:04.940920+08:00",
+  "generated_at": "2026-04-28T04:00:07.757413+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4679.94,
-      "rsi": 40.31,
+      "price": 4680.91,
+      "rsi": 40.77,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17228,
-      "rsi": 47.69,
+      "price": 1.17208,
+      "rsi": 46.01,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35344,
-      "rsi": 50.04,
+      "price": 1.35322,
+      "rsi": 48.74,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59096,
-      "rsi": 61.0,
+      "price": 0.59082,
+      "rsi": 59.67,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7187,
-      "rsi": 63.77,
+      "price": 0.71866,
+      "rsi": 63.47,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.4,
-      "rsi": 52.58,
+      "price": 159.422,
+      "rsi": 53.94,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36324,
-      "rsi": 44.67,
+      "price": 1.36343,
+      "rsi": 46.15,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78542,
-      "rsi": 53.6,
+      "price": 0.78566,
+      "rsi": 56.0,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "03:55"
+      "last": "04:00"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "03:55"
+      "last": "04:00"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "03:55"
+      "last": "04:00"
     },
     {
       "id": "D",
@@ -285,7 +285,44 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Press Conference",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "CB Consumer Confidence",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "NZD",
+      "title": "RBNZ Gov Breman Speaks",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "CPI m/m",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "CPI y/y",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "AUD",
+      "title": "Trimmed Mean CPI m/m",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -398,7 +435,7 @@
         "ranging": 1.0
       },
       "performance": {},
-      "updated": "2026-04-27T04:00:01.289870+08:00"
+      "updated": "2026-04-28T04:00:01.411978+08:00"
     },
     "STR-003": {
       "name": "RSI Divergence",
@@ -408,7 +445,7 @@
         "ranging": 1.0
       },
       "performance": {},
-      "updated": "2026-04-27T04:00:01.290926+08:00"
+      "updated": "2026-04-28T04:00:01.416430+08:00"
     },
     "STR-006": {
       "name": "Supply/Demand Zone Rejection",
@@ -418,7 +455,7 @@
         "ranging": 1.0
       },
       "performance": {},
-      "updated": "2026-04-27T04:00:01.291620+08:00"
+      "updated": "2026-04-28T04:00:01.417348+08:00"
     }
   },
   "decay": {
