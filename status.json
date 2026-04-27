@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T10:25:04.405190+08:00",
+  "generated_at": "2026-04-27T10:30:05.091810+08:00",
   "balance": 0,
   "account": "46949518",
   "open_trades": [
@@ -16,57 +16,57 @@
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4705.29,
-      "rsi": 50.42,
+      "price": 4705.74,
+      "rsi": 50.6,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.1723,
-      "rsi": 61.88,
+      "price": 1.1724,
+      "rsi": 62.8,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35326,
-      "rsi": 65.2,
+      "price": 1.35332,
+      "rsi": 65.64,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5888,
-      "rsi": 61.19,
+      "price": 0.58884,
+      "rsi": 61.55,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71677,
-      "rsi": 66.03,
+      "price": 0.71698,
+      "rsi": 67.29,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.34,
-      "rsi": 40.46,
+      "price": 159.338,
+      "rsi": 40.34,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36656,
-      "rsi": 39.01,
+      "price": 1.36655,
+      "rsi": 38.91,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78508,
-      "rsi": 45.43,
+      "price": 0.78504,
+      "rsi": 45.1,
       "regime": "ranging",
       "tradeable": true
     }
@@ -179,6 +179,24 @@
       "name": "Pending analysis",
       "status": "SOURCED",
       "scanner": ""
+    },
+    {
+      "id": "STR-014",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-015",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
+    },
+    {
+      "id": "STR-016",
+      "name": "Pending analysis",
+      "status": "SOURCED",
+      "scanner": ""
     }
   ],
   "scanners": [
@@ -187,21 +205,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "10:25"
+      "last": "10:30"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "10:25"
+      "last": "10:30"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "10:25"
+      "last": "10:30"
     },
     {
       "id": "D",
@@ -271,7 +289,26 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Policy Rate",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "Monetary Policy Statement",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Outlook Report",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
