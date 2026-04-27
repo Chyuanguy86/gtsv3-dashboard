@@ -1,72 +1,62 @@
 {
-  "generated_at": "2026-04-27T16:05:04.272414+08:00",
+  "generated_at": "2026-04-27T16:10:04.428596+08:00",
   "balance": 0,
   "account": "46949518",
-  "open_trades": [
-    {
-      "pair": "EURUSD",
-      "side": "BUY",
-      "entry": 1.17014,
-      "sl": 1.16864,
-      "tp": 1.17314,
-      "pnl": 0,
-      "strategy": "Malaysian SNR STR-001"
-    }
-  ],
+  "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4712.32,
-      "rsi": 51.64,
+      "price": 4711.975,
+      "rsi": 51.47,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17416,
-      "rsi": 67.9,
+      "price": 1.17473,
+      "rsi": 71.51,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35445,
-      "rsi": 66.04,
+      "price": 1.35482,
+      "rsi": 67.77,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58978,
-      "rsi": 64.4,
+      "price": 0.59044,
+      "rsi": 67.85,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71754,
-      "rsi": 65.39,
+      "price": 0.71813,
+      "rsi": 69.0,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.26,
-      "rsi": 41.36,
+      "price": 159.156,
+      "rsi": 36.87,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36336,
-      "rsi": 22.58,
+      "price": 1.36269,
+      "rsi": 20.59,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78478,
-      "rsi": 44.12,
+      "price": 0.78422,
+      "rsi": 39.95,
       "regime": "ranging",
       "tradeable": true
     }
@@ -211,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "16:05"
+      "last": "16:10"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "16:05"
+      "last": "16:10"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "16:05"
+      "last": "16:10"
     },
     {
       "id": "D",
@@ -295,7 +285,26 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Policy Rate",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "Monetary Policy Statement",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "JPY",
+      "title": "BOJ Outlook Report",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -372,7 +381,7 @@
   ],
   "risk": {
     "daily_dd": 0.0,
-    "slots_used": 1,
+    "slots_used": 0,
     "slots_total": 5,
     "consec_losses": 0,
     "tier": "NORMAL",
@@ -398,10 +407,7 @@
     "win_rate": 0,
     "expectancy": 0
   },
-  "exposure": {
-    "EUR": 0.02,
-    "USD": -0.02
-  },
+  "exposure": {},
   "weights": {
     "STR-001": {
       "name": "Malaysian SNR",
