@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-28T15:00:06.620749+08:00",
+  "generated_at": "2026-04-28T15:05:04.448799+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4628.555,
-      "rsi": 24.0,
+      "price": 4639.12,
+      "rsi": 31.13,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.16872,
-      "rsi": 26.04,
+      "price": 1.16882,
+      "rsi": 26.89,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3505,
+      "price": 1.35049,
       "rsi": 34.42,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58838,
-      "rsi": 34.83,
+      "price": 0.58853,
+      "rsi": 37.15,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71646,
-      "rsi": 38.05,
+      "price": 0.71666,
+      "rsi": 40.3,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.335,
+      "price": 159.336,
       "rsi": 49.57,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36474,
-      "rsi": 58.88,
+      "price": 1.3639,
+      "rsi": 52.11,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78962,
-      "rsi": 79.06,
+      "price": 0.78928,
+      "rsi": 75.12,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "15:00"
+      "last": "15:05"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "15:00"
+      "last": "15:05"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "15:00"
+      "last": "15:05"
     },
     {
       "id": "D",
