@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-28T08:45:04.396141+08:00",
-  "balance": 0,
+  "generated_at": "2026-04-28T08:50:05.496070+08:00",
+  "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4693.8,
-      "rsi": 49.39,
+      "price": 4693.85,
+      "rsi": 49.42,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17206,
-      "rsi": 45.82,
+      "price": 1.17217,
+      "rsi": 46.81,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35348,
-      "rsi": 50.05,
+      "price": 1.35354,
+      "rsi": 50.5,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59134,
-      "rsi": 63.77,
+      "price": 0.59141,
+      "rsi": 64.35,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7191,
-      "rsi": 66.85,
+      "price": 0.7192,
+      "rsi": 67.67,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.396,
-      "rsi": 51.81,
+      "price": 159.384,
+      "rsi": 51.38,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36229,
-      "rsi": 39.29,
+      "price": 1.36231,
+      "rsi": 39.49,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.7857,
-      "rsi": 56.13,
+      "price": 0.78563,
+      "rsi": 55.41,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "08:45"
+      "last": "08:50"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "08:45"
+      "last": "08:50"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "08:45"
+      "last": "08:50"
     },
     {
       "id": "D",
