@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-29T07:25:04.135136+08:00",
+  "generated_at": "2026-04-29T07:30:05.921788+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4592.255,
-      "rsi": 35.92,
+      "price": 4592.335,
+      "rsi": 35.95,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -27,15 +27,15 @@
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58878,
-      "rsi": 49.18,
+      "price": 0.58871,
+      "rsi": 48.49,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71827,
-      "rsi": 54.62,
+      "price": 0.71832,
+      "rsi": 55.01,
       "regime": "ranging",
       "tradeable": false
     },
@@ -48,15 +48,15 @@
     },
     {
       "pair": "USDCAD",
-      "price": 1.36818,
-      "rsi": 61.03,
+      "price": 1.3682,
+      "rsi": 61.13,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78911,
-      "rsi": 55.6,
+      "price": 0.7891,
+      "rsi": 55.51,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "07:25"
+      "last": "07:30"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "07:25"
+      "last": "07:30"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "07:25"
+      "last": "07:30"
     },
     {
       "id": "D",
@@ -285,56 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "German Prelim CPI m/m",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Monetary Policy Report",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Rate Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "Overnight Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Press Conference",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "Federal Funds Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Press Conference",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
@@ -431,6 +382,51 @@
     "kelly_pct": 0
   },
   "shadow": {
+    "total": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "expectancy": 0
+  },
+  "exposure": {},
+  "weights": {
+    "STR-001": {
+      "name": "Malaysian SNR",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-28T04:00:01.411978+08:00"
+    },
+    "STR-003": {
+      "name": "RSI Divergence",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-28T04:00:01.416430+08:00"
+    },
+    "STR-006": {
+      "name": "Supply/Demand Zone Rejection",
+      "weights": {
+        "trending_up": 1.0,
+        "trending_down": 1.0,
+        "ranging": 1.0
+      },
+      "performance": {},
+      "updated": "2026-04-28T04:00:01.417348+08:00"
+    }
+  },
+  "decay": {
+    "last_run": "2026-04-28T06:00:01.253422+08:00",
+    "decaying": [],
+    "healthy": []
+  }
+}": {
     "total": 0,
     "wins": 0,
     "losses": 0,
