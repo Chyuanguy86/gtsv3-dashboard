@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-29T07:20:08.168360+08:00",
+  "generated_at": "2026-04-29T07:25:04.135136+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4591.995,
-      "rsi": 35.83,
+      "price": 4592.255,
+      "rsi": 35.92,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17162,
-      "rsi": 55.19,
+      "price": 1.17158,
+      "rsi": 54.89,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35229,
-      "rsi": 55.44,
+      "price": 1.3522,
+      "rsi": 54.89,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58885,
-      "rsi": 49.85,
+      "price": 0.58878,
+      "rsi": 49.18,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71825,
-      "rsi": 54.46,
+      "price": 0.71827,
+      "rsi": 54.62,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.546,
-      "rsi": 51.41,
+      "price": 159.566,
+      "rsi": 52.38,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36819,
-      "rsi": 61.08,
+      "price": 1.36818,
+      "rsi": 61.03,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78908,
-      "rsi": 55.33,
+      "price": 0.78911,
+      "rsi": 55.6,
       "regime": "ranging",
       "tradeable": true
     }
@@ -80,7 +80,7 @@
       "name": "Groq Llama 3.3",
       "key": "groq",
       "status": "UP",
-      "ms": 3201,
+      "ms": 1488,
       "role": "BACKUP 2"
     },
     {
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "07:20"
+      "last": "07:25"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "07:20"
+      "last": "07:25"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "07:20"
+      "last": "07:25"
     },
     {
       "id": "D",
