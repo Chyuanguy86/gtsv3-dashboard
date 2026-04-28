@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-04-29T07:30:05.921788+08:00",
+  "generated_at": "2026-04-29T07:35:04.476796+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4592.335,
-      "rsi": 35.95,
+      "price": 4591.245,
+      "rsi": 35.59,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17158,
-      "rsi": 54.89,
+      "price": 1.17156,
+      "rsi": 54.7,
       "regime": "trending_down",
       "tradeable": true
     },
@@ -27,36 +27,36 @@
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58871,
-      "rsi": 48.49,
+      "price": 0.58868,
+      "rsi": 48.19,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71832,
-      "rsi": 55.01,
+      "price": 0.7184,
+      "rsi": 55.64,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.566,
-      "rsi": 52.38,
+      "price": 159.588,
+      "rsi": 53.38,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.3682,
-      "rsi": 61.13,
+      "price": 1.36823,
+      "rsi": 61.27,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.7891,
-      "rsi": 55.51,
+      "price": 0.78914,
+      "rsi": 55.87,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "07:30"
+      "last": "07:35"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "07:30"
+      "last": "07:35"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "07:30"
+      "last": "07:35"
     },
     {
       "id": "D",
@@ -382,51 +382,6 @@
     "kelly_pct": 0
   },
   "shadow": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "win_rate": 0,
-    "expectancy": 0
-  },
-  "exposure": {},
-  "weights": {
-    "STR-001": {
-      "name": "Malaysian SNR",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-28T04:00:01.411978+08:00"
-    },
-    "STR-003": {
-      "name": "RSI Divergence",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-28T04:00:01.416430+08:00"
-    },
-    "STR-006": {
-      "name": "Supply/Demand Zone Rejection",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-28T04:00:01.417348+08:00"
-    }
-  },
-  "decay": {
-    "last_run": "2026-04-28T06:00:01.253422+08:00",
-    "decaying": [],
-    "healthy": []
-  }
-}": {
     "total": 0,
     "wins": 0,
     "losses": 0,
