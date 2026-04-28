@@ -1,61 +1,61 @@
 {
-  "generated_at": "2026-04-28T10:15:04.340236+08:00",
+  "generated_at": "2026-04-28T10:20:03.670196+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4676.85,
-      "rsi": 41.41,
+      "price": 4678.71,
+      "rsi": 42.56,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17126,
-      "rsi": 38.87,
+      "price": 1.17129,
+      "rsi": 39.15,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35238,
-      "rsi": 42.68,
+      "price": 1.35246,
+      "rsi": 43.42,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59006,
-      "rsi": 48.21,
+      "price": 0.59002,
+      "rsi": 47.8,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71801,
+      "price": 0.71798,
       "rsi": 51.25,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.506,
-      "rsi": 57.5,
+      "price": 159.52,
+      "rsi": 58.56,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36368,
-      "rsi": 51.41,
+      "price": 1.36364,
+      "rsi": 51.11,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78656,
+      "price": 0.78654,
       "rsi": 63.3,
       "regime": "ranging",
       "tradeable": true
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "10:15"
+      "last": "10:20"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "10:15"
+      "last": "10:20"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "10:15"
+      "last": "10:20"
     },
     {
       "id": "D",
