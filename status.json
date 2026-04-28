@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-28T16:30:04.565333+08:00",
+  "generated_at": "2026-04-28T16:35:04.448729+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4624.275,
-      "rsi": 24.76,
+      "price": 4632.69,
+      "rsi": 26.94,
       "regime": "trending_up",
       "tradeable": true
     },
@@ -20,43 +20,43 @@
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35124,
-      "rsi": 40.23,
+      "price": 1.35145,
+      "rsi": 41.73,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58939,
-      "rsi": 44.18,
+      "price": 0.58938,
+      "rsi": 45.47,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71797,
-      "rsi": 51.25,
+      "price": 0.71801,
+      "rsi": 51.54,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.53,
-      "rsi": 57.18,
+      "price": 159.496,
+      "rsi": 55.6,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36404,
-      "rsi": 53.21,
+      "price": 1.364,
+      "rsi": 52.8,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78828,
-      "rsi": 63.95,
+      "price": 0.78842,
+      "rsi": 66.06,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "16:30"
+      "last": "16:35"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "16:30"
+      "last": "16:35"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "16:30"
+      "last": "16:35"
     },
     {
       "id": "D",
