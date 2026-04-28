@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-28T23:45:04.309199+08:00",
+  "generated_at": "2026-04-28T23:50:05.187939+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4577.925,
-      "rsi": 28.83,
+      "price": 4582.02,
+      "rsi": 30.7,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17119,
-      "rsi": 52.5,
+      "price": 1.17106,
+      "rsi": 51.76,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35094,
-      "rsi": 48.33,
+      "price": 1.35088,
+      "rsi": 48.05,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58856,
-      "rsi": 46.04,
+      "price": 0.58854,
+      "rsi": 45.88,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71772,
-      "rsi": 52.06,
+      "price": 0.7177,
+      "rsi": 51.95,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.568,
-      "rsi": 53.6,
+      "price": 159.58,
+      "rsi": 54.01,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36753,
-      "rsi": 61.93,
+      "price": 1.36747,
+      "rsi": 61.59,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78886,
-      "rsi": 56.81,
+      "price": 0.78899,
+      "rsi": 57.69,
       "regime": "ranging",
       "tradeable": true
     }
@@ -65,8 +65,8 @@
     {
       "name": "Claude Sonnet 4.5",
       "key": "claude",
-      "status": "DOWN",
-      "ms": 0,
+      "status": "UP",
+      "ms": 2056,
       "role": "PRIMARY"
     },
     {
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "23:45"
+      "last": "23:50"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "23:45"
+      "last": "23:50"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "23:45"
+      "last": "23:50"
     },
     {
       "id": "D",
