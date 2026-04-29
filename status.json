@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T05:30:06.614335+08:00",
+  "generated_at": "2026-04-30T05:35:05.760168+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
@@ -13,50 +13,50 @@
     },
     {
       "pair": "EURUSD",
-      "price": 1.16764,
-      "rsi": 36.69,
+      "price": 1.16783,
+      "rsi": 38.26,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3478,
-      "rsi": 40.12,
+      "price": 1.34782,
+      "rsi": 40.24,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58221,
-      "rsi": 30.17,
+      "price": 0.58244,
+      "rsi": 31.03,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71123,
-      "rsi": 29.98,
+      "price": 0.71135,
+      "rsi": 30.39,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.352,
-      "rsi": 67.79,
+      "price": 160.354,
+      "rsi": 67.91,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.36856,
-      "rsi": 54.25,
+      "price": 1.36852,
+      "rsi": 54.02,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79137,
-      "rsi": 60.34,
+      "price": 0.791,
+      "rsi": 57.48,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:30"
+      "last": "05:35"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:30"
+      "last": "05:35"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:30"
+      "last": "05:35"
     },
     {
       "id": "D",
@@ -285,7 +285,56 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "EUR",
+      "title": "German Prelim GDP q/q",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "EUR",
+      "title": "Core CPI Flash Estimate y/y",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "EUR",
+      "title": "CPI Flash Estimate y/y",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "GBP",
+      "title": "BOE Monetary Policy Report",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "GBP",
+      "title": "Monetary Policy Summary",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "GBP",
+      "title": "MPC Official Bank Rate Votes",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "GBP",
+      "title": "Official Bank Rate",
+      "impact": "HIGH"
+    },
+    {
+      "time": "00-04",
+      "currency": "GBP",
+      "title": "BOE Gov Bailey Speaks",
+      "impact": "HIGH"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -495,52 +544,6 @@
     "USDJPY": {
       "pair": "USDJPY",
       "regime": "UNKNOWN",
-      "adx": 0,
-      "plus_di": 0,
-      "minus_di": 0,
-      "atr": 0,
-      "atr_avg": 0,
-      "session": "ASIA",
-      "tradeable": false,
-      "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T05:30:03.958638+08:00"
-    },
-    "USDCAD": {
-      "pair": "USDCAD",
-      "regime": "UNKNOWN",
-      "adx": 0,
-      "plus_di": 0,
-      "minus_di": 0,
-      "atr": 0,
-      "atr_avg": 0,
-      "session": "ASIA",
-      "tradeable": false,
-      "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T05:30:04.540095+08:00"
-    },
-    "USDCHF": {
-      "pair": "USDCHF",
-      "regime": "UNKNOWN",
-      "adx": 0,
-      "plus_di": 0,
-      "minus_di": 0,
-      "atr": 0,
-      "atr_avg": 0,
-      "session": "ASIA",
-      "tradeable": false,
-      "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T05:30:05.103775+08:00"
-    }
-  },
-  "pipeline_stats": {
-    "tradeable": 0,
-    "tradeable_pairs": [],
-    "aligned": 0,
-    "aligned_pairs": [],
-    "signals": 0
-  },
-  "news_events": []
-}"UNKNOWN",
       "adx": 0,
       "plus_di": 0,
       "minus_di": 0,
