@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-04-29T21:50:04.905744+08:00",
+  "generated_at": "2026-04-29T21:55:03.527233+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4514.49,
-      "rsi": 25.55,
-      "regime": "trending_up",
-      "tradeable": true
+      "price": 4518.745,
+      "rsi": 26.26,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.16876,
-      "rsi": 36.37,
-      "regime": "trending_down",
-      "tradeable": true
+      "price": 1.16875,
+      "rsi": 36.31,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3477,
-      "rsi": 31.49,
-      "regime": "ranging",
-      "tradeable": true
+      "price": 1.34828,
+      "rsi": 33.65,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58364,
-      "rsi": 25.78,
-      "regime": "ranging",
-      "tradeable": true
+      "price": 0.58382,
+      "rsi": 26.43,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71278,
-      "rsi": 27.26,
-      "regime": "ranging",
+      "price": 0.71288,
+      "rsi": 27.58,
+      "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.16,
-      "rsi": 73.57,
-      "regime": "trending_down",
-      "tradeable": true
+      "price": 160.168,
+      "rsi": 73.77,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.37084,
-      "rsi": 67.13,
-      "regime": "trending_up",
-      "tradeable": true
+      "price": 1.37072,
+      "rsi": 66.69,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79148,
-      "rsi": 67.96,
-      "regime": "ranging",
-      "tradeable": true
+      "price": 0.79122,
+      "rsi": 66.69,
+      "regime": "UNKNOWN",
+      "tradeable": false
     }
   ],
   "models": [
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "21:50"
+      "last": "21:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "21:50"
+      "last": "21:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "21:50"
+      "last": "21:55"
     },
     {
       "id": "D",
