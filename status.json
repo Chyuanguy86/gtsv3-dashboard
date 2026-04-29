@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-29T23:55:13.892408+08:00",
+  "generated_at": "2026-04-30T00:00:19.094925+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4546.845,
-      "rsi": 38.05,
+      "price": 4547.765,
+      "rsi": 38.42,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.16891,
-      "rsi": 40.37,
+      "price": 1.16948,
+      "rsi": 43.41,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34845,
-      "rsi": 40.02,
+      "price": 1.34893,
+      "rsi": 41.77,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58322,
-      "rsi": 28.24,
-      "regime": "TREND_DOWN",
-      "tradeable": true
+      "price": 0.58356,
+      "rsi": 29.47,
+      "regime": "UNKNOWN",
+      "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71232,
-      "rsi": 31.01,
+      "price": 0.7129,
+      "rsi": 32.84,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.263,
-      "rsi": 72.81,
+      "price": 160.236,
+      "rsi": 72.18,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.36824,
-      "rsi": 52.17,
+      "price": 1.36732,
+      "rsi": 47.36,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79065,
-      "rsi": 58.95,
+      "price": 0.79025,
+      "rsi": 56.77,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "23:55"
+      "last": "00:00"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "23:55"
+      "last": "00:00"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "23:55"
+      "last": "00:00"
     },
     {
       "id": "D",
@@ -289,49 +289,49 @@
     {
       "time": "00-04",
       "currency": "EUR",
-      "title": "German Prelim CPI m/m",
+      "title": "German Prelim GDP q/q",
       "impact": "MEDIUM"
     },
     {
       "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Monetary Policy Report",
+      "currency": "EUR",
+      "title": "Core CPI Flash Estimate y/y",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "EUR",
+      "title": "CPI Flash Estimate y/y",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "GBP",
+      "title": "BOE Monetary Policy Report",
       "impact": "HIGH"
     },
     {
       "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Rate Statement",
+      "currency": "GBP",
+      "title": "Monetary Policy Summary",
       "impact": "HIGH"
     },
     {
       "time": "00-04",
-      "currency": "CAD",
-      "title": "Overnight Rate",
+      "currency": "GBP",
+      "title": "MPC Official Bank Rate Votes",
       "impact": "HIGH"
     },
     {
       "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Press Conference",
+      "currency": "GBP",
+      "title": "Official Bank Rate",
       "impact": "HIGH"
     },
     {
       "time": "00-04",
-      "currency": "USD",
-      "title": "Federal Funds Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Press Conference",
+      "currency": "GBP",
+      "title": "BOE Gov Bailey Speaks",
       "impact": "HIGH"
     }
   ],
