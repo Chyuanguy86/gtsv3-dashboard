@@ -1,61 +1,61 @@
 {
-  "generated_at": "2026-04-30T03:00:03.857451+08:00",
+  "generated_at": "2026-04-30T03:05:05.363825+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4538.255,
-      "rsi": 36.17,
+      "price": 4537.585,
+      "rsi": 35.98,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.16708,
-      "rsi": 32.62,
+      "price": 1.16715,
+      "rsi": 32.86,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34718,
-      "rsi": 36.7,
+      "price": 1.347,
+      "rsi": 36.1,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5825,
-      "rsi": 28.53,
+      "price": 0.58244,
+      "rsi": 28.32,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71124,
-      "rsi": 28.99,
+      "price": 0.71111,
+      "rsi": 28.57,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
       "price": 160.372,
-      "rsi": 72.18,
+      "rsi": 72.22,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.36878,
-      "rsi": 55.53,
+      "price": 1.36862,
+      "rsi": 54.72,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79166,
+      "price": 0.79165,
       "rsi": 63.3,
       "regime": "UNKNOWN",
       "tradeable": false
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "03:00"
+      "last": "03:05"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "03:00"
+      "last": "03:05"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "03:00"
+      "last": "03:05"
     },
     {
       "id": "D",
