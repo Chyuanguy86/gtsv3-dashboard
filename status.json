@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-30T04:40:04.567483+08:00",
+  "generated_at": "2026-04-30T04:45:04.412032+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4546.42,
-      "rsi": 40.05,
+      "price": 4543.755,
+      "rsi": 39.43,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.16746,
-      "rsi": 35.6,
+      "price": 1.16748,
+      "rsi": 35.69,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34779,
-      "rsi": 39.96,
+      "price": 1.34778,
+      "rsi": 39.9,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58305,
-      "rsi": 33.54,
+      "price": 0.58306,
+      "rsi": 33.58,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71188,
-      "rsi": 32.92,
+      "price": 0.71181,
+      "rsi": 32.41,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.42,
-      "rsi": 73.41,
+      "price": 160.434,
+      "rsi": 73.75,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.3678,
-      "rsi": 49.73,
+      "price": 1.36819,
+      "rsi": 52.06,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79149,
-      "rsi": 61.3,
+      "price": 0.79144,
+      "rsi": 61.05,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "04:40"
+      "last": "04:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "04:40"
+      "last": "04:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "04:40"
+      "last": "04:45"
     },
     {
       "id": "D",
@@ -475,4 +475,4 @@
     "decaying": [],
     "healthy": []
   }
-}
+}}
