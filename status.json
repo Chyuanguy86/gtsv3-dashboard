@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-29T22:30:53.742178+08:00",
+  "generated_at": "2026-04-29T22:35:15.375698+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4532.26,
-      "rsi": 31.86,
+      "price": 4539.735,
+      "rsi": 35.06,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.16904,
-      "rsi": 38.58,
+      "price": 1.16944,
+      "rsi": 42.18,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34855,
-      "rsi": 37.44,
+      "price": 1.34926,
+      "rsi": 42.02,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58413,
-      "rsi": 29.1,
+      "price": 0.58422,
+      "rsi": 30.04,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71365,
-      "rsi": 34.06,
+      "price": 0.7137,
+      "rsi": 34.43,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.124,
-      "rsi": 69.92,
+      "price": 160.114,
+      "rsi": 69.27,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.36905,
-      "rsi": 57.19,
+      "price": 1.36896,
+      "rsi": 56.59,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79063,
-      "rsi": 60.91,
+      "price": 0.79041,
+      "rsi": 58.93,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -80,7 +80,7 @@
       "name": "Groq Llama 3.3",
       "key": "groq",
       "status": "UP",
-      "ms": 2336,
+      "ms": 6724,
       "role": "BACKUP 2"
     },
     {
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "22:30"
+      "last": "22:35"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "22:30"
+      "last": "22:35"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "22:30"
+      "last": "22:35"
     },
     {
       "id": "D",
@@ -285,56 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "German Prelim CPI m/m",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Monetary Policy Report",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Rate Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "Overnight Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Press Conference",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "Federal Funds Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Press Conference",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
