@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-29T08:00:12.212124+08:00",
+  "generated_at": "2026-04-29T08:05:03.914948+08:00",
   "balance": 500.0,
   "account": "46949518",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4595.755,
-      "rsi": 37.51,
+      "price": 4607.065,
+      "rsi": 43.9,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17177,
-      "rsi": 56.3,
+      "price": 1.17203,
+      "rsi": 58.22,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3524,
-      "rsi": 56.12,
+      "price": 1.35275,
+      "rsi": 58.25,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58878,
-      "rsi": 49.19,
+      "price": 0.58911,
+      "rsi": 52.42,
       "regime": "ranging",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7187,
-      "rsi": 57.82,
+      "price": 0.71884,
+      "rsi": 58.84,
       "regime": "ranging",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 159.558,
-      "rsi": 51.98,
+      "price": 159.54,
+      "rsi": 51.05,
       "regime": "trending_down",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36802,
-      "rsi": 59.87,
+      "price": 1.36778,
+      "rsi": 58.09,
       "regime": "trending_up",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.789,
-      "rsi": 54.62,
+      "price": 0.78868,
+      "rsi": 51.8,
       "regime": "ranging",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "08:00"
+      "last": "08:05"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "08:00"
+      "last": "08:05"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "08:00"
+      "last": "08:05"
     },
     {
       "id": "D",
@@ -285,56 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "German Prelim CPI m/m",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Monetary Policy Report",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Rate Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "Overnight Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "CAD",
-      "title": "BOC Press Conference",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "Federal Funds Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Statement",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "FOMC Press Conference",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
