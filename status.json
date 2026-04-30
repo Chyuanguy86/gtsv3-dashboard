@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-30T15:50:06.124972+08:00",
+  "generated_at": "2026-04-30T15:55:06.005638+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4600.68,
-      "rsi": 60.13,
+      "price": 4600.385,
+      "rsi": 60.06,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.1676,
-      "rsi": 45.55,
+      "price": 1.16773,
+      "rsi": 46.49,
       "regime": "RANGE",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34867,
-      "rsi": 50.58,
+      "price": 1.34864,
+      "rsi": 50.43,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58371,
-      "rsi": 45.98,
+      "price": 0.58359,
+      "rsi": 45.05,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71256,
-      "rsi": 44.85,
+      "price": 0.71243,
+      "rsi": 43.93,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.581,
-      "rsi": 66.82,
+      "price": 160.571,
+      "rsi": 66.24,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.36705,
-      "rsi": 43.63,
+      "price": 1.36727,
+      "rsi": 44.99,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79089,
-      "rsi": 52.13,
+      "price": 0.7909,
+      "rsi": 52.21,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "15:50"
+      "last": "15:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "15:50"
+      "last": "15:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "15:50"
+      "last": "15:55"
     },
     {
       "id": "D",
@@ -285,56 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "German Prelim GDP q/q",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "Core CPI Flash Estimate y/y",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "CPI Flash Estimate y/y",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "BOE Monetary Policy Report",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "Monetary Policy Summary",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "MPC Official Bank Rate Votes",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "Official Bank Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "BOE Gov Bailey Speaks",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
