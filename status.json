@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T00:00:07.048307+08:00",
+  "generated_at": "2026-05-01T00:05:19.689811+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4615.295,
-      "rsi": 56.87,
+      "price": 4614.465,
+      "rsi": 56.56,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17285,
-      "rsi": 65.71,
+      "price": 1.17317,
+      "rsi": 66.65,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35785,
-      "rsi": 73.05,
+      "price": 1.35818,
+      "rsi": 73.64,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58903,
-      "rsi": 73.77,
+      "price": 0.58928,
+      "rsi": 74.62,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71829,
-      "rsi": 67.95,
+      "price": 0.71872,
+      "rsi": 69.23,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.662,
-      "rsi": 20.88,
-      "regime": "HIGH_VOL",
-      "tradeable": false
+      "price": 156.554,
+      "rsi": 20.31,
+      "regime": "TREND_DOWN",
+      "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36114,
-      "rsi": 26.45,
+      "price": 1.361,
+      "rsi": 26.08,
       "regime": "RANGE",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.78246,
-      "rsi": 22.66,
+      "price": 0.78218,
+      "rsi": 22.05,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "00:00"
+      "last": "00:05"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "00:00"
+      "last": "00:05"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "00:00"
+      "last": "00:05"
     },
     {
       "id": "D",
