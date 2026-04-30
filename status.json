@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-05-01T07:20:07.526550+08:00",
+  "generated_at": "2026-05-01T07:25:05.055754+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4630.125,
-      "rsi": 60.18,
+      "price": 4630.42,
+      "rsi": 60.29,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17323,
-      "rsi": 63.9,
+      "price": 1.17328,
+      "rsi": 64.11,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.36058,
-      "rsi": 76.09,
+      "price": 1.3606,
+      "rsi": 76.13,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59075,
-      "rsi": 76.88,
+      "price": 0.59074,
+      "rsi": 76.84,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.72028,
-      "rsi": 72.43,
+      "price": 0.72026,
+      "rsi": 72.36,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.762,
-      "rsi": 28.76,
+      "price": 156.702,
+      "rsi": 27.21,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
@@ -55,8 +55,8 @@
     },
     {
       "pair": "USDCHF",
-      "price": 0.78136,
-      "rsi": 22.97,
+      "price": 0.7813,
+      "rsi": 22.78,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "07:20"
+      "last": "07:25"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "07:20"
+      "last": "07:25"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "07:20"
+      "last": "07:25"
     },
     {
       "id": "D",
@@ -285,20 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing PMI",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing Prices",
-      "impact": "MEDIUM"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
@@ -443,15 +430,15 @@
     "XAUUSD": {
       "pair": "XAUUSD",
       "regime": "TREND_UP",
-      "adx": 25.29,
-      "plus_di": 26.16,
-      "minus_di": 14.95,
-      "atr": 17.900007,
-      "atr_avg": 20.503195,
+      "adx": 25.43,
+      "plus_di": 25.8,
+      "minus_di": 14.74,
+      "atr": 15.835728,
+      "atr_avg": 20.201055,
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:07.084731+08:00"
+      "timestamp": "2026-05-01T07:20:09.830522+08:00"
     },
     "EURUSD": {
       "pair": "EURUSD",
@@ -464,7 +451,7 @@
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:08.309041+08:00"
+      "timestamp": "2026-05-01T07:20:12.858954+08:00"
     },
     "GBPUSD": {
       "pair": "GBPUSD",
@@ -477,7 +464,7 @@
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:09.309785+08:00"
+      "timestamp": "2026-05-01T07:20:15.926135+08:00"
     },
     "NZDUSD": {
       "pair": "NZDUSD",
@@ -490,59 +477,59 @@
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:10.380916+08:00"
+      "timestamp": "2026-05-01T07:20:18.596031+08:00"
     },
     "AUDUSD": {
       "pair": "AUDUSD",
       "regime": "TREND_UP",
       "adx": 36.34,
-      "plus_di": 38.52,
-      "minus_di": 15.3,
-      "atr": 0.001167,
+      "plus_di": 38.38,
+      "minus_di": 15.25,
+      "atr": 0.001171,
       "atr_avg": 0.001131,
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:11.375002+08:00"
+      "timestamp": "2026-05-01T07:20:21.132719+08:00"
     },
     "USDJPY": {
       "pair": "USDJPY",
       "regime": "TREND_DOWN",
-      "adx": 62.63,
-      "plus_di": 7.87,
-      "minus_di": 44.05,
-      "atr": 0.641285,
-      "atr_avg": 0.469816,
+      "adx": 62.44,
+      "plus_di": 8.64,
+      "minus_di": 43.68,
+      "atr": 0.644785,
+      "atr_avg": 0.469991,
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:12.315719+08:00"
+      "timestamp": "2026-05-01T07:20:22.878532+08:00"
     },
     "USDCAD": {
       "pair": "USDCAD",
       "regime": "TREND_DOWN",
-      "adx": 34.72,
-      "plus_di": 7.92,
-      "minus_di": 31.89,
-      "atr": 0.001912,
-      "atr_avg": 0.00162,
+      "adx": 34.78,
+      "plus_di": 7.85,
+      "minus_di": 32.45,
+      "atr": 0.001926,
+      "atr_avg": 0.001621,
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:13.241732+08:00"
+      "timestamp": "2026-05-01T07:20:25.259689+08:00"
     },
     "USDCHF": {
       "pair": "USDCHF",
       "regime": "TREND_DOWN",
       "adx": 47.37,
       "plus_di": 6.63,
-      "minus_di": 34.32,
-      "atr": 0.001714,
+      "minus_di": 34.3,
+      "atr": 0.001715,
       "atr_avg": 0.001469,
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T07:10:14.318675+08:00"
+      "timestamp": "2026-05-01T07:20:28.470018+08:00"
     }
   },
   "pipeline_stats": {
