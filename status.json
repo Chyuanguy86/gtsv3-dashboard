@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T01:10:06.383667+08:00",
+  "generated_at": "2026-05-01T01:15:06.385839+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4617.81,
-      "rsi": 57.09,
+      "price": 4615.98,
+      "rsi": 56.59,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.17258,
-      "rsi": 64.15,
+      "price": 1.17254,
+      "rsi": 63.97,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3578,
-      "rsi": 72.79,
+      "price": 1.35778,
+      "rsi": 72.72,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58892,
-      "rsi": 72.15,
+      "price": 0.58896,
+      "rsi": 72.55,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71818,
-      "rsi": 67.2,
+      "price": 0.71824,
+      "rsi": 67.62,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.692,
-      "rsi": 22.84,
+      "price": 156.636,
+      "rsi": 21.67,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36128,
-      "rsi": 27.36,
+      "price": 1.36142,
+      "rsi": 28.29,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78257,
-      "rsi": 23.53,
+      "price": 0.7824,
+      "rsi": 22.83,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "01:10"
+      "last": "01:15"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "01:10"
+      "last": "01:15"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "01:10"
+      "last": "01:15"
     },
     {
       "id": "D",
@@ -285,7 +285,20 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "ISM Manufacturing PMI",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "ISM Manufacturing Prices",
+      "impact": "MEDIUM"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -544,11 +557,8 @@
       "USDCAD",
       "USDCHF"
     ],
-    "aligned": 2,
-    "aligned_pairs": [
-      "GBPUSD",
-      "USDCHF"
-    ],
+    "aligned": 0,
+    "aligned_pairs": [],
     "signals": 0
   },
   "news_events": [
