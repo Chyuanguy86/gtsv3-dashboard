@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-04-30T10:50:06.256301+08:00",
+  "generated_at": "2026-04-30T10:55:06.085457+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4562.21,
-      "rsi": 47.51,
+      "price": 4563.645,
+      "rsi": 48.02,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.16634,
-      "rsi": 32.77,
+      "price": 1.1665,
+      "rsi": 33.45,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34694,
-      "rsi": 37.21,
+      "price": 1.3472,
+      "rsi": 38.65,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58281,
-      "rsi": 36.16,
+      "price": 0.58306,
+      "rsi": 37.42,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71204,
-      "rsi": 38.57,
+      "price": 0.71237,
+      "rsi": 40.11,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.396,
-      "rsi": 64.1,
+      "price": 160.391,
+      "rsi": 63.95,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCAD",
-      "price": 1.36834,
-      "rsi": 53.38,
+      "price": 1.36819,
+      "rsi": 52.4,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.79192,
-      "rsi": 61.69,
+      "price": 0.7917,
+      "rsi": 60.54,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "10:50"
+      "last": "10:55"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "10:50"
+      "last": "10:55"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "10:50"
+      "last": "10:55"
     },
     {
       "id": "D",
