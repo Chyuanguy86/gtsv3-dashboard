@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T19:20:06.252804+08:00",
+  "generated_at": "2026-04-30T19:25:05.742370+08:00",
   "balance": 0,
   "account": "47153895",
   "open_trades": [],
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "19:20"
+      "last": "19:25"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "19:20"
+      "last": "19:25"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "19:20"
+      "last": "19:25"
     },
     {
       "id": "D",
