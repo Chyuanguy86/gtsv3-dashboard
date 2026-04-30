@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T05:00:09.204056+08:00",
+  "generated_at": "2026-05-01T05:05:04.436847+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
@@ -13,50 +13,50 @@
     },
     {
       "pair": "EURUSD",
-      "price": 1.17308,
-      "rsi": 63.86,
+      "price": 1.17309,
+      "rsi": 63.9,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.36034,
-      "rsi": 76.85,
+      "price": 1.3605,
+      "rsi": 77.13,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5909,
-      "rsi": 79.74,
+      "price": 0.59044,
+      "rsi": 74.58,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.72017,
-      "rsi": 72.99,
+      "price": 0.71958,
+      "rsi": 68.46,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.624,
-      "rsi": 24.45,
+      "price": 156.514,
+      "rsi": 23.59,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35822,
-      "rsi": 20.7,
+      "price": 1.35847,
+      "rsi": 22.57,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.7814,
-      "rsi": 21.29,
+      "price": 0.78117,
+      "rsi": 20.7,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "05:00"
+      "last": "05:05"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "05:00"
+      "last": "05:05"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "05:00"
+      "last": "05:05"
     },
     {
       "id": "D",
@@ -544,8 +544,10 @@
       "USDCAD",
       "USDCHF"
     ],
-    "aligned": 0,
-    "aligned_pairs": [],
+    "aligned": 1,
+    "aligned_pairs": [
+      "USDCHF"
+    ],
     "signals": 0
   },
   "news_events": [
