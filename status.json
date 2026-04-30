@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T00:40:07.157288+08:00",
+  "generated_at": "2026-05-01T00:45:07.872879+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4610.815,
-      "rsi": 55.27,
+      "price": 4609.185,
+      "rsi": 54.71,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
       "price": 1.17263,
-      "rsi": 64.2,
+      "rsi": 64.48,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35781,
-      "rsi": 72.87,
+      "price": 1.35784,
+      "rsi": 73.01,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58902,
-      "rsi": 73.67,
+      "price": 0.58908,
+      "rsi": 73.94,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71828,
-      "rsi": 67.88,
+      "price": 0.71823,
+      "rsi": 67.55,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.666,
-      "rsi": 20.97,
+      "price": 156.618,
+      "rsi": 20.65,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.36092,
-      "rsi": 25.9,
+      "price": 1.36105,
+      "rsi": 26.2,
       "regime": "RANGE",
       "tradeable": false
     },
     {
       "pair": "USDCHF",
-      "price": 0.78248,
-      "rsi": 22.82,
+      "price": 0.7825,
+      "rsi": 22.97,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "00:40"
+      "last": "00:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "00:40"
+      "last": "00:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "00:40"
+      "last": "00:45"
     },
     {
       "id": "D",
@@ -285,7 +285,20 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "ISM Manufacturing PMI",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "ISM Manufacturing Prices",
+      "impact": "MEDIUM"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -649,20 +662,6 @@
       "impact": "HIGH",
       "forecast": "",
       "previous": ""
-    },
-    {
-      "title": "Overnight Rate",
-      "currency": "CAD",
-      "pairs": [
-        "USDCAD"
-      ],
-      "datetime_utc": "2026-04-29T13:45:00+00:00",
-      "impact": "HIGH",
-      "forecast": "2.25%",
-      "previous": "2.25%"
-    }
-  ]
-}: ""
     },
     {
       "title": "Overnight Rate",
