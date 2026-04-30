@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T19:45:05.925213+08:00",
+  "generated_at": "2026-04-30T19:50:05.957702+08:00",
   "balance": 0,
   "account": "47153895",
   "open_trades": [],
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "19:45"
+      "last": "19:50"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "19:45"
+      "last": "19:50"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "19:45"
+      "last": "19:50"
     },
     {
       "id": "D",
@@ -438,7 +438,7 @@
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-04-30T19:40:02.178895+08:00"
+      "timestamp": "2026-04-30T19:50:01.481088+08:00"
     },
     "EURUSD": {
       "pair": "EURUSD",
@@ -451,7 +451,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "RANGE",
-      "timestamp": "2026-04-30T19:40:02.231551+08:00"
+      "timestamp": "2026-04-30T19:50:01.531742+08:00"
     },
     "GBPUSD": {
       "pair": "GBPUSD",
@@ -464,7 +464,7 @@
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-04-30T19:40:02.259444+08:00"
+      "timestamp": "2026-04-30T19:50:01.555957+08:00"
     },
     "NZDUSD": {
       "pair": "NZDUSD",
@@ -477,7 +477,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T19:40:02.268875+08:00"
+      "timestamp": "2026-04-30T19:50:01.566766+08:00"
     },
     "AUDUSD": {
       "pair": "AUDUSD",
@@ -490,7 +490,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T19:40:02.277436+08:00"
+      "timestamp": "2026-04-30T19:50:01.579013+08:00"
     },
     "USDJPY": {
       "pair": "USDJPY",
@@ -503,7 +503,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T19:40:02.284488+08:00"
+      "timestamp": "2026-04-30T19:50:01.588170+08:00"
     },
     "USDCAD": {
       "pair": "USDCAD",
@@ -516,7 +516,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T19:40:02.293503+08:00"
+      "timestamp": "2026-04-30T19:50:01.593548+08:00"
     },
     "USDCHF": {
       "pair": "USDCHF",
@@ -529,7 +529,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T19:40:02.303052+08:00"
+      "timestamp": "2026-04-30T19:50:01.597768+08:00"
     }
   },
   "pipeline_stats": {
