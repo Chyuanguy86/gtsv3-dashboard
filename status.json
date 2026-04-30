@@ -1,48 +1,48 @@
 {
-  "generated_at": "2026-04-30T12:55:05.978816+08:00",
+  "generated_at": "2026-04-30T13:00:07.447508+08:00",
   "balance": 500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4547.27,
-      "rsi": 42.24,
+      "price": 4542.06,
+      "rsi": 40.64,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.16601,
-      "rsi": 31.08,
+      "price": 1.16598,
+      "rsi": 30.95,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34616,
-      "rsi": 34.36,
+      "price": 1.34608,
+      "rsi": 34.06,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58292,
-      "rsi": 37.23,
+      "price": 0.5827,
+      "rsi": 36.07,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7118,
-      "rsi": 37.16,
+      "price": 0.7116,
+      "rsi": 36.23,
       "regime": "UNKNOWN",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 160.545,
-      "rsi": 68.56,
+      "price": 160.54,
+      "rsi": 68.43,
       "regime": "UNKNOWN",
       "tradeable": false
     },
@@ -55,8 +55,8 @@
     },
     {
       "pair": "USDCHF",
-      "price": 0.79205,
-      "rsi": 62.49,
+      "price": 0.79202,
+      "rsi": 62.33,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -201,21 +201,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "12:55"
+      "last": "13:00"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "12:55"
+      "last": "13:00"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "12:55"
+      "last": "13:00"
     },
     {
       "id": "D",
@@ -487,7 +487,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-04-30T12:50:03.126411+08:00"
+      "timestamp": "2026-04-30T13:00:03.406453+08:00"
     },
     "EURUSD": {
       "pair": "EURUSD",
@@ -500,7 +500,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-04-30T12:50:03.537320+08:00"
+      "timestamp": "2026-04-30T13:00:04.092954+08:00"
     },
     "GBPUSD": {
       "pair": "GBPUSD",
@@ -513,7 +513,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-04-30T12:50:03.975717+08:00"
+      "timestamp": "2026-04-30T13:00:04.944205+08:00"
     },
     "NZDUSD": {
       "pair": "NZDUSD",
@@ -526,7 +526,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-04-30T12:50:04.336164+08:00"
+      "timestamp": "2026-04-30T13:00:05.818365+08:00"
     },
     "AUDUSD": {
       "pair": "AUDUSD",
@@ -539,7 +539,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T12:50:04.729253+08:00"
+      "timestamp": "2026-04-30T13:00:06.469933+08:00"
     },
     "USDJPY": {
       "pair": "USDJPY",
@@ -552,7 +552,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T12:50:05.075717+08:00"
+      "timestamp": "2026-04-30T13:00:06.887015+08:00"
     },
     "USDCAD": {
       "pair": "USDCAD",
@@ -565,7 +565,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T12:50:05.442898+08:00"
+      "timestamp": "2026-04-30T13:00:07.349407+08:00"
     },
     "USDCHF": {
       "pair": "USDCHF",
@@ -578,7 +578,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "NO_DATA",
-      "timestamp": "2026-04-30T12:50:05.785591+08:00"
+      "timestamp": "2026-04-30T13:00:07.857997+08:00"
     }
   },
   "pipeline_stats": {
