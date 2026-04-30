@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T22:10:06.493972+08:00",
+  "generated_at": "2026-04-30T22:10:16.640487+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
@@ -14,7 +14,7 @@
     {
       "pair": "EURUSD",
       "price": 1.16928,
-      "rsi": 52.73,
+      "rsi": 52.83,
       "regime": "RANGE",
       "tradeable": false
     },
@@ -35,7 +35,7 @@
     {
       "pair": "AUDUSD",
       "price": 0.71717,
-      "rsi": 65.91,
+      "rsi": 66.58,
       "regime": "UNKNOWN",
       "tradeable": false
     },
@@ -56,7 +56,7 @@
     {
       "pair": "USDCHF",
       "price": 0.78337,
-      "rsi": 23.14,
+      "rsi": 22.85,
       "regime": "UNKNOWN",
       "tradeable": false
     }
@@ -285,56 +285,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "German Prelim GDP q/q",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "Core CPI Flash Estimate y/y",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "EUR",
-      "title": "CPI Flash Estimate y/y",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "BOE Monetary Policy Report",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "Monetary Policy Summary",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "MPC Official Bank Rate Votes",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "Official Bank Rate",
-      "impact": "HIGH"
-    },
-    {
-      "time": "00-04",
-      "currency": "GBP",
-      "title": "BOE Gov Bailey Speaks",
-      "impact": "HIGH"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
