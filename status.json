@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T17:10:04.034379+08:00",
+  "generated_at": "2026-05-01T17:15:05.063411+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4566.66,
-      "rsi": 35.07,
+      "price": 4565.92,
+      "rsi": 34.86,
       "regime": "RANGE",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.17372,
-      "rsi": 60.25,
+      "price": 1.17379,
+      "rsi": 61.18,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3604,
-      "rsi": 64.34,
+      "price": 1.36024,
+      "rsi": 63.33,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5895,
-      "rsi": 57.85,
+      "price": 0.58937,
+      "rsi": 56.39,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71934,
-      "rsi": 60.68,
+      "price": 0.71912,
+      "rsi": 58.32,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.54,
-      "rsi": 37.88,
+      "price": 156.568,
+      "rsi": 38.37,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35756,
-      "rsi": 28.88,
+      "price": 1.35746,
+      "rsi": 27.87,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78134,
-      "rsi": 37.17,
+      "price": 0.78148,
+      "rsi": 38.23,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -215,20 +215,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing PMI",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing Prices",
-      "impact": "MEDIUM"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
