@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T17:00:12.974187+08:00",
+  "generated_at": "2026-05-01T17:05:03.238680+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4569.2,
-      "rsi": 35.81,
+      "price": 4565.6,
+      "rsi": 34.77,
       "regime": "RANGE",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.17436,
-      "rsi": 65.52,
+      "price": 1.17384,
+      "rsi": 61.18,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.36086,
-      "rsi": 67.33,
+      "price": 1.36062,
+      "rsi": 65.76,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58968,
-      "rsi": 59.92,
+      "price": 0.58958,
+      "rsi": 58.79,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71954,
-      "rsi": 62.9,
+      "price": 0.71942,
+      "rsi": 61.59,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.476,
-      "rsi": 36.72,
+      "price": 156.45,
+      "rsi": 36.44,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35727,
-      "rsi": 25.94,
+      "price": 1.35728,
+      "rsi": 25.97,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.7809,
-      "rsi": 33.56,
+      "price": 0.78134,
+      "rsi": 37.17,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -80,7 +80,7 @@
       "name": "Groq Llama 3.3",
       "key": "groq",
       "status": "UP",
-      "ms": 4893,
+      "ms": 1412,
       "role": "BACKUP 2"
     },
     {
