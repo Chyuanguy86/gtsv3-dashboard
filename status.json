@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T16:55:05.327391+08:00",
+  "generated_at": "2026-05-01T17:00:12.974187+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4568.6,
-      "rsi": 35.65,
+      "price": 4569.2,
+      "rsi": 35.81,
       "regime": "RANGE",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.17422,
-      "rsi": 64.9,
+      "price": 1.17436,
+      "rsi": 65.52,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.36082,
-      "rsi": 67.2,
+      "price": 1.36086,
+      "rsi": 67.33,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58963,
-      "rsi": 59.53,
+      "price": 0.58968,
+      "rsi": 59.92,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71945,
-      "rsi": 61.99,
+      "price": 0.71954,
+      "rsi": 62.9,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 156.514,
-      "rsi": 37.1,
+      "price": 156.476,
+      "rsi": 36.72,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35753,
-      "rsi": 26.88,
+      "price": 1.35727,
+      "rsi": 25.94,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78118,
-      "rsi": 34.74,
+      "price": 0.7809,
+      "rsi": 33.56,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -80,7 +80,7 @@
       "name": "Groq Llama 3.3",
       "key": "groq",
       "status": "UP",
-      "ms": 1474,
+      "ms": 4893,
       "role": "BACKUP 2"
     },
     {
@@ -215,20 +215,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing PMI",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing Prices",
-      "impact": "MEDIUM"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
@@ -381,7 +368,7 @@
       "session": "LONDON",
       "tradeable": false,
       "block_reason": "RANGE",
-      "timestamp": "2026-05-01T16:40:06.578142+08:00"
+      "timestamp": "2026-05-01T17:00:10.664545+08:00"
     },
     "EURUSD": {
       "pair": "EURUSD",
@@ -394,20 +381,20 @@
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:07.780312+08:00"
+      "timestamp": "2026-05-01T17:00:13.426991+08:00"
     },
     "GBPUSD": {
       "pair": "GBPUSD",
       "regime": "TREND_UP",
       "adx": 44.55,
-      "plus_di": 33.41,
-      "minus_di": 12.26,
-      "atr": 0.000994,
-      "atr_avg": 0.00174,
+      "plus_di": 33.1,
+      "minus_di": 12.15,
+      "atr": 0.001007,
+      "atr_avg": 0.001741,
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:08.842702+08:00"
+      "timestamp": "2026-05-01T17:00:15.299589+08:00"
     },
     "NZDUSD": {
       "pair": "NZDUSD",
@@ -420,7 +407,7 @@
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:09.948260+08:00"
+      "timestamp": "2026-05-01T17:00:17.634147+08:00"
     },
     "AUDUSD": {
       "pair": "AUDUSD",
@@ -433,46 +420,46 @@
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:10.893044+08:00"
+      "timestamp": "2026-05-01T17:00:20.873862+08:00"
     },
     "USDJPY": {
       "pair": "USDJPY",
       "regime": "TREND_DOWN",
-      "adx": 56.25,
+      "adx": 56.94,
       "plus_di": 8.52,
-      "minus_di": 41.52,
-      "atr": 0.406713,
-      "atr_avg": 0.516346,
+      "minus_di": 41.5,
+      "atr": 0.387427,
+      "atr_avg": 0.503067,
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:11.918681+08:00"
+      "timestamp": "2026-05-01T17:00:22.548492+08:00"
     },
     "USDCAD": {
       "pair": "USDCAD",
       "regime": "TREND_DOWN",
-      "adx": 46.15,
-      "plus_di": 8.15,
-      "minus_di": 29.06,
-      "atr": 0.001146,
-      "atr_avg": 0.001679,
+      "adx": 46.87,
+      "plus_di": 8.11,
+      "minus_di": 28.91,
+      "atr": 0.001051,
+      "atr_avg": 0.001655,
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:13.012650+08:00"
+      "timestamp": "2026-05-01T17:00:23.677300+08:00"
     },
     "USDCHF": {
       "pair": "USDCHF",
       "regime": "TREND_DOWN",
-      "adx": 53.01,
-      "plus_di": 9.0,
-      "minus_di": 31.77,
-      "atr": 0.001077,
-      "atr_avg": 0.001477,
+      "adx": 53.22,
+      "plus_di": 8.98,
+      "minus_di": 31.68,
+      "atr": 0.001004,
+      "atr_avg": 0.001457,
       "session": "LONDON",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T16:40:14.122487+08:00"
+      "timestamp": "2026-05-01T17:00:24.658024+08:00"
     }
   },
   "pipeline_stats": {
