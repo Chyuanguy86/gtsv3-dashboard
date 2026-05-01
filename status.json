@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-01T09:25:05.535943+08:00",
+  "generated_at": "2026-05-01T09:30:08.092647+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4615.16,
-      "rsi": 53.55,
+      "price": 4616.515,
+      "rsi": 54.13,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
@@ -20,43 +20,43 @@
     },
     {
       "pair": "GBPUSD",
-      "price": 1.36034,
-      "rsi": 74.78,
+      "price": 1.36033,
+      "rsi": 74.7,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.5903,
-      "rsi": 72.17,
+      "price": 0.59042,
+      "rsi": 73.78,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71982,
-      "rsi": 69.08,
+      "price": 0.71992,
+      "rsi": 70.05,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 157.172,
-      "rsi": 38.25,
+      "price": 157.192,
+      "rsi": 38.69,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35774,
-      "rsi": 21.49,
+      "price": 1.35768,
+      "rsi": 21.35,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78174,
-      "rsi": 26.73,
+      "price": 0.78166,
+      "rsi": 25.85,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -93,106 +93,42 @@
   ],
   "strategies": [
     {
-      "id": "STR-001",
-      "name": "Malaysian SNR",
+      "id": "SMC-001",
+      "name": "SMC Trend Follow",
       "status": "DEMO",
-      "scanner": "A"
+      "scanner": "A",
+      "pairs": [
+        "EURUSD",
+        "GBPUSD",
+        "USDJPY",
+        "AUDUSD",
+        "NZDUSD",
+        "USDCAD",
+        "USDCHF"
+      ],
+      "min_confidence": 0.65
     },
     {
-      "id": "STR-002",
-      "name": "EMA Crossover",
-      "status": "CODED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-003",
-      "name": "RSI Divergence",
+      "id": "SMC-002",
+      "name": "SMC Structure Break",
       "status": "DEMO",
-      "scanner": "B"
+      "scanner": "B",
+      "pairs": [
+        "EURUSD",
+        "GBPUSD",
+        "XAUUSD"
+      ],
+      "min_confidence": 0.68
     },
     {
-      "id": "STR-004",
-      "name": "London Breakout with EMA Filter",
-      "status": "CODED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-005",
-      "name": "Moving Average Convergence Trend Following",
-      "status": "CODED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-006",
-      "name": "Supply/Demand Zone Rejection",
+      "id": "SMC-003",
+      "name": "SMC Gold Specialist",
       "status": "DEMO",
-      "scanner": "C"
-    },
-    {
-      "id": "STR-007",
-      "name": "Pending analysis",
-      "status": "REJECTED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-008",
-      "name": "Pending analysis",
-      "status": "REJECTED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-009",
-      "name": "Pending analysis",
-      "status": "REJECTED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-010",
-      "name": "Pending analysis",
-      "status": "REJECTED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-011",
-      "name": "Pending analysis",
-      "status": "REJECTED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-012",
-      "name": "Pending analysis",
-      "status": "REJECTED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-013",
-      "name": "Pending analysis",
-      "status": "SOURCED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-014",
-      "name": "Pending analysis",
-      "status": "SOURCED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-015",
-      "name": "Pending analysis",
-      "status": "SOURCED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-016",
-      "name": "Pending analysis",
-      "status": "SOURCED",
-      "scanner": ""
-    },
-    {
-      "id": "STR-017",
-      "name": "Pending analysis",
-      "status": "SOURCED",
-      "scanner": ""
+      "scanner": "C",
+      "pairs": [
+        "XAUUSD"
+      ],
+      "min_confidence": 0.7
     }
   ],
   "scanners": [
@@ -201,21 +137,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "09:25"
+      "last": "09:30"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "09:25"
+      "last": "09:30"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "09:25"
+      "last": "09:30"
     },
     {
       "id": "D",
@@ -285,7 +221,20 @@
       "ok": 2
     }
   ],
-  "news": [],
+  "news": [
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "ISM Manufacturing PMI",
+      "impact": "MEDIUM"
+    },
+    {
+      "time": "00-04",
+      "currency": "USD",
+      "title": "ISM Manufacturing Prices",
+      "impact": "MEDIUM"
+    }
+  ],
   "log": [
     {
       "ts": "23:40",
@@ -433,25 +382,25 @@
       "adx": 69.67,
       "plus_di": 2.98,
       "minus_di": 88.79,
-      "atr": 358.522624,
-      "atr_avg": 176.356024,
+      "atr": 358.600298,
+      "atr_avg": 176.359908,
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-05-01T09:20:04.207408+08:00"
+      "timestamp": "2026-05-01T09:30:02.904220+08:00"
     },
     "EURUSD": {
       "pair": "EURUSD",
       "regime": "HIGH_VOL",
       "adx": 56.28,
       "plus_di": 3.11,
-      "minus_di": 87.94,
-      "atr": 0.02447,
+      "minus_di": 87.9,
+      "atr": 0.024478,
       "atr_avg": 0.011933,
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-05-01T09:20:04.631727+08:00"
+      "timestamp": "2026-05-01T09:30:03.607304+08:00"
     },
     "GBPUSD": {
       "pair": "GBPUSD",
@@ -464,7 +413,7 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-05-01T09:20:04.953441+08:00"
+      "timestamp": "2026-05-01T09:30:04.045792+08:00"
     },
     "NZDUSD": {
       "pair": "NZDUSD",
@@ -477,20 +426,20 @@
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-05-01T09:20:05.286936+08:00"
+      "timestamp": "2026-05-01T09:30:04.750816+08:00"
     },
     "AUDUSD": {
       "pair": "AUDUSD",
       "regime": "HIGH_VOL",
       "adx": 59.95,
-      "plus_di": 94.43,
+      "plus_di": 94.42,
       "minus_di": 1.04,
-      "atr": 0.051703,
+      "atr": 0.051705,
       "atr_avg": 0.024186,
       "session": "ASIA",
       "tradeable": false,
       "block_reason": "HIGH_VOL",
-      "timestamp": "2026-05-01T09:20:05.627376+08:00"
+      "timestamp": "2026-05-01T09:30:05.543206+08:00"
     },
     "USDJPY": {
       "pair": "USDJPY",
@@ -503,7 +452,7 @@
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T09:20:10.796219+08:00"
+      "timestamp": "2026-05-01T09:30:10.625765+08:00"
     },
     "USDCAD": {
       "pair": "USDCAD",
@@ -516,20 +465,20 @@
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T09:20:13.273494+08:00"
+      "timestamp": "2026-05-01T09:30:11.946285+08:00"
     },
     "USDCHF": {
       "pair": "USDCHF",
       "regime": "TREND_DOWN",
-      "adx": 49.27,
-      "plus_di": 8.01,
-      "minus_di": 32.33,
-      "atr": 0.001482,
+      "adx": 49.25,
+      "plus_di": 8.06,
+      "minus_di": 32.31,
+      "atr": 0.001483,
       "atr_avg": 0.001488,
       "session": "ASIA",
       "tradeable": true,
       "block_reason": null,
-      "timestamp": "2026-05-01T09:20:14.317293+08:00"
+      "timestamp": "2026-05-01T09:30:12.946525+08:00"
     }
   },
   "pipeline_stats": {
