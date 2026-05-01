@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T10:00:09.132725+08:00",
+  "generated_at": "2026-05-01T10:05:06.244130+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4620.905,
-      "rsi": 55.97,
+      "price": 4624.925,
+      "rsi": 57.48,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "EURUSD",
-      "price": 1.17311,
-      "rsi": 62.41,
+      "price": 1.1731,
+      "rsi": 62.33,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "GBPUSD",
-      "price": 1.36066,
-      "rsi": 75.72,
+      "price": 1.36062,
+      "rsi": 75.47,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.59064,
-      "rsi": 75.18,
+      "price": 0.5905,
+      "rsi": 73.08,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "AUDUSD",
-      "price": 0.7202,
-      "rsi": 72.22,
+      "price": 0.72012,
+      "rsi": 71.35,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "USDJPY",
-      "price": 157.2,
-      "rsi": 38.88,
+      "price": 157.178,
+      "rsi": 38.55,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35766,
-      "rsi": 21.3,
+      "price": 1.35768,
+      "rsi": 21.42,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78155,
-      "rsi": 25.23,
+      "price": 0.78151,
+      "rsi": 24.99,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -137,21 +137,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "10:00"
+      "last": "10:05"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "10:00"
+      "last": "10:05"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "10:00"
+      "last": "10:05"
     },
     {
       "id": "D",
@@ -488,9 +488,10 @@
       "USDCAD",
       "USDCHF"
     ],
-    "aligned": 2,
+    "aligned": 3,
     "aligned_pairs": [
-      "GBPUSD",
+      "NZDUSD",
+      "USDCAD",
       "USDCHF"
     ],
     "signals": 0
