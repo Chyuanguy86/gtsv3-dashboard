@@ -1,62 +1,62 @@
 {
-  "generated_at": "2026-05-01T13:20:06.303837+08:00",
+  "generated_at": "2026-05-01T13:25:06.113737+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4614.075,
-      "rsi": 51.94,
+      "price": 4614.685,
+      "rsi": 52.19,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "EURUSD",
-      "price": 1.1725,
-      "rsi": 56.35,
+      "price": 1.17246,
+      "rsi": 56.03,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3594,
-      "rsi": 66.01,
+      "price": 1.35928,
+      "rsi": 65.15,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58934,
-      "rsi": 58.56,
+      "price": 0.58931,
+      "rsi": 58.23,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71904,
-      "rsi": 60.32,
+      "price": 0.71912,
+      "rsi": 61.11,
       "regime": "TREND_UP",
       "tradeable": true
     },
     {
       "pair": "USDJPY",
-      "price": 157.268,
-      "rsi": 41.0,
+      "price": 157.286,
+      "rsi": 41.47,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCAD",
-      "price": 1.35864,
-      "rsi": 31.23,
+      "price": 1.35869,
+      "rsi": 31.54,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78241,
-      "rsi": 36.2,
+      "price": 0.78239,
+      "rsi": 35.98,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -137,21 +137,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "13:20"
+      "last": "13:25"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "13:20"
+      "last": "13:25"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "13:20"
+      "last": "13:25"
     },
     {
       "id": "D",
@@ -609,4 +609,4 @@
       "previous": "2.25%"
     }
   ]
-}}
+}
