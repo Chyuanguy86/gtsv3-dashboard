@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-01T12:40:07.805879+08:00",
+  "generated_at": "2026-05-01T12:45:05.429706+08:00",
   "balance": 5500.0,
   "account": "47153895",
   "open_trades": [],
   "watchlist": [
     {
       "pair": "XAUUSD",
-      "price": 4616.08,
-      "rsi": 52.83,
+      "price": 4613.715,
+      "rsi": 51.8,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
@@ -20,15 +20,15 @@
     },
     {
       "pair": "GBPUSD",
-      "price": 1.3598,
-      "rsi": 69.03,
+      "price": 1.35977,
+      "rsi": 68.81,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58944,
-      "rsi": 59.63,
+      "price": 0.58945,
+      "rsi": 59.74,
       "regime": "HIGH_VOL",
       "tradeable": false
     },
@@ -48,15 +48,15 @@
     },
     {
       "pair": "USDCAD",
-      "price": 1.35852,
-      "rsi": 30.08,
+      "price": 1.35858,
+      "rsi": 30.6,
       "regime": "TREND_DOWN",
       "tradeable": true
     },
     {
       "pair": "USDCHF",
-      "price": 0.78194,
-      "rsi": 31.03,
+      "price": 0.782,
+      "rsi": 31.71,
       "regime": "TREND_DOWN",
       "tradeable": true
     }
@@ -137,21 +137,21 @@
       "strategies": [
         "STR-001"
       ],
-      "last": "12:40"
+      "last": "12:45"
     },
     {
       "id": "B",
       "strategies": [
         "STR-003"
       ],
-      "last": "12:40"
+      "last": "12:45"
     },
     {
       "id": "C",
       "strategies": [
         "STR-006"
       ],
-      "last": "12:40"
+      "last": "12:45"
     },
     {
       "id": "D",
@@ -221,20 +221,7 @@
       "ok": 2
     }
   ],
-  "news": [
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing PMI",
-      "impact": "MEDIUM"
-    },
-    {
-      "time": "00-04",
-      "currency": "USD",
-      "title": "ISM Manufacturing Prices",
-      "impact": "MEDIUM"
-    }
-  ],
+  "news": [],
   "log": [
     {
       "ts": "23:40",
