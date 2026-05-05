@@ -382,5 +382,52 @@ function updateClock(){
 setInterval(loadData,30000);setInterval(updateClock,1000);
 loadData();updateClock();
 </script>
+
+<script>
+/* ══ LIVE GIST FETCHER ══ */
+const GIST_RAW = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json";
+
+async function fetchLive() {
+  try {
+    const r = await fetch(GIST_RAW + "?t=" + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    applyLiveData(d);
+  } catch(e) {
+    console.warn("[live]", e);
+  }
+}
+
+function applyLiveData(d) {
+  if (d.balance     != null) updateBalance(d.balance);
+  if (d.open_trades != null) updateOpenTrades(d.open_trades);
+  if (d.ai_online   != null) updateAIModels(d.ai_online);
+  if (d.pipeline)            updatePipeline(d.pipeline.tradeable, d.pipeline.total);
+  if (d.risk) {
+    setRiskState(d.risk.state || d.risk_state || "NORMAL");
+    const dd = document.getElementById("daily-dd");
+    if (dd) dd.textContent = (d.risk.daily_dd||d.daily_dd||0).toFixed(2)+"%";
+    const cl = document.getElementById("consec-loss");
+    if (cl) cl.textContent = (d.risk.consec_loss||0)+" / 3";
+    const op = document.getElementById("risk-open-pos");
+    if (op) op.textContent = (d.risk.open_pos||0)+" / 3";
+  }
+  if (d.watchdog)  setWatchdogState(d.watchdog.running, "pid "+d.watchdog.pid+" · "+d.watchdog.restarts+" restarts");
+  if (d.positions) renderPositions(d.positions);
+  if (d.regime)    renderRegime(d.regime);
+  if (d.news)      renderNews(d.news);
+  if (d.ticks   != null) { const e=document.getElementById("sys-ticks");   if(e) e.textContent=d.ticks; }
+  if (d.signals != null) { const e=document.getElementById("sys-signals"); if(e) e.textContent=d.signals; }
+  if (d.ts) {
+    ["home-updated","last-updated-display"].forEach(id=>{
+      const el=document.getElementById(id); if(el) el.textContent="Updated: "+d.ts;
+    });
+  }
+  setSystemState(true,"Live feed active · "+d.ts);
+}
+
+fetchLive();
+setInterval(fetchLive, 30000);
+</script>
 </body>
 </html>
