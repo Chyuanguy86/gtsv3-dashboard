@@ -1580,7 +1580,7 @@ All existing IDs preserved. New IDs added:
 -->
 
 <script>
-const GIST_RAW = "https://api.github.com/gists/3d5cbe1b7063a171ef8fa512f68ffb8d";
+const GIST_RAW = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json";
 
 function renderPositions(pos) {
   const tb = document.getElementById('positions-tbody');
@@ -1610,9 +1610,7 @@ function renderRegime(regime) {
 
 async function fetchLive() {
   try {
-    const resp = await fetch(GIST_RAW, {headers:{"Accept":"application/vnd.github+json","Cache-Control":"no-cache"}});
-    const gist = await resp.json();
-    const d = JSON.parse(gist.files["data.json"].content);
+    const d = await fetch(GIST_RAW+"?nc="+Date.now(), {cache:"no-store"}).then(r=>r.json());
     if (d.balance    !=null) updateBalance(d.balance);
     if (d.open_trades!=null) updateOpenTrades(d.open_trades);
     if (d.ai_online  !=null) updateAIModels(d.ai_online);
