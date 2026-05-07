@@ -1622,48 +1622,9 @@ function renderClosedTrades(trades) {
 }
 </script>
 <script>
-/* AUTO-DISCOVER TUNNEL URL FROM GIST */
 const META_URL = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json";
-let ws = null, retries = 0;
 
-async function discoverAndConnect() {
-  try {
-    const d = await fetch(META_URL + "?nc=" + Date.now(), {cache:"no-store"}).then(r=>r.json());
-    const host = d.tunnel_url;
-    if (!host) { setTimeout(discoverAndConnect, 10000); return; }
-    const wss = "wss://" + host + "/ws";
-    const rest = "https://" + host + "/data";
-    console.log("[WS] connecting to", wss);
-    connectWS(wss, rest);
-  } catch(e) {
-    console.warn("[discover]", e);
-    setTimeout(discoverAndConnect, 10000);
-  }
-}
 
-function connectWS(wss, rest) {
-  if (ws) { try { ws.close(); } catch(e){} }
-  ws = new WebSocket(wss);
-  ws.onopen = () => {
-    retries = 0;
-    const d = document.getElementById("hdr-live-dot");
-    if (d) d.style.background = "var(--green)";
-    console.log("[WS] connected");
-  };
-  ws.onmessage = (e) => {
-    try { applyLiveData(JSON.parse(e.data)); pumpHeartbeat(14+Math.random()*12); } catch(x){}
-  };
-  ws.onclose = () => {
-    const d = document.getElementById("hdr-live-dot");
-    if (d) d.style.background = "var(--red)";
-    retries++;
-    if (retries > 3) { setTimeout(discoverAndConnect, 5000); return; }
-    setTimeout(() => connectWS(wss, rest), Math.min(30000, 2000*retries));
-  };
-  // REST fallback
-  fetch(rest, {cache:"no-store"}).then(r=>r.json()).then(applyLiveData).catch(()=>{});
-  setInterval(() => fetch(rest,{cache:"no-store"}).then(r=>r.json()).then(applyLiveData).catch(()=>{}), 60000);
-}
 
 (async function poll() {
   try {
