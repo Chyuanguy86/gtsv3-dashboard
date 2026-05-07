@@ -1668,13 +1668,9 @@ function connectWS(wss, rest) {
 (async function poll() {
   try {
     const d = await fetch("https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json?nc="+Date.now(),{cache:"no-store"}).then(r=>r.json());
-    const host = d.tunnel_url;
-    if (host) {
-      const r = await fetch("https://"+host+"/data",{cache:"no-store"}).then(r=>r.json());
-      applyLiveData(r); pumpHeartbeat(20);
-    }
+    applyLiveData(d); pumpHeartbeat(20);
   } catch(e) { console.warn("[poll]",e); }
-  setTimeout(poll, 5000);
+  setTimeout(poll, 10000);
 })();
 </script>
 
