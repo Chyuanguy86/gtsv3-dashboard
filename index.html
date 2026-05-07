@@ -1596,12 +1596,51 @@ function applyLiveData(d) {
   if (d.wd_ok !== undefined) setWatchdogState(d.wd_ok, d.ticks ? 'tick #'+d.ticks : undefined);
   setHeartbeatState(true, d.ts || undefined);
   if (d.news) renderNews(d.news);
+  else if (d.news_events) renderNews(d.news_events);
+  if (d.positions) renderPositions(d.positions);
+  if (d.regime) renderRegime(d.regime);
   if (d.pair_pnl) renderPairPnlChart(d.pair_pnl);
   if (d.session_pnl) ['sydney','tokyo','london','ny'].forEach(function(s){
     var x = d.session_pnl[s]; if (x) updateSessionPnl(s, x.pnl||0, x.trades||0, x.wr||0);
   });
   if (d.closed_trades) renderClosedTrades(d.closed_trades);
   if (d.ts) { var el = document.getElementById('last-update-ts'); if (el) el.textContent = d.ts; }
+  if (d.ticks !== undefined) { var e = document.getElementById('sys-ticks'); if (e) e.textContent = d.ticks; }
+  if (d.signals !== undefined) { var e = document.getElementById('sys-signals'); if (e) e.textContent = d.signals; }
+}
+
+function renderPositions(pos) {
+  var el = document.getElementById('positions-tbody');
+  if (!el) return;
+  if (!pos || !pos.length) { el.innerHTML = '<tr><td colspan="7" class="ph">No open positions</td></tr>'; return; }
+  el.innerHTML = pos.map(function(p) {
+    var pnlCls = (p.pnl||0) > 0 ? 'pos' : (p.pnl||0) < 0 ? 'neg' : 'muted';
+    var dirCls = p.direction === 'BUY' ? 'pos' : 'neg';
+    return '<tr>'
+      + '<td class="mono">' + (p.pair||'--') + '</td>'
+      + '<td class="' + dirCls + '">' + (p.direction||'--') + '</td>'
+      + '<td class="mono">' + (p.lots||'--') + '</td>'
+      + '<td class="mono">' + (p.entry||'--') + '</td>'
+      + '<td class="mono">' + (p.sl||'--') + '</td>'
+      + '<td class="mono">' + (p.tp||'--') + '</td>'
+      + '<td class="' + pnlCls + ' mono">' + ((p.pnl||0) >= 0 ? '+$' : '-$') + Math.abs(p.pnl||0).toFixed(2) + '</td>'
+      + '</tr>';
+  }).join('');
+}
+function renderRegime(regime) {
+  var el = document.getElementById('pipeline-pairs-display');
+  if (!el || !regime) return;
+  var pairs = Object.keys(regime);
+  el.innerHTML = pairs.map(function(pair) {
+    var r = regime[pair];
+    var cls = r.tradeable ? 'pos' : 'muted';
+    var dirArrow = r.dir === 'up' ? '▲' : r.dir === 'dn' ? '▼' : '—';
+    return '<div class="trade-row">'
+      + '<span class="mono" style="font-size:10px">' + pair + '</span>'
+      + '<span class="' + cls + '" style="font-size:9px">' + dirArrow + ' ADX ' + (r.adx||0).toFixed(1) + '</span>'
+      + '<span class="badge ' + (r.tradeable ? 'b-green' : 'b-muted') + '" style="font-size:8px">' + (r.tradeable ? 'TRADE' : 'SKIP') + '</span>'
+      + '</div>';
+  }).join('');
 }
 function renderClosedTrades(trades) {
   var el = document.getElementById('closed-trades-list');
