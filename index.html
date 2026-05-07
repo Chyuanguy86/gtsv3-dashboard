@@ -758,7 +758,7 @@ body::before{
       </div>
       <div class="kpi" style="--c:var(--green)">
         <div class="kpi-lbl">Open Trades</div>
-        <div class="kpi-val pos" id="home-open">0<span style="font-size:12px;color:var(--muted2)">/5</span></div>
+        <div class="kpi-val pos" id="home-open">0<span style="font-size:12px;color:var(--muted2)">/10</span></div>
         <div style="font-size:8px;color:var(--muted2)">Max 3 concurrent</div>
       </div>
       <div class="kpi" style="--c:var(--neon)">
@@ -1583,6 +1583,44 @@ All existing IDs preserved. New IDs added:
 
 
 
+
+<script>
+function applyLiveData(d) {
+  if (!d) return;
+  if (d.balance !== undefined) updateBalance(d.balance);
+  var openN = d.open_trades !== undefined ? d.open_trades : (d.open_pos || 0);
+  updateOpenTrades(openN);
+  if (d.ai_online !== undefined) updateAIModels(d.ai_online);
+  if (d.pipeline) updatePipeline(d.pipeline.tradeable || 0, d.pipeline.total || 8);
+  if (d.risk_state) setRiskState(d.risk_state);
+  if (d.wd_ok !== undefined) setWatchdogState(d.wd_ok, d.ticks ? 'tick #'+d.ticks : undefined);
+  setHeartbeatState(true, d.ts || undefined);
+  if (d.news) renderNews(d.news);
+  if (d.pair_pnl) renderPairPnlChart(d.pair_pnl);
+  if (d.session_pnl) ['sydney','tokyo','london','ny'].forEach(function(s){
+    var x = d.session_pnl[s]; if (x) updateSessionPnl(s, x.pnl||0, x.trades||0, x.wr||0);
+  });
+  if (d.closed_trades) renderClosedTrades(d.closed_trades);
+  if (d.ts) { var el = document.getElementById('last-update-ts'); if (el) el.textContent = d.ts; }
+}
+function renderClosedTrades(trades) {
+  var el = document.getElementById('closed-trades-list');
+  if (!el) return;
+  if (!trades.length) { el.innerHTML = '<div class="ph">No closed trades yet</div>'; return; }
+  el.innerHTML = trades.slice(0,20).map(function(t) {
+    var pnl = typeof t.pnl === 'number' ? t.pnl : 0;
+    var pnlCls = pnl > 0 ? 'pos' : pnl < 0 ? 'neg' : 'muted';
+    var pnlStr = pnl !== 0 ? (pnl > 0 ? '+$' : '-$') + Math.abs(pnl).toFixed(2) : '--';
+    var dirCls = t.direction === 'BUY' ? 'pos' : 'neg';
+    return '<div class="trade-row">'
+      + '<span class="mono" style="font-size:10px">' + (t.pair||'--') + '</span>'
+      + '<span class="' + dirCls + '" style="font-size:9px;font-weight:700">' + (t.direction||'--') + '</span>'
+      + '<span class="mono" style="font-size:9px;color:var(--muted2)">' + (t.entry||'--') + '</span>'
+      + '<span class="' + pnlCls + ' mono" style="font-size:10px;font-weight:700">' + pnlStr + '</span>'
+      + '</div>';
+  }).join('');
+}
+</script>
 <script>
 /* AUTO-DISCOVER TUNNEL URL FROM GIST */
 const META_URL = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json";
