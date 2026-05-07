@@ -1580,80 +1580,54 @@ All existing IDs preserved. New IDs added:
 -->
 
 
+
+
+
 <script>
-/* REAL-TIME WEBSOCKET */
-const WS_URL = "wss://api.trycloudflare.com/ws";
-const REST_URL = "https://api.trycloudflare.com/data";
-let ws=null, retries=0;
+/* AUTO-DISCOVER TUNNEL URL FROM GIST */
+const META_URL = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json";
+let ws = null, retries = 0;
 
-function connect() {
-  ws = new WebSocket(WS_URL);
-  ws.onopen = () => { retries=0; console.log("[WS] connected");
-    const d=document.getElementById("hdr-live-dot"); if(d) d.style.background="var(--green)"; };
-  ws.onmessage = (e) => { try{ applyLiveData(JSON.parse(e.data)); pumpHeartbeat(14+Math.random()*12); }catch(x){} };
+async function discoverAndConnect() {
+  try {
+    const d = await fetch(META_URL + "?nc=" + Date.now(), {cache:"no-store"}).then(r=>r.json());
+    const host = d.tunnel_url;
+    if (!host) { setTimeout(discoverAndConnect, 10000); return; }
+    const wss = "wss://" + host + "/ws";
+    const rest = "https://" + host + "/data";
+    console.log("[WS] connecting to", wss);
+    connectWS(wss, rest);
+  } catch(e) {
+    console.warn("[discover]", e);
+    setTimeout(discoverAndConnect, 10000);
+  }
+}
+
+function connectWS(wss, rest) {
+  if (ws) { try { ws.close(); } catch(e){} }
+  ws = new WebSocket(wss);
+  ws.onopen = () => {
+    retries = 0;
+    const d = document.getElementById("hdr-live-dot");
+    if (d) d.style.background = "var(--green)";
+    console.log("[WS] connected");
+  };
+  ws.onmessage = (e) => {
+    try { applyLiveData(JSON.parse(e.data)); pumpHeartbeat(14+Math.random()*12); } catch(x){}
+  };
   ws.onclose = () => {
-    const d=document.getElementById("hdr-live-dot"); if(d) d.style.background="var(--red)";
-    setTimeout(connect, Math.min(30000, 1000*Math.pow(1.5,retries++))); };
+    const d = document.getElementById("hdr-live-dot");
+    if (d) d.style.background = "var(--red)";
+    retries++;
+    if (retries > 3) { setTimeout(discoverAndConnect, 5000); return; }
+    setTimeout(() => connectWS(wss, rest), Math.min(30000, 2000*retries));
+  };
+  // REST fallback
+  fetch(rest, {cache:"no-store"}).then(r=>r.json()).then(applyLiveData).catch(()=>{});
+  setInterval(() => fetch(rest,{cache:"no-store"}).then(r=>r.json()).then(applyLiveData).catch(()=>{}), 60000);
 }
 
-function renderPositions(pos) {
-  const tb=document.getElementById("positions-tbody"); if(!tb) return;
-  if(!pos||!pos.length){tb.innerHTML="<tr><td colspan=10 class=ph>No open positions</td></tr>";updateOpenTrades(0);return;}
-  tb.innerHTML=pos.map(p=>{const pnl=p.pnl||0,cls=pnl>=0?"pos":"neg";
-    return `<tr><td>${p.pair}</td><td class="${p.direction==="BUY"?"pos":"neg"}">${p.direction}</td>
-    <td>${p.lots}</td><td>${p.entry}</td><td>-</td><td>${p.sl}</td><td>${p.tp}</td>
-    <td class="${cls}">${pnl>=0?"+":"-"}$${Math.abs(pnl).toFixed(2)}</td>
-    <td>-</td><td>${p.strategy||"SMC"}</td></tr>`;}).join("");
-  updateOpenTrades(pos.length);
-}
-
-function renderRegime(regime) {
-  const strip=document.getElementById("home-reg-strip"); if(!strip||!regime) return;
-  const pairs=["XAUUSD","EURUSD","GBPUSD","USDJPY","AUDUSD","NZDUSD","USDCAD","USDCHF"];
-  let t=0;
-  strip.innerHTML=pairs.map(pair=>{
-    const r=regime[pair]||{};
-    const dir=r.dir==="up"?"📈":r.dir==="dn"?"📉":"—";
-    const cls=r.dir==="up"?"trend-up":r.dir==="dn"?"trend-dn":r.adx>20?"ranging":"";
-    if(r.tradeable)t++;
-    return `<div class="reg-cell ${cls}"><div class="reg-pair">${pair}</div>
-    <div class="reg-dir">${dir}</div><div class="reg-adx">ADX ${r.adx?Math.round(r.adx):"—"}</div></div>`;
-  }).join("");
-  updatePipeline(t,8);
-}
-
-function renderClosedTrades(trades) {
-  const tb=document.getElementById("shadow-tracker-tbody"); if(!tb) return;
-  if(!trades||!trades.length){tb.innerHTML="<tr><td colspan=8 class=ph>No closed trades</td></tr>";return;}
-  tb.innerHTML=trades.slice(0,20).map(t=>{const pnl=t.pnl||0,cls=pnl>=0?"pos":"neg";
-    return `<tr><td>${t.pair}</td><td>${t.direction}</td><td>${t.entry}</td><td>${t.exit||"-"}</td>
-    <td class="${cls}">${pnl>=0?"+":"-"}$${Math.abs(pnl).toFixed(2)}</td>
-    <td>${t.session||"-"}</td><td>${t.duration||"-"}</td>
-    <td class="${cls}">${pnl>=0?"✅TP":"❌SL"}</td></tr>`;}).join("");
-}
-
-function applyLiveData(d) {
-  if(d.balance    !=null) updateBalance(d.balance);
-  if(d.open_trades!=null) updateOpenTrades(d.open_trades);
-  if(d.ai_online  !=null) updateAIModels(d.ai_online);
-  if(d.pipeline)          updatePipeline(d.pipeline.tradeable,d.pipeline.total);
-  if(d.risk_state)        setRiskState(d.risk_state);
-  if(d.positions)         renderPositions(d.positions);
-  if(d.regime)            renderRegime(d.regime);
-  if(d.closed_trades)     renderClosedTrades(d.closed_trades);
-  if(d.daily_dd!=null){const e=document.getElementById("daily-dd");if(e)e.textContent=Number(d.daily_dd).toFixed(2)+"%";}
-  if(d.consec_loss!=null){const e=document.getElementById("consec-loss");if(e)e.textContent=d.consec_loss+" / 3";}
-  if(d.ticks!=null){const e=document.getElementById("sys-ticks");if(e)e.textContent=d.ticks;}
-  if(d.signals!=null){const e=document.getElementById("sys-signals");if(e)e.textContent=d.signals;}
-  const ts=d.server_ts||d.ts||"—";
-  ["home-updated","last-updated-display"].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent="Updated: "+ts;});
-  setSystemState(true,"Live · "+ts);
-  if(d.wd_ok!=null) setWatchdogState(d.wd_ok,"auto-restart active");
-}
-
-connect();
-fetch(REST_URL,{cache:"no-store"}).then(r=>r.json()).then(applyLiveData).catch(e=>console.warn("[REST]",e));
-setInterval(()=>{fetch(REST_URL,{cache:"no-store"}).then(r=>r.json()).then(applyLiveData).catch(()=>{});},60000);
+discoverAndConnect();
 </script>
 
 </body>
