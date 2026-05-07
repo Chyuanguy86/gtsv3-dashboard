@@ -1629,7 +1629,7 @@ const META_URL = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a17
 (async function poll() {
   try {
     const d = await fetch("https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json?nc="+Date.now(),{cache:"no-store"}).then(r=>r.json());
-    applyLiveData(d); pumpHeartbeat(20);
+    console.log("[poll] data:", d.balance, d.ai_online, d.pipeline); applyLiveData(d); pumpHeartbeat(20);
   } catch(e) { console.warn("[poll]",e); }
   setTimeout(poll, 10000);
 })();
