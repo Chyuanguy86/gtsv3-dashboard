@@ -2,615 +2,695 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>GTSv3.3 · Terminal</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>GTSv3.3 · NEXUS</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════
-   FUTURISTIC DESIGN SYSTEM
-═══════════════════════════════════════ */
-:root{
-  --bg:      #020710;
-  --s1:      #080f1e;
-  --s2:      #0d1829;
-  --s3:      #132236;
-  --border:  #1a3354;
-  --b2:      #25477a;
-  --b3:      #1e6eb5;
+/* ══════════════════════════════════════════
+   NEXUS DESIGN SYSTEM — FUTURISTIC
+══════════════════════════════════════════ */
+:root {
+  --bg:       #04070f;
+  --bg2:      #060b17;
+  --surface:  #0a1020;
+  --s2:       #0e1830;
+  --s3:       #121f3a;
+  --border:   #0d2040;
+  --border2:  #1a3a60;
+  --glow:     rgba(0,200,255,0.08);
 
-  --neon:    #00d4ff;
-  --neon2:   #7c3aed;
-  --gold:    #f59e0b;
-  --green:   #00ff88;
-  --red:     #ff3860;
-  --warn:    #ffb800;
-  --blue:    #3b82f6;
-  --purple:  #a855f7;
+  --cyan:     #00d4ff;
+  --cyan2:    #00a8cc;
+  --gold:     #ffc107;
+  --gold2:    #ff9800;
+  --green:    #00ff88;
+  --green2:   #00cc6a;
+  --red:      #ff3366;
+  --red2:     #cc1a44;
+  --purple:   #9b59ff;
+  --orange:   #ff6b35;
 
-  --text:    #e0f0ff;
-  --muted:   #3a5f8a;
-  --muted2:  #6a8fbc;
+  --text:     #e0f0ff;
+  --muted:    #3a5a80;
+  --muted2:   #6a90b8;
 
-  --mono:   'JetBrains Mono',monospace;
-  --orb:    'Orbitron',sans-serif;
-  --sans:   'DM Sans',system-ui,sans-serif;
+  --mono:     'JetBrains Mono', monospace;
+  --display:  'Orbitron', monospace;
+  --ui:       'Rajdhani', system-ui, sans-serif;
 
-  --nav-h:  60px;
-  --hdr-h:  54px;
+  --nav-h:    58px;
+  --head-h:   50px;
 }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html,body{height:100%;overflow:hidden;-webkit-font-smoothing:antialiased;}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
 
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--sans);
-  font-size:13px;
-  display:flex;
-  flex-direction:column;
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ui);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  background-image:
+    radial-gradient(ellipse 120% 60% at 50% -10%, rgba(0,212,255,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(155,89,255,0.03) 0%, transparent 50%);
 }
 
-/* ── Global background ── */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(ellipse 60% 40% at 20% 0%,rgba(0,212,255,.04) 0%,transparent 60%),
-    radial-gradient(ellipse 40% 30% at 80% 100%,rgba(124,58,237,.04) 0%,transparent 60%),
-    repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(26,51,84,.15) 40px),
-    repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(26,51,84,.1) 40px);
-  pointer-events:none;
-  z-index:0;
+::-webkit-scrollbar { width: 2px; height: 2px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* ══ SCANLINE overlay ══ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,212,255,0.008) 2px, rgba(0,212,255,0.008) 4px);
+  pointer-events: none;
+  z-index: 1000;
 }
 
-::-webkit-scrollbar{width:2px;height:2px;}
-::-webkit-scrollbar-track{background:transparent;}
-::-webkit-scrollbar-thumb{background:var(--b2);border-radius:1px;}
-
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════════════
    HEADER
-═══════════════════════════════════════ */
-.header{
-  height:var(--hdr-h);
-  background:rgba(8,15,30,.95);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;
-  padding:0 12px;gap:10px;
-  flex-shrink:0;
-  position:relative;z-index:60;
-  backdrop-filter:blur(12px);
-}
-.brand{
-  font-family:var(--orb);
-  font-size:15px;font-weight:700;
-  color:var(--neon);
-  letter-spacing:.08em;
-  text-shadow:0 0 20px rgba(0,212,255,.4);
-  flex-shrink:0;
-}
-.brand-ver{
-  font-family:var(--mono);
-  font-size:8px;padding:2px 6px;
-  background:rgba(0,212,255,.06);
-  border:1px solid rgba(0,212,255,.2);
-  border-radius:4px;color:var(--neon);
-  letter-spacing:.06em;flex-shrink:0;
+══════════════════════════════════════════ */
+.header {
+  height: var(--head-h);
+  background: rgba(10,16,32,0.95);
+  border-bottom: 1px solid var(--border2);
+  box-shadow: 0 1px 20px rgba(0,212,255,0.06);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 50;
+  backdrop-filter: blur(10px);
 }
 
-/* Account switcher */
-.acct-tabs{
-  display:flex;align-items:center;gap:2px;
-  background:rgba(13,24,41,.8);
-  border:1px solid var(--border);
-  border-radius:8px;padding:3px;
-  flex-shrink:0;
+.brand {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: .08em;
+  text-shadow: 0 0 20px rgba(0,212,255,0.5);
+  flex-shrink: 0;
 }
-.acct-tab{
-  padding:4px 10px;border-radius:5px;
-  font-size:9px;font-weight:700;
-  letter-spacing:.08em;text-transform:uppercase;
-  cursor:pointer;transition:all .2s;
-  color:var(--muted2);
-}
-.acct-tab.active{
-  background:rgba(0,212,255,.12);
-  color:var(--neon);
-  box-shadow:0 0 8px rgba(0,212,255,.1);
-}
-.acct-tab.live-tab.active{
-  background:rgba(0,255,136,.1);
-  color:var(--green);
-  box-shadow:0 0 8px rgba(0,255,136,.1);
+.brand-ver {
+  font-family: var(--mono);
+  font-size: 8px;
+  padding: 2px 5px;
+  background: rgba(0,212,255,0.06);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 3px;
+  color: var(--cyan2);
+  letter-spacing: .06em;
+  flex-shrink: 0;
 }
 
-.hdr-spacer{flex:1;}
+/* Session ticker in header */
+.session-ticker {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+}
+.session-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 100px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  border: 1px solid;
+  transition: all .3s;
+  flex-shrink: 0;
+}
+.session-pill.active-session {
+  animation: sessionpulse 2s infinite;
+}
+@keyframes sessionpulse {
+  0%,100% { box-shadow: 0 0 0 0 currentColor; }
+  50%      { box-shadow: 0 0 8px 2px rgba(current, 0.3); }
+}
+.session-sydney { color: #94a3b8; border-color: rgba(148,163,184,.25); background: rgba(148,163,184,.05); }
+.session-tokyo  { color: #f59e0b; border-color: rgba(245,158,11,.3);  background: rgba(245,158,11,.06); }
+.session-london { color: #60a5fa; border-color: rgba(96,165,250,.35); background: rgba(96,165,250,.07); }
+.session-newyork{ color: #10b981; border-color: rgba(16,185,129,.35); background: rgba(16,185,129,.07); }
+.session-pill.active-session.session-london { box-shadow: 0 0 10px rgba(96,165,250,.3); }
+.session-pill.active-session.session-newyork{ box-shadow: 0 0 10px rgba(16,185,129,.3); }
+.session-pill.active-session.session-tokyo  { box-shadow: 0 0 10px rgba(245,158,11,.3); }
 
-.hdr-clock{
-  font-family:var(--orb);
-  font-size:12px;color:var(--neon);
-  letter-spacing:.06em;flex-shrink:0;
-  text-shadow:0 0 12px rgba(0,212,255,.3);
+.header-clock {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted2);
+  flex-shrink: 0;
 }
-.live-dot{
-  width:7px;height:7px;border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 8px var(--green);
-  animation:livepulse 1.5s infinite;flex-shrink:0;
+.live-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: livepulse 1.8s infinite;
+  flex-shrink: 0;
 }
-@keyframes livepulse{
-  0%,100%{opacity:1;box-shadow:0 0 8px var(--green);}
-  50%{opacity:.5;box-shadow:0 0 16px var(--green);}
-}
-
-/* ═══════════════════════════════════════
-   SESSIONS BAR
-═══════════════════════════════════════ */
-.sessions-bar{
-  height:36px;
-  background:rgba(8,15,30,.95);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;
-  padding:0 12px;gap:6px;
-  flex-shrink:0;
-  overflow-x:auto;
-  position:relative;z-index:50;
-}
-.sessions-bar::-webkit-scrollbar{display:none;}
-.session-chip{
-  display:flex;align-items:center;gap:5px;
-  padding:4px 10px;border-radius:6px;
-  border:1px solid var(--border);
-  background:rgba(13,24,41,.6);
-  white-space:nowrap;transition:all .3s;
-  flex-shrink:0;
-}
-.session-chip.active{
-  background:rgba(0,212,255,.07);
-  border-color:rgba(0,212,255,.3);
-  box-shadow:0 0 12px rgba(0,212,255,.08);
-}
-.session-chip.sydney.active{
-  background:rgba(168,85,247,.07);
-  border-color:rgba(168,85,247,.3);
-  box-shadow:0 0 12px rgba(168,85,247,.08);
-}
-.session-chip.tokyo.active{
-  background:rgba(255,184,0,.07);
-  border-color:rgba(255,184,0,.3);
-}
-.session-chip.london.active{
-  background:rgba(0,212,255,.07);
-  border-color:rgba(0,212,255,.3);
-}
-.session-chip.ny.active{
-  background:rgba(0,255,136,.07);
-  border-color:rgba(0,255,136,.3);
-}
-.session-label{
-  font-size:9px;font-weight:700;
-  letter-spacing:.1em;text-transform:uppercase;
-}
-.session-time{
-  font-family:var(--mono);
-  font-size:9px;color:var(--muted2);
-}
-.session-state{
-  font-size:8px;font-weight:700;
-  letter-spacing:.08em;
-  padding:1px 5px;border-radius:3px;
-}
-.s-open{background:rgba(0,255,136,.15);color:var(--green);}
-.s-closed{background:rgba(58,95,138,.15);color:var(--muted2);}
-.session-dot{
-  width:5px;height:5px;border-radius:50%;flex-shrink:0;
+@keyframes livepulse {
+  0%,100% { opacity:1; box-shadow: 0 0 8px var(--green); }
+  50%      { opacity:.4; box-shadow: 0 0 2px var(--green); }
 }
 
-/* ═══════════════════════════════════════
-   PAGE SYSTEM
-═══════════════════════════════════════ */
-.pages{flex:1;overflow:hidden;position:relative;z-index:1;}
-.page{
-  position:absolute;inset:0;
-  overflow-y:auto;
-  padding:8px 8px calc(var(--nav-h) + 8px);
-  display:none;flex-direction:column;gap:7px;
+/* ══════════════════════════════════════════
+   ACCOUNT SELECTOR BAR
+══════════════════════════════════════════ */
+.account-bar {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 12px;
+  height: 34px;
+  background: rgba(6,11,23,0.95);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
-.page.active{display:flex;}
+.account-bar::-webkit-scrollbar { display: none; }
+.account-tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 12px;
+  height: 100%;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .07em;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+.account-tab.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+.account-tab:hover  { color: var(--muted2); }
+.account-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.account-balance { color: var(--gold); }
+.account-sep { width: 1px; height: 16px; background: var(--border); margin: 0 4px; flex-shrink: 0; }
 
-/* ═══════════════════════════════════════
-   BOTTOM NAV
-═══════════════════════════════════════ */
-.nav{
-  height:var(--nav-h);
-  background:rgba(8,15,30,.97);
-  border-top:1px solid var(--border);
-  display:flex;flex-shrink:0;
-  position:relative;z-index:60;
-  backdrop-filter:blur(12px);
+/* ══════════════════════════════════════════
+   PAGES
+══════════════════════════════════════════ */
+.pages { flex: 1; overflow: hidden; position: relative; }
+.page {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 8px;
+  gap: 7px;
+  display: none;
+  flex-direction: column;
+  padding-bottom: calc(var(--nav-h) + 8px);
 }
-.nav::before{
-  content:'';position:absolute;
-  top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--neon),var(--neon2),transparent);
-  opacity:.3;
-}
-.nav-item{
-  flex:1;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:3px;
-  cursor:pointer;transition:background .15s;
-  padding:6px 2px;position:relative;
-  -webkit-tap-highlight-color:transparent;
-}
-.nav-item:active{background:rgba(0,212,255,.04);}
-.nav-item.active::before{
-  content:'';position:absolute;
-  top:-1px;left:20%;right:20%;height:2px;
-  background:var(--neon);
-  box-shadow:0 0 8px var(--neon);
-  border-radius:0 0 2px 2px;
-}
-.nav-icon{font-size:17px;line-height:1;transition:transform .2s;}
-.nav-item.active .nav-icon{transform:translateY(-1px);}
-.nav-lbl{
-  font-size:8px;font-weight:600;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--muted);
-  transition:color .15s;
-}
-.nav-item.active .nav-lbl{color:var(--neon);}
-.nav-badge{
-  position:absolute;top:5px;
-  right:calc(50% - 18px);
-  background:var(--red);color:#fff;
-  font-size:7px;font-weight:700;
-  min-width:13px;height:13px;
-  border-radius:7px;padding:0 3px;
-  display:flex;align-items:center;justify-content:center;
-  border:1px solid var(--s1);
-}
+.page.active { display: flex; }
 
-/* ═══════════════════════════════════════
-   CARDS
-═══════════════════════════════════════ */
-.card{
-  background:rgba(8,15,30,.85);
-  border:1px solid var(--border);
-  border-radius:12px;overflow:hidden;
-  backdrop-filter:blur(8px);
-  flex-shrink:0;
-  position:relative;
+/* ══════════════════════════════════════════
+   BOTTOM NAV — FUTURISTIC
+══════════════════════════════════════════ */
+.nav {
+  height: var(--nav-h);
+  background: rgba(10,16,32,0.98);
+  border-top: 1px solid var(--border2);
+  box-shadow: 0 -1px 30px rgba(0,212,255,0.05);
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 50;
+  backdrop-filter: blur(10px);
 }
-.card::before{
-  content:'';position:absolute;
-  top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(0,212,255,.15),transparent);
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+  padding-top: 4px;
+  transition: all .2s;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
 }
-.card-head{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:9px 13px;
-  background:rgba(13,24,41,.6);
-  border-bottom:1px solid var(--border);
+.nav-item.active { border-top-color: var(--cyan); }
+.nav-item.active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 20%; right: 20%;
+  height: 1px;
+  background: var(--cyan);
+  box-shadow: 0 0 12px var(--cyan);
 }
-.card-title{
-  font-size:9px;font-weight:700;
-  letter-spacing:.14em;text-transform:uppercase;
-  color:var(--muted2);font-family:var(--sans);
+.nav-icon {
+  font-size: 17px;
+  transition: transform .2s;
+  filter: grayscale(1) opacity(.5);
 }
-.card-body{padding:12px 13px;}
-.card-flush{}
-
-/* ═══════════════════════════════════════
-   BADGES
-═══════════════════════════════════════ */
-.badge{
-  display:inline-flex;align-items:center;gap:4px;
-  padding:2px 8px;border-radius:100px;
-  font-size:8px;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;
+.nav-item.active .nav-icon { filter: none; transform: translateY(-1px); }
+.nav-label {
+  font-family: var(--display);
+  font-size: 7px;
+  letter-spacing: .12em;
+  color: var(--muted);
+  transition: color .2s;
+  text-transform: uppercase;
 }
-.b-neon  {background:rgba(0,212,255,.1); color:var(--neon);   border:1px solid rgba(0,212,255,.25);}
-.b-green {background:rgba(0,255,136,.08);color:var(--green);  border:1px solid rgba(0,255,136,.2);}
-.b-red   {background:rgba(255,56,96,.1); color:var(--red);    border:1px solid rgba(255,56,96,.25);}
-.b-gold  {background:rgba(245,158,11,.1);color:var(--gold);   border:1px solid rgba(245,158,11,.25);}
-.b-purple{background:rgba(168,85,247,.1);color:var(--purple); border:1px solid rgba(168,85,247,.25);}
-.b-muted {background:rgba(58,95,138,.1); color:var(--muted2); border:1px solid var(--border);}
-
-.dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0;}
-.dot-live{animation:dotlive 1.8s infinite;}
-@keyframes dotlive{
-  0%,100%{opacity:1;box-shadow:0 0 4px currentColor;}
-  50%{opacity:.4;box-shadow:0 0 0px currentColor;}
-}
-
-.mono{font-family:var(--mono);}
-.orb {font-family:var(--orb);}
-.muted{color:var(--muted2);}
-.pos  {color:var(--green);}
-.neg  {color:var(--red);}
-.warn {color:var(--warn);}
-.neon {color:var(--neon);}
-.gold {color:var(--gold);}
-
-.row-bw{display:flex;align-items:center;justify-content:space-between;}
-.row-c {display:flex;align-items:center;gap:6px;}
-.col-g {display:flex;flex-direction:column;gap:6px;}
-
-.xs{font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.divider{height:1px;background:var(--border);margin:8px 0;}
-.ph{color:var(--muted);font-size:10px;text-align:center;padding:16px;font-style:italic;}
-
-/* ═══════════════════════════════════════
-   HOME — ALIVE BANNER
-═══════════════════════════════════════ */
-.alive{
-  background:linear-gradient(135deg,rgba(0,212,255,.05) 0%,rgba(124,58,237,.04) 100%);
-  border:1px solid rgba(0,212,255,.2);
-  border-radius:12px;padding:12px;
-  display:flex;align-items:center;gap:12px;
-  position:relative;overflow:hidden;
-}
-.alive::after{
-  content:'';position:absolute;
-  top:-30px;right:-30px;
-  width:80px;height:80px;
-  background:radial-gradient(circle,rgba(0,212,255,.06) 0%,transparent 70%);
-  pointer-events:none;
-}
-.alive-icon{
-  width:44px;height:44px;border-radius:10px;
-  background:rgba(0,212,255,.08);
-  border:1px solid rgba(0,212,255,.2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:20px;flex-shrink:0;
-}
-.alive-title{
-  font-family:var(--orb);
-  font-size:12px;font-weight:600;
-  color:var(--neon);letter-spacing:.06em;
-  text-shadow:0 0 12px rgba(0,212,255,.3);
-}
-.alive-sub{font-size:9px;color:var(--muted2);margin-top:2px;}
-
-/* ── Monitor cards ── */
-.mon-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
-.mon-card{
-  border-radius:10px;padding:11px;
-  border:1px solid;transition:all .3s;
-  position:relative;overflow:hidden;
-}
-.mon-card::before{
-  content:'';position:absolute;
-  top:0;left:0;right:0;height:2px;
-  background:currentColor;opacity:.3;
-}
-.mon-ok   {border-color:rgba(0,255,136,.25);background:rgba(0,255,136,.03);color:var(--green);}
-.mon-err  {border-color:rgba(255,56,96,.3);background:rgba(255,56,96,.04);color:var(--red);animation:errg 1.5s infinite;}
-.mon-warn {border-color:rgba(255,184,0,.3);background:rgba(255,184,0,.03);color:var(--warn);}
-@keyframes errg{0%,100%{box-shadow:none;}50%{box-shadow:0 0 16px rgba(255,56,96,.15);}}
-.mon-emoji{font-size:20px;margin-bottom:3px;display:block;}
-.mon-name{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);}
-.mon-state{font-family:var(--orb);font-size:12px;font-weight:600;margin:2px 0;line-height:1;}
-.mon-meta{font-size:8px;color:var(--muted2);}
-
-/* ── Heartbeat trace ── */
-.hb-wrap{
-  background:rgba(0,212,255,.03);
-  border:1px solid rgba(0,212,255,.1);
-  border-radius:8px;height:36px;overflow:hidden;position:relative;
-}
-.hb-wrap::after{
-  content:'';position:absolute;
-  bottom:0;left:0;right:0;height:1px;
-  background:rgba(0,212,255,.15);
-}
-.hb-svg{width:100%;height:100%;}
-
-/* ── Process rows ── */
-.proc{
-  display:flex;align-items:center;gap:8px;
-  padding:7px 10px;
-  background:rgba(13,24,41,.5);
-  border:1px solid var(--border);
-  border-radius:8px;
-}
-.proc-name{flex:1;font-size:11px;font-weight:500;font-family:var(--mono);}
-.proc-pid{font-family:var(--mono);font-size:8px;color:var(--muted2);}
-
-/* ── KPI grid ── */
-.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
-.kpi{
-  background:rgba(8,15,30,.8);
-  border:1px solid var(--border);
-  border-radius:10px;padding:11px 12px;
-  display:flex;flex-direction:column;gap:4px;
-  position:relative;overflow:hidden;
-}
-.kpi::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--c,var(--border));opacity:.6;}
-.kpi-val{font-family:var(--orb);font-size:20px;font-weight:700;line-height:1;letter-spacing:.02em;}
-.kpi-lbl{font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-
-/* ── Regime strip ── */
-.reg-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;}
-.reg-cell{
-  background:rgba(13,24,41,.6);
-  border:1px solid var(--border);
-  border-radius:7px;padding:7px 5px;
-  text-align:center;transition:all .3s;
-}
-.reg-cell.trend-up{border-color:rgba(0,255,136,.25);background:rgba(0,255,136,.04);}
-.reg-cell.trend-dn{border-color:rgba(255,56,96,.25);background:rgba(255,56,96,.04);}
-.reg-cell.ranging {border-color:rgba(245,158,11,.2);background:rgba(245,158,11,.03);}
-.reg-pair{font-family:var(--mono);font-size:8px;font-weight:700;color:var(--text);}
-.reg-dir {font-size:13px;line-height:1;margin:2px 0;}
-.reg-adx {font-family:var(--mono);font-size:7px;color:var(--muted2);}
-
-/* ═══════════════════════════════════════
-   NEWS
-═══════════════════════════════════════ */
-.news-item{
-  padding:9px 0;
-  border-bottom:1px solid rgba(26,51,84,.6);
-  display:flex;flex-direction:column;gap:4px;
-}
-.news-item:last-child{border-bottom:none;}
-.news-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
-.news-time{font-family:var(--mono);font-size:9px;font-weight:700;}
-.news-currency{
-  font-family:var(--mono);font-size:8px;font-weight:700;
-  padding:1px 5px;border-radius:3px;
-}
-.news-ccy-usd{background:rgba(0,255,136,.1);color:var(--green);}
-.news-ccy-eur{background:rgba(0,212,255,.1);color:var(--neon);}
-.news-ccy-gbp{background:rgba(168,85,247,.1);color:var(--purple);}
-.news-ccy-jpy{background:rgba(255,184,0,.1);color:var(--warn);}
-.news-ccy-other{background:rgba(58,95,138,.15);color:var(--muted2);}
-.news-impact{
-  font-size:7px;font-weight:800;letter-spacing:.1em;
-  padding:1px 5px;border-radius:3px;
-  text-transform:uppercase;
-}
-.imp-high{background:rgba(255,56,96,.15);color:var(--red);}
-.imp-med {background:rgba(255,184,0,.12);color:var(--warn);}
-.imp-low {background:rgba(58,95,138,.15);color:var(--muted2);}
-.news-event{font-size:11px;color:var(--text);line-height:1.4;}
-.news-val{font-family:var(--mono);font-size:9px;color:var(--muted2);margin-top:1px;}
-.news-session-tag{
-  display:inline-flex;align-items:center;gap:3px;
-  font-size:7px;padding:1px 5px;border-radius:3px;
-  background:rgba(0,212,255,.06);color:var(--muted2);
+.nav-item.active .nav-label { color: var(--cyan); }
+.nav-badge {
+  position: absolute;
+  top: 4px;
+  right: calc(50% - 18px);
+  background: var(--red);
+  color: #fff;
+  font-size: 7px;
+  font-weight: 700;
+  min-width: 13px; height: 13px;
+  border-radius: 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  box-shadow: 0 0 8px var(--red);
 }
 
-/* ═══════════════════════════════════════
-   TABLES
-═══════════════════════════════════════ */
-.tbl{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px;}
-.tbl th{
-  text-align:left;padding:7px 10px;
-  font-size:7px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);border-bottom:1px solid var(--border);
-  background:rgba(13,24,41,.8);
-  position:sticky;top:0;z-index:2;
+/* ══════════════════════════════════════════
+   CARDS — NEXUS STYLE
+══════════════════════════════════════════ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
 }
-.tbl td{
-  padding:7px 10px;
-  border-bottom:1px solid rgba(26,51,84,.4);
-  color:var(--muted2);vertical-align:middle;
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border2), transparent);
 }
-.tbl tr:last-child td{border-bottom:none;}
-.tbl tr:hover td{background:rgba(0,212,255,.03);color:var(--text);}
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 13px;
+  background: rgba(14,24,48,0.8);
+  border-bottom: 1px solid var(--border);
+}
+.card-title {
+  font-family: var(--display);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--muted2);
+}
+.card-body { padding: 11px 13px; }
 
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════════════
+   BADGE — NEXUS
+══════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+}
+.b-cyan   { background: rgba(0,212,255,.1);  color: var(--cyan);  border: 1px solid rgba(0,212,255,.25); }
+.b-green  { background: rgba(0,255,136,.08); color: var(--green); border: 1px solid rgba(0,255,136,.2); }
+.b-red    { background: rgba(255,51,102,.1); color: var(--red);   border: 1px solid rgba(255,51,102,.25); }
+.b-gold   { background: rgba(255,193,7,.08); color: var(--gold);  border: 1px solid rgba(255,193,7,.2); }
+.b-purple { background: rgba(155,89,255,.1); color: var(--purple);border: 1px solid rgba(155,89,255,.25); }
+.b-muted  { background: rgba(58,90,128,.15); color: var(--muted2);border: 1px solid var(--border2); }
+
+/* ══ GLOWING DOT ══ */
+.gdot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 6px currentColor; flex-shrink: 0; }
+.gdot-pulse { animation: gdotpulse 1.8s infinite; }
+@keyframes gdotpulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* ══════════════════════════════════════════
+   SESSION INDICATOR (full display)
+══════════════════════════════════════════ */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5px;
+}
+.session-card {
+  border-radius: 7px;
+  padding: 9px 8px;
+  text-align: center;
+  border: 1px solid;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
+}
+.session-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.session-card.active::after { opacity: .04; }
+.session-card.active { box-shadow: 0 0 20px -5px currentColor; }
+.session-name  { font-family: var(--display); font-size: 8px; letter-spacing: .12em; margin-bottom: 3px; }
+.session-time  { font-family: var(--mono); font-size: 10px; font-weight: 600; margin-bottom: 2px; }
+.session-pairs { font-size: 8px; color: var(--muted2); }
+.session-status{ font-family: var(--mono); font-size: 9px; font-weight: 700; margin-top: 3px; }
+
+/* ══════════════════════════════════════════
+   SYSTEM MONITOR
+══════════════════════════════════════════ */
+.alive-banner {
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid;
+  position: relative;
+  overflow: hidden;
+}
+.alive-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: .03;
+}
+.alive-ok   { color: var(--green);  border-color: rgba(0,255,136,.2);  background: rgba(0,255,136,.04); }
+.alive-warn { color: var(--gold);   border-color: rgba(255,193,7,.25);  background: rgba(255,193,7,.04); }
+.alive-err  { color: var(--red);    border-color: rgba(255,51,102,.3);  background: rgba(255,51,102,.05); animation: errglow 1.5s infinite; }
+@keyframes errglow { 0%,100%{box-shadow:none} 50%{box-shadow:0 0 20px rgba(255,51,102,.15)} }
+
+.alive-icon { font-size: 24px; flex-shrink: 0; }
+.alive-title { font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.alive-sub { font-size: 10px; color: var(--muted2); margin-top: 2px; }
+
+/* Monitor cards */
+.monitor-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.monitor-card {
+  border-radius: 8px;
+  padding: 10px 11px;
+  border: 1px solid;
+  transition: all .3s;
+}
+.mc-ok   { border-color: rgba(0,255,136,.2);  background: rgba(0,255,136,.03); }
+.mc-err  { border-color: rgba(255,51,102,.3);  background: rgba(255,51,102,.05); animation: errglow 1.5s infinite; }
+.mc-warn { border-color: rgba(255,193,7,.25);  background: rgba(255,193,7,.03); }
+.mc-icon { font-size: 18px; margin-bottom: 3px; }
+.mc-name { font-family: var(--display); font-size: 8px; letter-spacing: .1em; color: var(--muted2); }
+.mc-state{ font-family: var(--mono); font-size: 12px; font-weight: 700; margin: 2px 0; }
+.mc-meta { font-size: 9px; color: var(--muted); }
+
+/* Heartbeat */
+.hb-wrap { border-radius: 6px; background: rgba(0,0,0,.3); padding: 5px; margin-top: 5px; border: 1px solid var(--border); }
+.hb-svg  { width: 100%; height: 26px; display: block; }
+
+/* Process list */
+.proc-list { display: flex; flex-direction: column; gap: 4px; }
+.proc-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: var(--s2);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+.proc-name { flex: 1; font-size: 11px; font-weight: 600; font-family: var(--mono); }
+.proc-pid  { font-family: var(--mono); font-size: 9px; color: var(--muted2); }
+.proc-status { font-family: var(--mono); font-size: 9px; font-weight: 700; }
+
+/* ══════════════════════════════════════════
+   KPI
+══════════════════════════════════════════ */
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  position: relative;
+  overflow: hidden;
+}
+.kpi::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: currentColor;
+  opacity: .4;
+}
+.kpi-gold   { color: var(--gold); }
+.kpi-green  { color: var(--green); }
+.kpi-cyan   { color: var(--cyan); }
+.kpi-purple { color: var(--purple); }
+.kpi-val { font-family: var(--display); font-size: 18px; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+.kpi-lbl { font-family: var(--display); font-size: 7px; letter-spacing: .12em; color: var(--muted2); text-transform: uppercase; }
+
+/* ══════════════════════════════════════════
+   NEWS FEED
+══════════════════════════════════════════ */
+.news-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.news-item {
+  display: flex;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(13,32,64,.8);
+  align-items: flex-start;
+}
+.news-item:last-child { border-bottom: none; }
+.news-impact {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  min-width: 28px;
+  text-align: center;
+}
+.ni-high { background: rgba(255,51,102,.15); color: var(--red); border: 1px solid rgba(255,51,102,.3); }
+.ni-med  { background: rgba(255,193,7,.1);   color: var(--gold); border: 1px solid rgba(255,193,7,.25); }
+.ni-low  { background: rgba(58,90,128,.15);   color: var(--muted2); border: 1px solid var(--border); }
+.news-body { flex: 1; min-width: 0; }
+.news-time { font-family: var(--mono); font-size: 9px; color: var(--cyan2); margin-bottom: 2px; }
+.news-title { font-size: 11px; color: var(--text); line-height: 1.4; }
+.news-ccy { font-size: 9px; color: var(--muted2); margin-top: 1px; }
+
+/* Blocked pairs strip */
+.blocked-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 0 2px;
+}
+.blocked-pair {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+  background: rgba(255,51,102,.1);
+  color: var(--red);
+  border: 1px solid rgba(255,51,102,.25);
+}
+
+/* ══════════════════════════════════════════
+   ANALYTICS — P&L by session / pair
+══════════════════════════════════════════ */
+.analytics-section { margin-bottom: 12px; }
+.analytics-title {
+  font-family: var(--display);
+  font-size: 9px;
+  letter-spacing: .15em;
+  color: var(--muted2);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.analytics-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* Session P&L heatmap */
+.session-pnl-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; }
+.spnl-cell {
+  background: var(--s2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 6px;
+  text-align: center;
+}
+.spnl-name  { font-family: var(--display); font-size: 7px; letter-spacing: .1em; color: var(--muted2); margin-bottom: 4px; }
+.spnl-val   { font-family: var(--mono); font-size: 13px; font-weight: 700; line-height: 1; }
+.spnl-trades{ font-size: 8px; color: var(--muted); margin-top: 2px; }
+
+/* Pair bar chart */
+.pair-bars { display: flex; flex-direction: column; gap: 5px; }
+.pair-bar-row { display: flex; align-items: center; gap: 8px; }
+.pair-bar-lbl  { font-family: var(--mono); font-size: 9px; font-weight: 700; min-width: 52px; color: var(--text); }
+.pair-bar-track{ flex: 1; height: 14px; background: var(--s2); border-radius: 3px; overflow: hidden; position: relative; border: 1px solid var(--border); }
+.pair-bar-fill { height: 100%; border-radius: 2px; transition: width .6s ease; position: relative; }
+.pair-bar-fill.pos { background: linear-gradient(90deg, rgba(0,255,136,.2), rgba(0,255,136,.5)); }
+.pair-bar-fill.neg { background: linear-gradient(90deg, rgba(255,51,102,.2), rgba(255,51,102,.5)); }
+.pair-bar-val  { font-family: var(--mono); font-size: 9px; min-width: 44px; text-align: right; font-weight: 600; }
+
+/* Win/loss donut placeholder */
+.donut-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.donut-svg { width: 70px; height: 70px; flex-shrink: 0; }
+.donut-legend { display: flex; flex-direction: column; gap: 5px; }
+.donut-row { display: flex; align-items: center; gap: 6px; font-size: 10px; }
+.donut-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* ══════════════════════════════════════════
+   REGIME MAP
+══════════════════════════════════════════ */
+.regime-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; }
+.regime-cell {
+  background: var(--s2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 7px 5px;
+  text-align: center;
+  transition: border-color .3s;
+}
+.regime-cell.trend-up   { border-color: rgba(0,255,136,.3); }
+.regime-cell.trend-down { border-color: rgba(255,51,102,.3); }
+.regime-cell.ranging    { border-color: rgba(255,193,7,.2); }
+.regime-lbl { font-family: var(--mono); font-size: 9px; font-weight: 700; color: var(--text); }
+.regime-dir { font-size: 13px; line-height: 1; margin: 2px 0; }
+.regime-adx { font-family: var(--mono); font-size: 8px; color: var(--muted2); }
+
+/* ══════════════════════════════════════════
+   TABLE
+══════════════════════════════════════════ */
+.tbl { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px; }
+.tbl th {
+  text-align: left;
+  padding: 7px 9px;
+  font-family: var(--display);
+  font-size: 7px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border2);
+  background: rgba(14,24,48,0.9);
+  position: sticky; top: 0; z-index: 2;
+}
+.tbl td {
+  padding: 7px 9px;
+  border-bottom: 1px solid rgba(13,32,64,.6);
+  color: var(--muted2);
+  vertical-align: middle;
+}
+.tbl tr:last-child td { border-bottom: none; }
+.tbl tr:hover td { background: rgba(0,212,255,.03); color: var(--text); }
+
+/* ══════════════════════════════════════════
    RISK
-═══════════════════════════════════════ */
-.risk-big{
-  text-align:center;padding:18px 12px;
-  border-radius:12px;border:1px solid;margin-bottom:8px;
-  position:relative;overflow:hidden;
+══════════════════════════════════════════ */
+.risk-hero {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 7px;
 }
-.risk-big::before{
-  content:'';position:absolute;
-  inset:0;opacity:.03;
-  background:radial-gradient(circle at 50% 50%,white,transparent 60%);
+.risk-hero::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: .03;
 }
-.rb-normal{background:rgba(0,255,136,.04);border-color:rgba(0,255,136,.2);}
-.rb-warning{background:rgba(255,184,0,.04);border-color:rgba(255,184,0,.2);}
-.rb-danger {background:rgba(255,56,96,.05);border-color:rgba(255,56,96,.3);animation:errg 1.5s infinite;}
-.risk-state{font-family:var(--orb);font-size:30px;font-weight:800;letter-spacing:.08em;line-height:1;}
-.risk-sub  {font-size:9px;color:var(--muted2);margin-top:5px;letter-spacing:.06em;}
+.risk-hero.ok   { color:var(--green);  border-color:rgba(0,255,136,.2); background:rgba(0,255,136,.03); }
+.risk-hero.warn { color:var(--gold);   border-color:rgba(255,193,7,.25); background:rgba(255,193,7,.03); }
+.risk-hero.danger{color:var(--red);   border-color:rgba(255,51,102,.3); background:rgba(255,51,102,.04); animation:errglow 1.5s infinite; }
+.risk-state { font-family: var(--display); font-size: 28px; font-weight: 800; letter-spacing: .12em; line-height: 1; text-shadow: 0 0 30px currentColor; }
+.risk-sub   { font-size: 10px; color: var(--muted2); margin-top: 5px; letter-spacing: .06em; }
 
-.rm{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(26,51,84,.4);}
-.rm:last-child{border-bottom:none;}
-.rm-name{font-size:10px;color:var(--muted2);}
-.rm-val{font-family:var(--mono);font-size:11px;font-weight:600;}
+.risk-metric { display:flex; align-items:center; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(13,32,64,.7); }
+.risk-metric:last-child { border-bottom: none; }
+.risk-mname { font-size: 11px; color: var(--muted2); }
+.risk-mval  { font-family: var(--mono); font-size: 12px; font-weight: 700; }
 
-/* Exposure bar */
-.exp{margin-bottom:8px;}
-.exp-top{display:flex;justify-content:space-between;margin-bottom:3px;font-family:var(--mono);font-size:9px;}
-.exp-track{height:4px;background:rgba(13,24,41,.8);border-radius:2px;overflow:hidden;}
-.exp-fill{height:100%;border-radius:2px;transition:width .6s ease;}
+.exp-row { margin-bottom: 7px; }
+.exp-top { display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; margin-bottom:3px; }
+.exp-track { height: 5px; background: var(--s2); border-radius: 3px; overflow: hidden; border: 1px solid var(--border); }
+.exp-fill  { height: 100%; background: linear-gradient(90deg, var(--cyan2), var(--cyan)); border-radius: 2px; transition: width .6s; }
 
-/* ═══════════════════════════════════════
-   P&L ANALYSIS
-═══════════════════════════════════════ */
-.seg-tabs{
-  display:flex;background:rgba(13,24,41,.7);
-  border:1px solid var(--border);border-radius:8px;
-  padding:3px;gap:2px;margin-bottom:8px;
+/* ══════════════════════════════════════════
+   AI PAGE
+══════════════════════════════════════════ */
+.ai-model-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  background: var(--s2);
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  margin-bottom: 4px;
 }
-.seg-tab{
-  flex:1;text-align:center;padding:5px;border-radius:5px;
-  font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  cursor:pointer;color:var(--muted2);transition:all .2s;
-}
-.seg-tab.active{
-  background:rgba(0,212,255,.1);color:var(--neon);
-  box-shadow:0 0 8px rgba(0,212,255,.08);
-}
+.ai-model-name { flex: 1; font-size: 12px; font-weight: 600; }
+.ai-model-tier { font-family: var(--mono); font-size: 8px; color: var(--muted2); }
+.ai-model-ms   { font-family: var(--mono); font-size: 10px; min-width: 50px; text-align: right; }
 
-/* Bar chart */
-.bar-chart{display:flex;flex-direction:column;gap:7px;}
-.bar-row{display:flex;align-items:center;gap:8px;}
-.bar-label{font-family:var(--mono);font-size:9px;color:var(--muted2);min-width:54px;flex-shrink:0;}
-.bar-track{flex:1;height:22px;background:rgba(13,24,41,.7);border-radius:4px;overflow:hidden;position:relative;}
-.bar-fill {height:100%;border-radius:4px;transition:width .8s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;padding:0 7px;}
-.bar-fill.pos-fill{background:linear-gradient(90deg,rgba(0,255,136,.15),rgba(0,255,136,.25));}
-.bar-fill.neg-fill{background:linear-gradient(90deg,rgba(255,56,96,.15),rgba(255,56,96,.25));}
-.bar-val{font-family:var(--mono);font-size:9px;font-weight:600;white-space:nowrap;}
-.bar-count{font-family:var(--mono);font-size:8px;color:var(--muted2);min-width:28px;text-align:right;flex-shrink:0;}
-
-/* Session P&L circles */
-.session-pnl-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;}
-.session-pnl-card{
-  background:rgba(13,24,41,.6);
-  border:1px solid var(--border);border-radius:10px;
-  padding:10px;text-align:center;
-  position:relative;overflow:hidden;
-}
-.session-pnl-card.active-session{
-  border-color:rgba(0,212,255,.3);
-  background:rgba(0,212,255,.04);
-}
-.session-pnl-card.active-session::before{
-  content:'NOW';
-  position:absolute;top:4px;right:6px;
-  font-size:6px;font-weight:800;letter-spacing:.1em;
-  color:var(--neon);opacity:.7;
-}
-.spnl-name{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);}
-.spnl-time{font-family:var(--mono);font-size:8px;color:var(--muted);margin:2px 0;}
-.spnl-val{font-family:var(--orb);font-size:18px;font-weight:700;line-height:1;margin:4px 0;}
-.spnl-trades{font-size:8px;color:var(--muted2);}
-.spnl-wr{font-family:var(--mono);font-size:9px;margin-top:2px;}
-
-/* Stats row */
-.stat-row-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;}
-.stat-box{
-  background:rgba(13,24,41,.6);border:1px solid var(--border);
-  border-radius:8px;padding:9px;text-align:center;
-}
-.stat-val{font-family:var(--orb);font-size:16px;font-weight:700;line-height:1;margin-bottom:3px;}
-.stat-lbl{font-size:7px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-
-/* ═══════════════════════════════════════
-   MULTI-BROKER ACCOUNTS
-═══════════════════════════════════════ */
-.broker-list{display:flex;flex-direction:column;gap:5px;}
-.broker-card{
-  background:rgba(13,24,41,.6);border:1px solid var(--border);
-  border-radius:9px;padding:10px 12px;
-  display:flex;align-items:center;gap:10px;
-  transition:border-color .2s;
-}
-.broker-card.connected{border-color:rgba(0,212,255,.2);}
-.broker-card.live-acct{border-color:rgba(0,255,136,.2);}
-.broker-card.pending  {border-color:rgba(58,95,138,.3);opacity:.6;}
-.broker-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.broker-info{flex:1;min-width:0;}
-.broker-name{font-size:12px;font-weight:600;}
-.broker-detail{font-family:var(--mono);font-size:9px;color:var(--muted2);margin-top:1px;}
-.broker-balance{font-family:var(--orb);font-size:14px;font-weight:700;text-align:right;flex-shrink:0;}
-.broker-type{font-size:7px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);text-align:right;}
+/* ══════════════════════════════════════════
+   PLACEHOLDERS
+══════════════════════════════════════════ */
+.ph { color: var(--muted); font-size: 10px; text-align: center; padding: 16px; font-style: italic; }
+.pos { color: var(--green); }
+.neg { color: var(--red); }
+.warn-c { color: var(--gold); }
+.mono { font-family: var(--mono); }
+.muted2 { color: var(--muted2); }
+.divider { height: 1px; background: var(--border); margin: 8px 0; }
 </style>
 </head>
 <body>
@@ -618,442 +698,447 @@ body::before{
 <!-- ══════════ HEADER ══════════ -->
 <header class="header">
   <span class="brand">GTSv3</span>
-  <span class="brand-ver">v3.3·RAG</span>
+  <span class="brand-ver">NEXUS</span>
 
-  <!-- Account switcher — ready for multiple brokers -->
-  <div class="acct-tabs" id="acct-tabs">
-    <div class="acct-tab active" onclick="switchAccount('demo',this)">DEMO</div>
-    <div class="acct-tab live-tab" onclick="switchAccount('live',this)">LIVE</div>
+  <!-- Session ticker -->
+  <div class="session-ticker" id="session-ticker">
+    <div class="session-pill session-sydney" id="sess-sydney">🌏 SYD</div>
+    <div class="session-pill session-tokyo"  id="sess-tokyo">🗾 TYO</div>
+    <div class="session-pill session-london" id="sess-london">🇬🇧 LON</div>
+    <div class="session-pill session-newyork"id="sess-newyork">🗽 NYC</div>
   </div>
 
-  <div class="hdr-spacer"></div>
-  <span class="hdr-clock" id="hdr-clock">--:--:--</span>
-  <div class="live-dot" id="hdr-live-dot"></div>
+  <span class="header-clock" id="hdr-clock">--:--:--</span>
+  <div class="live-dot" id="live-dot"></div>
 </header>
 
-<!-- ══════════ SESSION BAR ══════════ -->
-<div class="sessions-bar" id="sessions-bar">
-  <div class="session-chip sydney" id="sess-sydney">
-    <div class="session-dot" style="background:var(--purple)"></div>
-    <span class="session-label" style="color:var(--purple)">Sydney</span>
-    <span class="session-time" id="sess-sydney-time">--:--</span>
-    <span class="session-state s-closed" id="sess-sydney-state">CLOSED</span>
+<!-- ══════════ ACCOUNT BAR ══════════ -->
+<div class="account-bar" id="account-bar">
+  <div class="account-tab active" data-acct="demo" onclick="switchAccount('demo',this)">
+    <div class="account-dot" style="color:var(--cyan)"></div>
+    DEMO · PEPPERSTONE
+    <span class="account-balance" id="acct-demo-balance">$0.00</span>
   </div>
-  <div class="session-chip tokyo" id="sess-tokyo">
-    <div class="session-dot" style="background:var(--warn)"></div>
-    <span class="session-label" style="color:var(--warn)">Tokyo</span>
-    <span class="session-time" id="sess-tokyo-time">--:--</span>
-    <span class="session-state s-closed" id="sess-tokyo-state">CLOSED</span>
+  <div class="account-sep"></div>
+  <div class="account-tab" data-acct="live" onclick="switchAccount('live',this)">
+    <div class="account-dot" style="color:var(--green)"></div>
+    LIVE · PEPPERSTONE
+    <span class="account-balance" id="acct-live-balance">$—</span>
   </div>
-  <div class="session-chip london" id="sess-london">
-    <div class="session-dot" style="background:var(--neon)"></div>
-    <span class="session-label" style="color:var(--neon)">London</span>
-    <span class="session-time" id="sess-london-time">--:--</span>
-    <span class="session-state s-closed" id="sess-london-state">CLOSED</span>
-  </div>
-  <div class="session-chip ny" id="sess-ny">
-    <div class="session-dot" style="background:var(--green)"></div>
-    <span class="session-label" style="color:var(--green)">New York</span>
-    <span class="session-time" id="sess-ny-time">--:--</span>
-    <span class="session-state s-closed" id="sess-ny-state">CLOSED</span>
-  </div>
-  <div style="flex:1"></div>
-  <div style="display:flex;align-items:center;gap:5px;font-size:8px;color:var(--muted2);flex-shrink:0">
-    <span style="font-family:var(--mono)">MYT</span>
-    <span id="sess-active-label" class="badge b-neon" style="font-size:7px">—</span>
+  <div class="account-sep"></div>
+  <div class="account-tab" data-acct="add" onclick="addBroker()" style="color:var(--muted);font-size:10px">
+    + BROKER
   </div>
 </div>
 
 <!-- ══════════ PAGES ══════════ -->
 <div class="pages">
 
-  <!-- ════════════ PAGE: HOME ════════════ -->
+  <!-- ════════ PAGE: HOME ════════ -->
   <div class="page active" id="page-home">
 
     <!-- System Alive -->
-    <div class="alive" id="alive-banner">
+    <div class="alive-banner alive-ok" id="alive-banner">
       <div class="alive-icon">🤖</div>
       <div style="flex:1;min-width:0">
-        <div class="alive-title" id="system-alive-status">SYSTEM AUTONOMOUS</div>
-        <div class="alive-sub" id="system-alive-sub">All processes running · Self-monitoring active</div>
+        <div class="alive-title" id="alive-title">SYSTEM AUTONOMOUS</div>
+        <div class="alive-sub" id="alive-sub">All agents running · Self-healing active</div>
       </div>
-      <div class="badge b-green" id="system-overall-badge"><span class="dot dot-live" style="color:var(--green)"></span>OK</div>
+      <div class="badge b-green" id="alive-badge"><span class="gdot gdot-pulse" style="color:var(--green)"></span>NEXUS OK</div>
+    </div>
+
+    <!-- Session display -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Trading Sessions</span>
+        <span class="badge b-cyan" id="active-session-badge">— SESSION</span>
+      </div>
+      <div class="card-body">
+        <div class="session-grid">
+          <div class="session-card" id="sc-sydney" style="color:#94a3b8;border-color:rgba(148,163,184,.2)">
+            <div class="session-name" style="color:inherit">SYDNEY</div>
+            <div class="session-time" id="sc-sydney-time">—</div>
+            <div class="session-pairs" style="font-size:7px">AUD NZD</div>
+            <div class="session-status" id="sc-sydney-st">CLOSED</div>
+          </div>
+          <div class="session-card" id="sc-tokyo" style="color:#f59e0b;border-color:rgba(245,158,11,.2)">
+            <div class="session-name" style="color:inherit">TOKYO</div>
+            <div class="session-time" id="sc-tokyo-time">—</div>
+            <div class="session-pairs" style="font-size:7px">JPY AUD</div>
+            <div class="session-status" id="sc-tokyo-st">CLOSED</div>
+          </div>
+          <div class="session-card" id="sc-london" style="color:#60a5fa;border-color:rgba(96,165,250,.2)">
+            <div class="session-name" style="color:inherit">LONDON</div>
+            <div class="session-time" id="sc-london-time">—</div>
+            <div class="session-pairs" style="font-size:7px">GBP EUR</div>
+            <div class="session-status" id="sc-london-st">CLOSED</div>
+          </div>
+          <div class="session-card" id="sc-newyork" style="color:#10b981;border-color:rgba(16,185,129,.2)">
+            <div class="session-name" style="color:inherit">NEW YORK</div>
+            <div class="session-time" id="sc-newyork-time">—</div>
+            <div class="session-pairs" style="font-size:7px">USD CAD</div>
+            <div class="session-status" id="sc-newyork-st">CLOSED</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Watchdog + Heartbeat -->
     <div class="card">
       <div class="card-head">
         <span class="card-title">System Monitor</span>
-        <span class="badge b-neon" id="monitor-ts">--:--</span>
+        <span class="badge b-muted" id="monitor-ts">--:--</span>
       </div>
-      <div class="card-body col-g">
-        <div class="mon-grid">
-          <div class="mon-card mon-ok" id="wd-card">
-            <span class="mon-emoji">🐕</span>
-            <div class="mon-name">Watchdog</div>
-            <div class="mon-state" id="wd-state">RUNNING</div>
-            <div class="mon-meta" id="wd-meta">pid — · 0 restarts</div>
+      <div class="card-body">
+        <div class="monitor-pair" style="margin-bottom:8px">
+          <div class="monitor-card mc-ok" id="watchdog-card">
+            <div class="mc-icon">🐕</div>
+            <div class="mc-name">WATCHDOG</div>
+            <div class="mc-state pos" id="watchdog-state">RUNNING</div>
+            <div class="mc-meta" id="watchdog-meta">0 restarts</div>
           </div>
-          <div class="mon-card mon-ok" id="hb-card">
-            <span class="mon-emoji">💓</span>
-            <div class="mon-name">Heartbeat</div>
-            <div class="mon-state" id="hb-state">ACTIVE</div>
-            <div class="mon-meta" id="hb-meta">5s · — ticks</div>
+          <div class="monitor-card mc-ok" id="heartbeat-card">
+            <div class="mc-icon">💓</div>
+            <div class="mc-name">HEARTBEAT</div>
+            <div class="mc-state pos" id="heartbeat-state">ACTIVE</div>
+            <div class="mc-meta" id="heartbeat-meta">5s · live</div>
           </div>
         </div>
 
         <!-- Heartbeat trace -->
-        <div>
-          <div class="xs" style="margin-bottom:4px">Live heartbeat · 5s interval</div>
+        <div style="margin-bottom:6px">
+          <div style="font-family:var(--display);font-size:7px;letter-spacing:.12em;color:var(--muted);margin-bottom:4px">HEARTBEAT TRACE</div>
           <div class="hb-wrap">
-            <svg class="hb-svg" id="hb-svg" viewBox="0 0 320 36" preserveAspectRatio="none">
+            <svg class="hb-svg" id="hb-svg" viewBox="0 0 300 26" preserveAspectRatio="none">
               <defs>
-                <linearGradient id="hbg" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(0,212,255,0)"/>
-                  <stop offset="40%" stop-color="rgba(0,212,255,0.6)"/>
-                  <stop offset="100%" stop-color="rgba(0,255,136,0.7)"/>
+                <linearGradient id="hbgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:var(--cyan);stop-opacity:0"/>
+                  <stop offset="50%" style="stop-color:var(--cyan);stop-opacity:0.8"/>
+                  <stop offset="100%" style="stop-color:var(--green);stop-opacity:1"/>
                 </linearGradient>
               </defs>
-              <polyline id="hb-polyline" points="" fill="none" stroke="url(#hbg)" stroke-width="1.5"/>
+              <polyline id="hb-line" points="" fill="none" stroke="url(#hbgrad)" stroke-width="1.5"/>
             </svg>
           </div>
         </div>
 
-        <!-- Processes -->
-        <div class="col-g" id="proc-list">
-          <div class="proc">
-            <span class="dot dot-live" style="color:var(--green)"></span>
-            <span class="proc-name">main.py</span>
-            <span class="proc-pid" id="p-main-pid">pid —</span>
-            <span class="badge b-green" style="font-size:7px">ENGINE</span>
-          </div>
-          <div class="proc">
-            <span class="dot dot-live" style="color:var(--green)"></span>
+        <!-- Process rows -->
+        <div class="proc-list">
+          <div class="proc-row">
+            <span class="gdot gdot-pulse" style="color:var(--green)"></span>
             <span class="proc-name">watchdog.py</span>
-            <span class="proc-pid" id="p-wd-pid">pid —</span>
-            <span class="badge b-neon" style="font-size:7px">MONITOR</span>
+            <span class="proc-pid" id="pid-watchdog">pid —</span>
+            <span class="proc-status pos" id="pst-watchdog">GUARD</span>
           </div>
-          <div class="proc">
-            <span class="dot dot-live" style="color:var(--neon)"></span>
+          <div class="proc-row">
+            <span class="gdot gdot-pulse" style="color:var(--cyan)"></span>
+            <span class="proc-name">main.py</span>
+            <span class="proc-pid" id="pid-main">pid —</span>
+            <span class="proc-status" style="color:var(--cyan)" id="pst-main">ENGINE</span>
+          </div>
+          <div class="proc-row">
+            <span class="gdot gdot-pulse" style="color:var(--purple)"></span>
             <span class="proc-name">telegram_bot.py</span>
-            <span class="proc-pid" id="p-bot-pid">pid —</span>
-            <span class="badge b-neon" style="font-size:7px">NOTIFY</span>
+            <span class="proc-pid" id="pid-bot">pid —</span>
+            <span class="proc-status" style="color:var(--purple)" id="pst-bot">NOTIFY</span>
           </div>
-          <div class="proc">
-            <span class="dot" style="color:var(--muted2)"></span>
-            <span class="proc-name">strategy_improver</span>
-            <span class="proc-pid">weekly</span>
-            <span class="badge b-muted" style="font-size:7px">IDLE</span>
+          <div class="proc-row">
+            <span class="gdot" style="color:var(--gold)"></span>
+            <span class="proc-name">ctrader_feed.py</span>
+            <span class="proc-pid">feed</span>
+            <span class="proc-status" style="color:var(--gold)" id="pst-feed">LIVE</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- KPIs -->
+    <!-- KPI -->
     <div class="kpi-grid">
-      <div class="kpi" style="--c:var(--gold)">
+      <div class="kpi kpi-gold">
         <div class="kpi-lbl">Balance</div>
-        <div class="kpi-val gold" id="home-balance">$0.00</div>
-        <div style="font-size:8px;color:var(--muted2)" id="home-acct-label">Demo · Pepperstone</div>
+        <div class="kpi-val" id="home-balance">$0.00</div>
       </div>
-      <div class="kpi" style="--c:var(--green)">
+      <div class="kpi kpi-green">
         <div class="kpi-lbl">Open Trades</div>
-        <div class="kpi-val pos" id="home-open">0<span style="font-size:12px;color:var(--muted2)">/10</span></div>
-        <div style="font-size:8px;color:var(--muted2)">Max 3 concurrent</div>
+        <div class="kpi-val" id="home-open-trades">0<span style="font-size:11px;opacity:.5">/5</span></div>
       </div>
-      <div class="kpi" style="--c:var(--neon)">
+      <div class="kpi kpi-cyan">
         <div class="kpi-lbl">AI Models</div>
-        <div class="kpi-val neon" id="home-ai">0/4</div>
-        <div style="font-size:8px;color:var(--muted2)">Free-first routing</div>
+        <div class="kpi-val" id="home-ai">0/4</div>
       </div>
-      <div class="kpi" style="--c:var(--muted)">
+      <div class="kpi kpi-purple">
         <div class="kpi-lbl">Pipeline</div>
-        <div class="kpi-val" id="home-pipe">0/8</div>
-        <div style="font-size:8px;color:var(--muted2)">Tradeable pairs</div>
+        <div class="kpi-val" id="home-pipeline">0/8</div>
       </div>
     </div>
 
-    <!-- Regime strip -->
+    <!-- Regime Map quick -->
     <div class="card">
       <div class="card-head">
         <span class="card-title">Regime Map</span>
-        <span class="badge b-muted" id="home-regime-active">— tradeable</span>
+        <span class="badge b-muted" id="regime-tradeable-badge">— TRADEABLE</span>
       </div>
       <div class="card-body">
-        <div class="reg-strip" id="home-reg-strip">
-          <!-- populated by JS -->
-          <div class="reg-cell"><div class="reg-pair">XAUUSD</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">EURUSD</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">GBPUSD</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">USDJPY</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">AUDUSD</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">NZDUSD</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">USDCAD</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
-          <div class="reg-cell"><div class="reg-pair">USDCHF</div><div class="reg-dir">—</div><div class="reg-adx">ADX —</div></div>
+        <div class="regime-strip" id="regime-strip">
+          <!-- filled by JS or existing widget -->
+          <div class="regime-cell"><div class="regime-lbl">XAUUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">EURUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">GBPUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">USDJPY</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">AUDUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">NZDUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">USDCAD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">USDCHF</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
         </div>
       </div>
     </div>
 
-    <!-- News -->
+    <!-- News (quick) -->
     <div class="card">
       <div class="card-head">
         <span class="card-title">News Intelligence</span>
         <span class="badge b-gold">TODAY</span>
       </div>
-      <div class="card-body" id="news-intelligence-widget">
-        <div id="news-feed-display">
-          <div class="ph">Loading news feed...</div>
+      <div class="card-body" id="home-news-body">
+        <div id="home-news-display">
+          <!-- Existing widget: news-intelligence-widget / news-feed-display -->
+          <div id="news-intelligence-widget">
+            <div id="news-feed-display">
+              <div class="ph">Loading news...</div>
+            </div>
+          </div>
+        </div>
+        <div id="blocked-pairs-display" style="display:none">
+          <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin:6px 0 3px">BLOCKED PAIRS</div>
+          <div class="blocked-strip" id="blocked-pairs-list"></div>
         </div>
       </div>
     </div>
 
-    <div style="text-align:center;font-size:8px;color:var(--muted);padding:4px" id="home-updated">Updated: —</div>
-  </div>
+    <div style="text-align:center;font-size:8px;color:var(--muted);font-family:var(--display);letter-spacing:.08em;padding:4px 0" id="home-updated">UPDATED: —</div>
 
-  <!-- ════════════ PAGE: TRADES ════════════ -->
-  <div class="page" id="page-trades">
-    <div class="row-bw" style="padding:2px 2px 5px">
-      <div>
-        <div style="font-size:16px;font-weight:700;font-family:var(--orb);letter-spacing:.04em">Trades</div>
-        <div class="muted" style="font-size:9px" id="trades-sub">0 open · — P/L</div>
-      </div>
-      <span class="badge b-green" id="trades-count-badge">0 OPEN</span>
+  </div><!-- /page-home -->
+
+
+  <!-- ════════ PAGE: TRADES ════════ -->
+  <div class="page" id="page-positions">
+
+    <div style="padding:2px 0 6px">
+      <div style="font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--cyan)">POSITIONS</div>
+      <div style="font-size:10px;color:var(--muted2)" id="pos-sub">0 open · — P/L today</div>
     </div>
 
-    <div id="open-positions-widget">
-      <div class="card">
-        <div class="card-head"><span class="card-title">Open Positions</span></div>
-        <div class="card-flush" style="overflow-x:auto">
-          <table class="tbl" id="positions-table">
-            <thead><tr>
-              <th>Pair</th><th>Dir</th><th>Lots</th>
-              <th>Entry</th><th>Now</th>
-              <th>SL</th><th>TP</th>
-              <th>P/L</th><th>Dur</th><th>Strat</th>
-            </tr></thead>
-            <tbody id="positions-tbody">
-              <tr><td colspan="10" class="ph">No open positions</td></tr>
-            </tbody>
-          </table>
-        </div>
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Open Positions</span>
+        <span class="badge b-green" id="open-pos-count-badge">0 OPEN</span>
+      </div>
+      <div style="overflow-x:auto" id="open-positions-widget">
+        <table class="tbl" id="positions-table">
+          <thead><tr>
+            <th>Pair</th><th>Dir</th><th>Lots</th>
+            <th>Entry</th><th>Now</th>
+            <th>SL</th><th>TP</th>
+            <th>P/L</th><th>Dur</th><th>Strat</th>
+          </tr></thead>
+          <tbody id="positions-tbody">
+            <tr><td colspan="10" class="ph">No open positions</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Shadow Tracker -->
     <div class="card">
       <div class="card-head">
         <span class="card-title">Trade History</span>
         <span class="badge b-muted" id="shadow-count-badge">0 CLOSED</span>
       </div>
-      <div class="card-flush" style="overflow-x:auto">
-        <div id="shadow-tracker-widget">
-          <table class="tbl" id="shadow-tracker-table">
-            <thead><tr>
-              <th>Pair</th><th>Dir</th>
-              <th>Entry</th><th>Exit</th>
-              <th>P/L</th><th>Session</th>
-              <th>Dur</th><th>Result</th>
-            </tr></thead>
-            <tbody id="shadow-tracker-tbody">
-              <tr><td colspan="8" class="ph">No data yet</td></tr>
-            </tbody>
-          </table>
-        </div>
+      <div style="overflow-x:auto" id="shadow-tracker-widget">
+        <table class="tbl" id="shadow-tracker-table">
+          <thead><tr>
+            <th>Pair</th><th>Dir</th><th>Entry</th><th>Exit</th>
+            <th>P/L</th><th>Session</th><th>Strat</th><th>Result</th>
+          </tr></thead>
+          <tbody id="shadow-tracker-tbody">
+            <tr><td colspan="8" class="ph">No data yet</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- 30D quality -->
-    <div class="card">
+    <div class="card" id="trade-quality-widget">
       <div class="card-head">
-        <span class="card-title">30-Day Performance</span>
+        <span class="card-title">Performance 30D</span>
         <span class="badge b-muted" id="trade-quality-badge">0 TRADES</span>
       </div>
-      <div class="card-body" id="trade-quality-widget">
-        <div class="stat-row-grid">
-          <div class="stat-box">
-            <div class="stat-val pos" id="win-rate-display">—</div>
-            <div class="stat-lbl">Win Rate</div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:10px" id="quality-stats-display">
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center">
+            <div style="font-family:var(--display);font-size:18px;font-weight:700" class="pos" id="win-rate-display">—</div>
+            <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin-top:3px">WIN RATE</div>
           </div>
-          <div class="stat-box">
-            <div class="stat-val" id="profit-factor-display">—</div>
-            <div class="stat-lbl">Prof Factor</div>
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center">
+            <div style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--cyan)" id="profit-factor-display">—</div>
+            <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin-top:3px">PROF FACTOR</div>
           </div>
-          <div class="stat-box">
-            <div class="stat-val" id="avg-rr-display">—</div>
-            <div class="stat-lbl">Avg R:R</div>
-          </div>
-        </div>
-        <div id="quality-stats-display" style="margin-top:8px">
-          <div class="ph">Loading stats...</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ════════════ PAGE: ANALYSIS ════════════ -->
-  <div class="page" id="page-analysis">
-    <div style="padding:2px 2px 5px">
-      <div style="font-size:16px;font-weight:700;font-family:var(--orb);letter-spacing:.04em">Analysis</div>
-      <div class="muted" style="font-size:9px">P&amp;L by session · pair · broker</div>
-    </div>
-
-    <!-- Seg tabs -->
-    <div class="seg-tabs">
-      <div class="seg-tab active" onclick="switchAnalysis('session',this)">Session</div>
-      <div class="seg-tab" onclick="switchAnalysis('pair',this)">By Pair</div>
-      <div class="seg-tab" onclick="switchAnalysis('broker',this)">Accounts</div>
-    </div>
-
-    <!-- SESSION P&L -->
-    <div id="analysis-session">
-      <div class="card" style="margin-bottom:7px">
-        <div class="card-head">
-          <span class="card-title">P&amp;L by Trading Session</span>
-          <span class="badge b-neon">30D</span>
-        </div>
-        <div class="card-body">
-          <div class="session-pnl-grid" id="session-pnl-grid">
-            <div class="session-pnl-card" id="spnl-sydney">
-              <div class="spnl-name" style="color:var(--purple)">Sydney</div>
-              <div class="spnl-time">22:00–07:00 MYT</div>
-              <div class="spnl-val" id="spnl-sydney-val" style="color:var(--muted2)">—</div>
-              <div class="spnl-trades" id="spnl-sydney-trades">0 trades</div>
-              <div class="spnl-wr" id="spnl-sydney-wr" style="color:var(--muted2)">— WR</div>
-            </div>
-            <div class="session-pnl-card" id="spnl-tokyo">
-              <div class="spnl-name" style="color:var(--warn)">Tokyo</div>
-              <div class="spnl-time">07:00–16:00 MYT</div>
-              <div class="spnl-val" id="spnl-tokyo-val" style="color:var(--muted2)">—</div>
-              <div class="spnl-trades" id="spnl-tokyo-trades">0 trades</div>
-              <div class="spnl-wr" id="spnl-tokyo-wr" style="color:var(--muted2)">— WR</div>
-            </div>
-            <div class="session-pnl-card" id="spnl-london">
-              <div class="spnl-name" style="color:var(--neon)">London</div>
-              <div class="spnl-time">15:00–00:00 MYT</div>
-              <div class="spnl-val" id="spnl-london-val" style="color:var(--muted2)">—</div>
-              <div class="spnl-trades" id="spnl-london-trades">0 trades</div>
-              <div class="spnl-wr" id="spnl-london-wr" style="color:var(--muted2)">— WR</div>
-            </div>
-            <div class="session-pnl-card" id="spnl-ny">
-              <div class="spnl-name" style="color:var(--green)">New York</div>
-              <div class="spnl-time">20:30–05:00 MYT</div>
-              <div class="spnl-val" id="spnl-ny-val" style="color:var(--muted2)">—</div>
-              <div class="spnl-trades" id="spnl-ny-trades">0 trades</div>
-              <div class="spnl-wr" id="spnl-ny-wr" style="color:var(--muted2)">— WR</div>
-            </div>
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center">
+            <div style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--gold)" id="avg-rr-display">—</div>
+            <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin-top:3px">AVG R:R</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- PAIR P&L -->
-    <div id="analysis-pair" style="display:none">
-      <div class="card">
-        <div class="card-head">
-          <span class="card-title">P&amp;L by Currency Pair</span>
-          <span class="badge b-neon">30D</span>
-        </div>
-        <div class="card-body">
-          <div class="bar-chart" id="pair-pnl-chart">
-            <div class="ph">No trade data yet</div>
-          </div>
-        </div>
-      </div>
+  </div><!-- /page-positions -->
+
+
+  <!-- ════════ PAGE: ANALYTICS ════════ -->
+  <div class="page" id="page-analytics">
+
+    <div style="padding:2px 0 6px">
+      <div style="font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--purple)">ANALYTICS</div>
+      <div style="font-size:10px;color:var(--muted2)">P&amp;L by session · pair · time</div>
     </div>
 
-    <!-- BROKER / ACCOUNTS -->
-    <div id="analysis-broker" style="display:none">
-      <div class="card">
-        <div class="card-head">
-          <span class="card-title">Accounts &amp; Brokers</span>
-          <span class="badge b-gold">MULTI-BROKER READY</span>
-        </div>
-        <div class="card-body">
-          <div class="broker-list" id="broker-list">
-            <!-- Demo Pepperstone -->
-            <div class="broker-card connected">
-              <div class="broker-dot" style="background:var(--neon);box-shadow:0 0 6px var(--neon)"></div>
-              <div class="broker-info">
-                <div class="broker-name">Pepperstone</div>
-                <div class="broker-detail">cTrader · Demo · ID <span id="broker-demo-id">471538***</span></div>
-              </div>
-              <div>
-                <div class="broker-balance gold" id="broker-demo-balance">$0.00</div>
-                <div class="broker-type">DEMO</div>
-              </div>
-            </div>
-            <!-- Live Pepperstone -->
-            <div class="broker-card live-acct" id="live-acct-card">
-              <div class="broker-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-              <div class="broker-info">
-                <div class="broker-name">Pepperstone</div>
-                <div class="broker-detail">cTrader · Live · — awaiting data —</div>
-              </div>
-              <div>
-                <div class="broker-balance pos" id="broker-live-balance">$0.00</div>
-                <div class="broker-type" style="color:var(--green)">LIVE</div>
-              </div>
-            </div>
-            <!-- Future broker placeholder -->
-            <div class="broker-card pending">
-              <div class="broker-dot" style="background:var(--muted)"></div>
-              <div class="broker-info">
-                <div class="broker-name" style="color:var(--muted2)">+ Add Broker</div>
-                <div class="broker-detail">MT4 · MT5 · cTrader · IC Markets · etc.</div>
-              </div>
-              <div>
-                <div class="broker-balance" style="color:var(--muted2)">—</div>
-                <div class="broker-type">FUTURE</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Account stats -->
-      <div class="card">
-        <div class="card-head"><span class="card-title">Combined Stats</span></div>
-        <div class="card-body">
-          <div class="stat-row-grid">
-            <div class="stat-box">
-              <div class="stat-val gold" id="combined-balance">$0.00</div>
-              <div class="stat-lbl">Total Balance</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-val" id="combined-trades">0</div>
-              <div class="stat-lbl">Total Trades</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-val pos" id="combined-pnl">$0.00</div>
-              <div class="stat-lbl">Total P/L</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Departments -->
+    <!-- P&L by Session -->
     <div class="card">
       <div class="card-head">
-        <span class="card-title">Departments</span>
-        <span class="badge b-muted">6 DEPARTMENTS</span>
+        <span class="card-title">P&amp;L by Session</span>
+        <span class="badge b-muted">30D</span>
       </div>
-      <div class="card-body" id="departments-widget">
-        <div id="departments-display"><div class="ph">Loading...</div></div>
+      <div class="card-body">
+        <div class="analytics-section">
+          <div class="session-pnl-grid" id="session-pnl-grid">
+            <div class="spnl-cell">
+              <div class="spnl-name">SYDNEY</div>
+              <div class="spnl-val muted2" id="pnl-sydney">$—</div>
+              <div class="spnl-trades" id="trades-sydney">— trades</div>
+            </div>
+            <div class="spnl-cell">
+              <div class="spnl-name">TOKYO</div>
+              <div class="spnl-val muted2" id="pnl-tokyo">$—</div>
+              <div class="spnl-trades" id="trades-tokyo">— trades</div>
+            </div>
+            <div class="spnl-cell">
+              <div class="spnl-name">LONDON</div>
+              <div class="spnl-val muted2" id="pnl-london">$—</div>
+              <div class="spnl-trades" id="trades-london">— trades</div>
+            </div>
+            <div class="spnl-cell">
+              <div class="spnl-name">NEW YORK</div>
+              <div class="spnl-val muted2" id="pnl-newyork">$—</div>
+              <div class="spnl-trades" id="trades-newyork">— trades</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Win/loss by session -->
+        <div class="analytics-section">
+          <div class="analytics-title">Win rate by session</div>
+          <div id="session-winrate-display">
+            <div class="ph">Accumulating data...</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- ════════════ PAGE: RISK ════════════ -->
+    <!-- P&L by Pair -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">P&amp;L by Currency Pair</span>
+        <span class="badge b-muted">30D</span>
+      </div>
+      <div class="card-body">
+        <div class="pair-bars" id="pair-pnl-bars">
+          <!-- Dynamically filled or placeholder -->
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">XAUUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-XAUUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-XAUUSD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">EURUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-EURUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-EURUSD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">GBPUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-GBPUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-GBPUSD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">AUDUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-AUDUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-AUDUSD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">NZDUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-NZDUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-NZDUSD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">USDJPY</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-USDJPY"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-USDJPY">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">USDCAD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-USDCAD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-USDCAD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">USDCHF</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-USDCHF"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-USDCHF">$—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Win/Loss donut -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Win / Loss Breakdown</span>
+      </div>
+      <div class="card-body">
+        <div class="donut-wrap">
+          <svg class="donut-svg" viewBox="0 0 70 70" id="donut-svg">
+            <circle cx="35" cy="35" r="28" fill="none" stroke="var(--s3)" stroke-width="10"/>
+            <circle cx="35" cy="35" r="28" fill="none" stroke="var(--green)" stroke-width="10"
+              stroke-dasharray="175.93" stroke-dashoffset="175.93"
+              stroke-linecap="round" transform="rotate(-90 35 35)"
+              id="donut-wins" style="transition:stroke-dashoffset .8s ease"/>
+            <circle cx="35" cy="35" r="28" fill="none" stroke="var(--red)" stroke-width="10"
+              stroke-dasharray="175.93" stroke-dashoffset="175.93"
+              stroke-linecap="round" transform="rotate(-90 35 35)"
+              id="donut-losses" style="transition:stroke-dashoffset .8s ease;opacity:.6"/>
+            <text x="35" y="32" text-anchor="middle" font-family="var(--display)" font-size="10" fill="var(--text)" font-weight="700" id="donut-pct">—%</text>
+            <text x="35" y="43" text-anchor="middle" font-family="var(--display)" font-size="6" fill="var(--muted2)" letter-spacing="1">WIN</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="donut-row"><div class="donut-dot" style="background:var(--green)"></div><span id="legend-wins" style="color:var(--muted2)">— wins</span></div>
+            <div class="donut-row"><div class="donut-dot" style="background:var(--red)"></div><span id="legend-losses" style="color:var(--muted2)">— losses</span></div>
+            <div class="donut-row"><div class="donut-dot" style="background:var(--gold)"></div><span id="legend-total" style="color:var(--muted2)">— total</span></div>
+            <div style="font-family:var(--mono);font-size:13px;font-weight:700;margin-top:4px" id="legend-pnl" class="pos">$—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /page-analytics -->
+
+
+  <!-- ════════ PAGE: RISK ════════ -->
   <div class="page" id="page-risk">
-    <div style="padding:2px 2px 5px">
-      <div style="font-size:16px;font-weight:700;font-family:var(--orb);letter-spacing:.04em">Risk</div>
-      <div class="muted" style="font-size:9px">1% / trade · 2% daily limit · 3 max concurrent</div>
+
+    <div style="padding:2px 0 6px">
+      <div style="font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--red)">RISK</div>
+      <div style="font-size:10px;color:var(--muted2)">1% per trade · 3 max concurrent · 2% daily DD</div>
     </div>
 
     <div id="risk-monitor-widget">
-      <div class="risk-big rb-normal" id="risk-big">
-        <div class="risk-state pos" id="risk-state-label">NORMAL</div>
+      <div class="risk-hero ok" id="risk-hero">
+        <div class="risk-state" id="risk-state-label">NORMAL</div>
         <div class="risk-sub" id="risk-state-sub">All limits within range</div>
       </div>
     </div>
@@ -1064,20 +1149,19 @@ body::before{
         <span class="badge b-green" id="risk-state-badge">NORMAL</span>
       </div>
       <div class="card-body" id="risk-details-display">
-        <div class="rm"><span class="rm-name">Daily Drawdown</span><span class="rm-val pos" id="daily-dd">0.00%</span></div>
-        <div class="rm"><span class="rm-name">Daily DD Limit</span><span class="rm-val" style="color:var(--muted2)">2.00%</span></div>
-        <div class="rm"><span class="rm-name">Consecutive Losses</span><span class="rm-val" id="consec-loss">0 / 3</span></div>
-        <div class="rm"><span class="rm-name">Open Positions</span><span class="rm-val" id="risk-open-pos">0 / 3</span></div>
-        <div class="rm"><span class="rm-name">Risk Per Trade</span><span class="rm-val">1.00%</span></div>
-        <div class="rm"><span class="rm-name">Trailing Stop</span><span class="rm-val pos">ACTIVE</span></div>
-        <div class="rm"><span class="rm-name">Circuit Breaker</span><span class="rm-val pos" id="circuit-status">ARMED</span></div>
+        <div class="risk-metric"><span class="risk-mname">Daily Drawdown</span><span class="risk-mval pos" id="daily-dd-val">0.00%</span></div>
+        <div class="risk-metric"><span class="risk-mname">Consecutive Losses</span><span class="risk-mval" id="consec-loss-val">0 / 3</span></div>
+        <div class="risk-metric"><span class="risk-mname">Open Positions</span><span class="risk-mval" id="risk-open-val">0 / 3</span></div>
+        <div class="risk-metric"><span class="risk-mname">Risk Per Trade</span><span class="risk-mval">1.00%</span></div>
+        <div class="risk-metric"><span class="risk-mname">Circuit Breaker</span><span class="risk-mval pos" id="circuit-val">ARMED</span></div>
+        <div class="risk-metric"><span class="risk-mname">Trailing Stop</span><span class="risk-mval pos">ACTIVE</span></div>
       </div>
     </div>
 
     <div class="card">
       <div class="card-head">
         <span class="card-title">Currency Exposure</span>
-        <span class="badge b-muted" id="exposure-count-badge">0</span>
+        <span class="badge b-muted" id="exposure-count-badge">0 CCY</span>
       </div>
       <div class="card-body" id="currency-exposure-widget">
         <div id="exposure-bars-display"><div class="ph">No exposure</div></div>
@@ -1093,80 +1177,125 @@ body::before{
         <div id="risk-news-display"><div class="ph">Loading...</div></div>
       </div>
     </div>
-  </div>
 
-  <!-- ════════════ PAGE: SYSTEM ════════════ -->
+  </div><!-- /page-risk -->
+
+
+  <!-- ════════ PAGE: SYSTEM ════════ -->
   <div class="page" id="page-system">
-    <div style="padding:2px 2px 5px">
-      <div style="font-size:16px;font-weight:700;font-family:var(--orb);letter-spacing:.04em">System</div>
-      <div class="muted" style="font-size:9px">Autonomous · watchdog auto-restarts on crash</div>
-    </div>
 
-    <div class="card">
-      <div class="card-head">
-        <span class="card-title">Process Monitor</span>
-        <span class="badge b-green" id="sys-watchdog-badge"><span class="dot dot-live" style="color:var(--green)"></span>ACTIVE</span>
-      </div>
-      <div class="card-body col-g">
-        <div class="mon-grid">
-          <div class="mon-card mon-ok" id="sys-wd-card">
-            <span class="mon-emoji">🐕</span>
-            <div class="mon-name">Watchdog</div>
-            <div class="mon-state" id="sys-wd-state">RUNNING</div>
-            <div class="mon-meta" id="sys-wd-meta">0 restarts</div>
-          </div>
-          <div class="mon-card mon-ok" id="sys-hb-card">
-            <span class="mon-emoji">💓</span>
-            <div class="mon-name">Heartbeat</div>
-            <div class="mon-state" id="sys-hb-state">ACTIVE</div>
-            <div class="mon-meta" id="sys-hb-meta">5s interval</div>
-          </div>
-        </div>
-        <div class="col-g" id="sys-proc-list">
-          <div class="proc"><span class="dot dot-live" style="color:var(--green)"></span><span class="proc-name">watchdog.py</span><span class="proc-pid" id="sys-wd-pid">pid —</span><span class="badge b-neon" style="font-size:7px">MONITOR</span></div>
-          <div class="proc"><span class="dot dot-live" style="color:var(--green)"></span><span class="proc-name">main.py</span><span class="proc-pid" id="sys-main-pid">pid —</span><span class="badge b-green" style="font-size:7px">ENGINE</span></div>
-          <div class="proc"><span class="dot dot-live" style="color:var(--neon)"></span><span class="proc-name">telegram_bot.py</span><span class="proc-pid" id="sys-bot-pid">pid —</span><span class="badge b-neon" style="font-size:7px">NOTIFY</span></div>
-          <div class="proc"><span class="dot dot-live" style="color:var(--neon)"></span><span class="proc-name">ctrader_feed.py</span><span class="proc-pid">feed</span><span class="badge b-neon" style="font-size:7px">LIVE</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-head"><span class="card-title">Engine Stats</span></div>
-      <div class="card-body">
-        <div class="stat-row-grid">
-          <div class="stat-box"><div class="stat-val neon" id="sys-ticks">—</div><div class="stat-lbl">Ticks</div></div>
-          <div class="stat-box"><div class="stat-val" id="sys-signals">—</div><div class="stat-lbl">Signals</div></div>
-          <div class="stat-box"><div class="stat-val pos" id="sys-uptime">—</div><div class="stat-lbl">Uptime</div></div>
-        </div>
-      </div>
+    <div style="padding:2px 0 6px">
+      <div style="font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--gold)">SYSTEM</div>
+      <div style="font-size:10px;color:var(--muted2)">Autonomous · multi-broker ready · RAG enabled</div>
     </div>
 
     <!-- AI Models -->
     <div class="card">
       <div class="card-head">
-        <span class="card-title">AI Models</span>
-        <span class="badge b-neon" id="ai-status-badge">4 MODELS</span>
+        <span class="card-title">AI Model Status</span>
+        <span class="badge b-cyan" id="ai-status-badge">4 MODELS</span>
       </div>
       <div class="card-body" id="ai-model-status-widget">
-        <div id="ai-models-list"><div class="ph">Loading...</div></div>
+        <div id="ai-models-list">
+          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--gold)"></span><span class="ai-model-name">Mistral Small</span><span class="ai-model-tier">FREE · TIER 1</span><span class="ai-model-ms muted2">—ms</span></div>
+          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--green)"></span><span class="ai-model-name">Groq Llama 3.3</span><span class="ai-model-tier">FREE · TIER 2</span><span class="ai-model-ms muted2">—ms</span></div>
+          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--cyan)"></span><span class="ai-model-name">Gemini 2.5 Flash</span><span class="ai-model-tier">FREE · TIER 3</span><span class="ai-model-ms muted2">—ms</span></div>
+          <div class="ai-model-row"><span class="gdot" style="color:var(--muted2)"></span><span class="ai-model-name">Claude Sonnet</span><span class="ai-model-tier">PAID · FALLBACK</span><span class="ai-model-ms muted2">—ms</span></div>
+        </div>
       </div>
     </div>
 
-    <!-- RAG/Vector -->
+    <!-- Scanner + Pipeline -->
     <div class="card">
       <div class="card-head">
-        <span class="card-title">AI Learning · Agentic RAG</span>
-        <span class="badge b-purple">QDRANT</span>
+        <span class="card-title">Pipeline Status</span>
+        <span class="badge b-green">SMC ENGINE</span>
+      </div>
+      <div class="card-body" id="pipeline-status-widget">
+        <div id="pipeline-pairs-display"><div class="ph">Loading...</div></div>
+        <div style="height:3px;background:var(--s2);border-radius:2px;margin-top:8px;overflow:hidden;border:1px solid var(--border)">
+          <div id="scanner-progress" style="height:100%;background:linear-gradient(90deg,var(--cyan2),var(--green));border-radius:2px;width:0%;animation:scan 300s linear infinite;box-shadow:0 0 8px var(--cyan)"></div>
+        </div>
+        <style>@keyframes scan{0%{width:0%}100%{width:100%}}</style>
+      </div>
+    </div>
+
+    <!-- Strategy Registry -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Strategy Registry</span>
+        <span class="badge b-muted" id="strategies-badge">0 STRATS</span>
+      </div>
+      <div style="overflow-x:auto" id="strategy-registry-widget">
+        <table class="tbl" id="strategy-registry-table">
+          <thead><tr>
+            <th>ID</th><th>Name</th><th>Scanner</th>
+            <th>Status</th><th>Last Run</th><th>Logic</th>
+          </tr></thead>
+          <tbody id="strategy-registry-tbody">
+            <tr><td colspan="6" class="ph">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RAG / Learning -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">AI Learning (Agentic RAG)</span>
+        <span class="badge b-purple">NEXUS BRAIN</span>
       </div>
       <div class="card-body">
-        <div class="stat-row-grid">
-          <div class="stat-box"><div class="stat-val" id="vector-db-count" style="color:var(--blue)">—</div><div class="stat-lbl">Vectors</div></div>
-          <div class="stat-box"><div class="stat-val pos" id="xgb-model-status">OK</div><div class="stat-lbl">XGBoost</div></div>
-          <div class="stat-box"><div class="stat-val" style="color:var(--warn)" id="next-retrain">Mon</div><div class="stat-lbl">Next Train</div></div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:10px">
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center">
+            <div style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--cyan)" id="vector-db-count">—</div>
+            <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin-top:3px">VECTORS</div>
+          </div>
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center">
+            <div style="font-family:var(--display);font-size:18px;font-weight:700" class="pos" id="xgb-model-status">OK</div>
+            <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin-top:3px">XGBOOST</div>
+          </div>
+          <div style="background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:9px;text-align:center">
+            <div style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--gold)" id="next-retrain">MON</div>
+            <div style="font-family:var(--display);font-size:7px;letter-spacing:.1em;color:var(--muted);margin-top:3px">RETRAIN</div>
+          </div>
         </div>
-        <div class="rm" style="margin-top:8px"><span class="rm-name">AI Version</span><span class="rm-val neon" id="ai-version-badge">v3.3-RAG</span></div>
-        <div class="rm"><span class="rm-name">Last Update</span><span class="rm-val" id="ai-last-update">—</span></div>
+        <div style="font-size:9px;color:var(--muted);line-height:1.6;font-family:var(--display);letter-spacing:.04em">
+          QDRANT LOCAL · SENTENCE-TRANSFORMERS · RETRAIN EVERY MON 02:00
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-broker info -->
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Broker Connections</span>
+        <span class="badge b-gold">MULTI-BROKER READY</span>
+      </div>
+      <div class="card-body">
+        <div class="proc-list">
+          <div class="proc-row">
+            <span class="gdot gdot-pulse" style="color:var(--green)"></span>
+            <span class="proc-name">Pepperstone Demo</span>
+            <span class="proc-pid" style="color:var(--cyan)">cTrader</span>
+            <span class="proc-status pos">LIVE</span>
+          </div>
+          <div class="proc-row">
+            <span class="gdot" style="color:var(--muted)"></span>
+            <span class="proc-name">Pepperstone Live</span>
+            <span class="proc-pid">cTrader</span>
+            <span class="proc-status" style="color:var(--muted2)">READY</span>
+          </div>
+          <div class="proc-row" onclick="addBroker()" style="cursor:pointer;opacity:.6">
+            <span class="gdot" style="color:var(--muted)"></span>
+            <span class="proc-name" style="color:var(--muted2)">+ Add Broker</span>
+            <span class="proc-pid">MT5/cTrader</span>
+            <span class="proc-status" style="color:var(--muted2)">CONFIG</span>
+          </div>
+        </div>
+        <div style="margin-top:8px;font-size:8px;color:var(--muted);line-height:1.6">
+          Add credentials in .env · system auto-detects broker type · supports cTrader OpenAPI + MT5
+        </div>
       </div>
     </div>
 
@@ -1181,498 +1310,440 @@ body::before{
       </div>
     </div>
 
-    <!-- Pipeline + Scanner -->
-    <div class="card">
-      <div class="card-head">
-        <span class="card-title">Pipeline / Scanner</span>
-        <span class="badge b-green">SMC ENGINE</span>
-      </div>
-      <div class="card-body" id="pipeline-status-widget">
-        <div id="pipeline-pairs-display"><div class="ph">Loading...</div></div>
-        <div id="scanner-status-widget" style="margin-top:8px">
-          <div class="row-bw" style="margin-bottom:5px">
-            <span class="xs">Scanner</span>
-            <span class="badge b-neon" id="scanner-badge">5-MIN</span>
-          </div>
-          <div id="scanner-status-display" style="font-size:9px;color:var(--muted2)">Loading...</div>
-          <div style="height:3px;background:rgba(13,24,41,.8);border-radius:2px;margin-top:6px;overflow:hidden">
-            <div id="scanner-progress" style="height:100%;background:linear-gradient(90deg,var(--neon),var(--green));border-radius:2px;width:0%;animation:scan 300s linear infinite"></div>
-          </div>
-          <style>@keyframes scan{0%{width:0}100%{width:100%}}</style>
-        </div>
-      </div>
+    <div style="text-align:center;font-size:8px;color:var(--muted);font-family:var(--display);letter-spacing:.08em;padding:4px 0">
+      UPDATED: <span id="last-updated-display">—</span> · <span id="ai-version-badge">GTSv3.3-RAG</span>
     </div>
 
-    <!-- Strategy registry -->
-    <div class="card">
-      <div class="card-head">
-        <span class="card-title">Strategy Registry</span>
-        <span class="badge b-muted" id="strategies-badge">0 STRATEGIES</span>
-      </div>
-      <div class="card-flush" style="overflow-x:auto" id="strategy-registry-widget">
-        <table class="tbl" id="strategy-registry-table">
-          <thead><tr>
-            <th>ID</th><th>Name</th><th>Scanner</th>
-            <th>Status</th><th>Last Run</th>
-          </tr></thead>
-          <tbody id="strategy-registry-tbody">
-            <tr><td colspan="5" class="ph">Loading...</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  </div><!-- /page-system -->
 
-    <div style="text-align:center;font-size:8px;color:var(--muted);padding:4px" id="last-updated-display">Updated: —</div>
-  </div>
+</div><!-- /pages -->
 
-</div><!-- end pages -->
 
 <!-- ══════════ BOTTOM NAV ══════════ -->
 <nav class="nav">
-  <div class="nav-item active" onclick="navigate('home',this)">
+  <div class="nav-item active" data-page="home" onclick="go('home',this)">
     <span class="nav-icon">⚡</span>
-    <span class="nav-lbl">Home</span>
+    <span class="nav-label">Nexus</span>
   </div>
-  <div class="nav-item" onclick="navigate('trades',this)">
-    <span class="nav-icon">📊</span>
-    <span class="nav-lbl">Trades</span>
-    <span class="nav-badge" id="nav-trades-badge" style="display:none">0</span>
+  <div class="nav-item" data-page="positions" onclick="go('positions',this)">
+    <span class="nav-icon">📈</span>
+    <span class="nav-label">Trades</span>
+    <span class="nav-badge" id="nav-pos-badge">0</span>
   </div>
-  <div class="nav-item" onclick="navigate('analysis',this)">
-    <span class="nav-icon">🧠</span>
-    <span class="nav-lbl">Analysis</span>
+  <div class="nav-item" data-page="analytics" onclick="go('analytics',this)">
+    <span class="nav-icon">🔬</span>
+    <span class="nav-label">Analyse</span>
   </div>
-  <div class="nav-item" onclick="navigate('risk',this)">
+  <div class="nav-item" data-page="risk" onclick="go('risk',this)">
     <span class="nav-icon">🛡️</span>
-    <span class="nav-lbl">Risk</span>
-    <span class="nav-badge" id="nav-risk-badge" style="display:none">!</span>
+    <span class="nav-label">Risk</span>
+    <span class="nav-badge" id="nav-risk-badge">!</span>
   </div>
-  <div class="nav-item" onclick="navigate('system',this)">
-    <span class="nav-icon">🔧</span>
-    <span class="nav-lbl">System</span>
+  <div class="nav-item" data-page="system" onclick="go('system',this)">
+    <span class="nav-icon">🤖</span>
+    <span class="nav-label">System</span>
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════
-     SCRIPTS
-═══════════════════════════════════════ -->
+
 <script>
-/* ── Nav ── */
-function navigate(id, el) {
+/* ══ Navigation ══ */
+function go(id, el) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + id)?.classList.add('active');
-  if (el) el.classList.add('active');
+  (el || document.querySelector(`[data-page="${id}"]`))?.classList.add('active');
 }
 
-/* ── Account switcher ── */
+/* ══ Account switcher ══ */
 let currentAccount = 'demo';
-function switchAccount(type, el) {
-  currentAccount = type;
-  document.querySelectorAll('.acct-tab').forEach(t => t.classList.remove('active'));
-  if (el) el.classList.add('active');
-  const lbl = document.getElementById('home-acct-label');
-  if (lbl) lbl.textContent = type === 'live' ? 'Live · Pepperstone' : 'Demo · Pepperstone';
+function switchAccount(id, el) {
+  currentAccount = id;
+  document.querySelectorAll('.account-tab[data-acct]').forEach(t => t.classList.remove('active'));
+  el?.classList.add('active');
+  // Trigger existing JS to reload account data
+  document.dispatchEvent(new CustomEvent('accountSwitch', { detail: { account: id } }));
+}
+function addBroker() {
+  alert('Add broker: configure CTRADER_LIVE_* or MT5_* keys in ~/GTSv3/.env and restart system.');
 }
 
-/* ── Analysis tabs ── */
-function switchAnalysis(type, el) {
-  ['session','pair','broker'].forEach(t => {
-    const el2 = document.getElementById('analysis-' + t);
-    if (el2) el2.style.display = t === type ? 'block' : 'none';
-  });
-  document.querySelectorAll('.seg-tab').forEach(t => t.classList.remove('active'));
-  if (el) el.classList.add('active');
-}
-
-/* ── Clock (MYT) ── */
+/* ══ Clock ══ */
 function updateClock() {
-  const now = new Date();
-  const t = now.toLocaleTimeString('en-GB', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
-  const d = document.getElementById('hdr-clock');
-  if (d) d.textContent = t;
+  const utc = Date.now();
+  const myt = new Date(utc).toLocaleTimeString('en-GB', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
+  const el = document.getElementById('hdr-clock');
+  if (el) el.textContent = myt;
   const mu = document.getElementById('monitor-ts');
-  if (mu) mu.textContent = t.slice(0,5);
+  if (mu) mu.textContent = myt.slice(0,5);
+  updateSessions();
 }
 setInterval(updateClock, 1000);
 updateClock();
 
-/* ── Trading sessions (MYT = UTC+8) ── */
+/* ══ Session logic (UTC-based) ══ */
 const SESSIONS = {
-  sydney:  { open: 6,  close: 15, el: 'sydney',  cls: 'sydney'  },
-  tokyo:   { open: 7,  close: 16, el: 'tokyo',   cls: 'tokyo'   },
-  london:  { open: 15, close: 23, el: 'london',  cls: 'london'  },
-  ny:      { open: 20, close: 32, el: 'ny',       cls: 'ny'      }, // 32 = next day 08
+  sydney:  { start: 21, end: 6,  pill: 'sess-sydney',  card: 'sc-sydney',  st: 'sc-sydney-st',  t: 'sc-sydney-time',  badge: '🌏 SYD', cls: 'session-sydney'  },
+  tokyo:   { start: 0,  end: 9,  pill: 'sess-tokyo',   card: 'sc-tokyo',   st: 'sc-tokyo-st',   t: 'sc-tokyo-time',   badge: '🗾 TYO', cls: 'session-tokyo'   },
+  london:  { start: 7,  end: 16, pill: 'sess-london',  card: 'sc-london',  st: 'sc-london-st',  t: 'sc-london-time',  badge: '🇬🇧 LON', cls: 'session-london'  },
+  newyork: { start: 12, end: 21, pill: 'sess-newyork', card: 'sc-newyork', st: 'sc-newyork-st', t: 'sc-newyork-time', badge: '🗽 NYC', cls: 'session-newyork' },
 };
 
 function updateSessions() {
   const now = new Date();
-  const myt = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur' }));
-  const h = myt.getHours() + myt.getMinutes() / 60;
-
-  const fmt = (hh) => {
-    const hr = Math.floor(hh % 24);
-    return (hr < 10 ? '0' : '') + hr + ':00';
-  };
-
+  const h = now.getUTCHours() + now.getUTCMinutes()/60;
   let activeSessions = [];
 
-  Object.entries(SESSIONS).forEach(([key, s]) => {
-    const chip   = document.getElementById('sess-' + s.el);
-    const timeEl = document.getElementById('sess-' + s.el + '-time');
-    const stEl   = document.getElementById('sess-' + s.el + '-state');
+  Object.entries(SESSIONS).forEach(([name, s]) => {
+    const isActive = s.start < s.end
+      ? (h >= s.start && h < s.end)
+      : (h >= s.start || h < s.end);
 
-    const isOpen = s.close > 24
-      ? (h >= s.open || h < (s.close - 24))
-      : (h >= s.open && h < s.close);
+    const pill = document.getElementById(s.pill);
+    const card = document.getElementById(s.card);
+    const st   = document.getElementById(s.st);
+    const tEl  = document.getElementById(s.t);
 
-    if (chip) chip.classList.toggle('active', isOpen);
-    if (stEl) {
-      stEl.textContent = isOpen ? 'OPEN' : 'CLOSED';
-      stEl.className = 'session-state ' + (isOpen ? 's-open' : 's-closed');
+    if (pill) pill.classList.toggle('active-session', isActive);
+    if (card) {
+      if (isActive) { card.classList.add('active'); card.style.boxShadow = '0 0 16px -4px currentColor'; }
+      else          { card.classList.remove('active'); card.style.boxShadow = 'none'; }
     }
-    if (timeEl) timeEl.textContent = fmt(s.open) + '–' + fmt(s.close);
+    if (st) { st.textContent = isActive ? 'OPEN' : 'CLOSED'; st.style.color = isActive ? 'currentColor' : 'var(--muted)'; }
+    if (isActive) activeSessions.push(name.toUpperCase());
 
-    if (isOpen) activeSessions.push(key.charAt(0).toUpperCase() + key.slice(1));
-
-    // mark active session on P&L cards
-    const pnlCard = document.getElementById('spnl-' + key);
-    if (pnlCard) pnlCard.classList.toggle('active-session', isOpen);
+    // Time in each tz
+    const tzMap = { sydney:'Australia/Sydney', tokyo:'Asia/Tokyo', london:'Europe/London', newyork:'America/New_York' };
+    if (tEl) tEl.textContent = now.toLocaleTimeString('en-GB', { timeZone: tzMap[name], hour:'2-digit', minute:'2-digit', hour12:false });
   });
 
-  const lbl = document.getElementById('sess-active-label');
-  if (lbl) {
-    lbl.textContent = activeSessions.length ? activeSessions.join(' + ') : 'All Closed';
-    lbl.className = 'badge ' + (activeSessions.length ? 'b-green' : 'b-muted');
-  }
-}
-setInterval(updateSessions, 60000);
-updateSessions();
+  const badge = document.getElementById('active-session-badge');
+  if (badge) badge.textContent = activeSessions.length > 0 ? activeSessions.join(' + ') + ' OPEN' : 'ALL CLOSED';
 
-/* ── Heartbeat trace ── */
-const HB = { pts: [], tick: 0 };
+  // Update header session pills color glow
+}
+
+/* ══ Heartbeat ══ */
+const hbData = Array(60).fill(13);
+let hbTick = 0;
 function pumpHeartbeat(v) {
-  if (v === undefined) v = 12 + Math.sin(HB.tick * .9) * 10 + Math.random() * 4;
-  HB.pts.push(v); HB.tick++;
-  if (HB.pts.length > 64) HB.pts.shift();
-  const poly = document.getElementById('hb-polyline');
-  if (!poly) return;
-  const W = 320, H = 36;
-  const pts = HB.pts.map((val, i) => {
-    const x = (i / (HB.pts.length - 1 || 1)) * W;
-    const y = H - 4 - (val / 30) * (H - 8);
-    return x.toFixed(1) + ',' + y.toFixed(1);
-  }).join(' ');
-  poly.setAttribute('points', pts);
-  // update tick display
-  const meta = document.getElementById('hb-meta');
-  if (meta) meta.textContent = '5s · ' + (HB.tick * 8 + 192) + ' ticks';
-  const smeta = document.getElementById('sys-hb-meta');
-  if (smeta) smeta.textContent = '5s interval · ' + HB.tick + ' cycles';
+  if (v === undefined) v = 10 + Math.sin(hbTick * 0.7) * 7 + Math.random() * 3;
+  hbData.push(v); hbData.shift();
+  hbTick++;
+  const line = document.getElementById('hb-line');
+  if (!line) return;
+  const pts = hbData.map((y, i) => `${(i/59*300).toFixed(1)},${(26 - y/30*24).toFixed(1)}`).join(' ');
+  line.setAttribute('points', pts);
 }
-// seed
-for (let i = 0; i < 12; i++) pumpHeartbeat();
-setInterval(pumpHeartbeat, 5000);
+setInterval(() => pumpHeartbeat(), 5000);
+pumpHeartbeat(8); pumpHeartbeat(18); pumpHeartbeat(10); pumpHeartbeat(22); pumpHeartbeat(12);
 
-/* ── Public helpers for existing JS ── */
-function updateBalance(val) {
-  const f = typeof val === 'number'
-    ? new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(val) : val;
-  ['home-balance','balance-value','balance-display','broker-demo-balance'].forEach(id => {
+/* ══ Risk helper ══ */
+function setRiskState(s) {
+  const label = document.getElementById('risk-state-label');
+  const badge = document.getElementById('risk-state-badge');
+  const hero  = document.getElementById('risk-hero');
+  const navB  = document.getElementById('nav-risk-badge');
+  const subs  = { NORMAL:'All limits within range', WARNING:'Approaching risk threshold', DANGER:'Circuit breaker may activate' };
+  if (label) label.textContent = s;
+  const sub = document.getElementById('risk-state-sub');
+  if (sub) sub.textContent = subs[s] || '';
+  const cfg = { NORMAL:{hc:'ok',bc:'b-green'}, WARNING:{hc:'warn',bc:'b-gold'}, DANGER:{hc:'danger',bc:'b-red'} }[s]||{hc:'ok',bc:'b-green'};
+  if (hero)  hero.className  = 'risk-hero ' + cfg.hc;
+  if (badge) badge.className = 'badge ' + cfg.bc;
+  if (navB)  navB.style.display = (s !== 'NORMAL') ? 'flex' : 'none';
+}
+setRiskState('NORMAL');
+
+/* ══ Watchdog state ══ */
+function setWatchdogState(ok, meta) {
+  ['watchdog-card'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.className = 'monitor-card ' + (ok ? 'mc-ok' : 'mc-err');
+  });
+  const st = document.getElementById('watchdog-state');
+  if (st) { st.textContent = ok ? 'RUNNING' : 'STOPPED'; st.className = 'mc-state ' + (ok ? 'pos' : 'neg'); }
+  const m = document.getElementById('watchdog-meta');
+  if (m && meta) m.textContent = meta;
+  if (!ok) setSystemState(false, 'Watchdog not responding');
+}
+
+function setHeartbeatState(ok, meta) {
+  const el = document.getElementById('heartbeat-card');
+  if (el) el.className = 'monitor-card ' + (ok ? 'mc-ok' : 'mc-err');
+  const st = document.getElementById('heartbeat-state');
+  if (st) { st.textContent = ok ? 'ACTIVE' : 'STALLED'; st.className = 'mc-state ' + (ok ? 'pos' : 'neg'); }
+  const m = document.getElementById('heartbeat-meta');
+  if (m && meta) m.textContent = meta;
+}
+
+function setSystemState(ok, msg) {
+  const banner = document.getElementById('alive-banner');
+  const title  = document.getElementById('alive-title');
+  const badge  = document.getElementById('alive-badge');
+  const sub    = document.getElementById('alive-sub');
+  if (!banner) return;
+  banner.className = 'alive-banner ' + (ok ? 'alive-ok' : 'alive-err');
+  if (title) title.textContent = ok ? 'SYSTEM AUTONOMOUS' : 'SYSTEM ALERT';
+  if (sub && msg) sub.textContent = msg;
+  if (badge) badge.innerHTML = ok ? '<span class="gdot gdot-pulse" style="color:var(--green)"></span>NEXUS OK' : '<span class="gdot" style="color:var(--red)"></span>ALERT';
+  badge.className = 'badge ' + (ok ? 'b-green' : 'b-red');
+}
+
+/* ══ Balance / trades ══ */
+function updateBalance(v) {
+  const f = '$' + Number(v).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  ['home-balance','balance-value','balance-display','acct-demo-balance'].forEach(id => {
     const el = document.getElementById(id); if (el) el.textContent = f;
   });
 }
 function updateOpenTrades(n) {
-  const badge = document.getElementById('nav-trades-badge');
-  if (badge) { badge.style.display = n > 0 ? 'flex' : 'none'; badge.textContent = n; }
-  const hv = document.getElementById('home-open');
-  if (hv) hv.innerHTML = n + '<span style="font-size:12px;color:var(--muted2)">/5</span>';
-  const cb = document.getElementById('trades-count-badge');
-  if (cb) cb.textContent = n + ' OPEN';
-  const sb = document.getElementById('trades-sub');
-  if (sb) sb.textContent = n + ' open · — P/L';
+  const el = document.getElementById('home-open-trades');
+  if (el) el.innerHTML = n + '<span style="font-size:11px;opacity:.5">/5</span>';
+  ['open-trades-value','open-trades-display'].forEach(id => { const e = document.getElementById(id); if(e) e.textContent = n; });
+  const b = document.getElementById('nav-pos-badge');
+  if (b) { b.style.display = n > 0 ? 'flex' : 'none'; b.textContent = n; }
+  const c = document.getElementById('open-pos-count-badge');
+  if (c) c.textContent = n + ' OPEN';
 }
 function updatePipeline(n, total) {
-  const t = n + '/' + (total || 8);
-  ['home-pipe','pipeline-display','pipeline-value'].forEach(id => {
-    const el = document.getElementById(id); if (el) el.textContent = t;
+  ['home-pipeline','pipeline-value','pipeline-display'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.textContent = n + '/' + (total||8);
   });
-  const ra = document.getElementById('home-regime-active');
-  if (ra) ra.textContent = n + ' tradeable';
+  const b = document.getElementById('regime-tradeable-badge');
+  if (b) b.textContent = n + ' TRADEABLE';
 }
 function updateAIModels(n) {
-  ['home-ai','ai-models-display','ai-models-value'].forEach(id => {
+  ['home-ai','ai-models-value','ai-models-display'].forEach(id => {
     const el = document.getElementById(id); if (el) el.textContent = n + '/4';
   });
 }
-function setRiskState(state) {
-  const label = document.getElementById('risk-state-label');
-  const badge = document.getElementById('risk-state-badge');
-  const big   = document.getElementById('risk-big');
-  const navb  = document.getElementById('nav-risk-badge');
-  if (!label) return;
-  const cfgs = {
-    NORMAL:  { bc:'b-green', rb:'rb-normal', sc:'pos', sub:'All limits within range', nav:false },
-    WARNING: { bc:'b-gold',  rb:'rb-warning', sc:'warn', sub:'Approaching risk limits', nav:true },
-    DANGER:  { bc:'b-red',   rb:'rb-danger',  sc:'neg', sub:'Circuit breaker may fire', nav:true },
-  };
-  const c = cfgs[state] || cfgs.NORMAL;
-  label.textContent = state;
-  label.className = 'risk-state ' + c.sc;
-  if (badge) { badge.className = 'badge ' + c.bc; badge.textContent = state; }
-  if (big)   big.className = 'risk-big ' + c.rb;
-  if (navb)  navb.style.display = c.nav ? 'flex' : 'none';
-  const sub = document.getElementById('risk-state-sub');
-  if (sub) sub.textContent = c.sub;
-}
-function setWatchdogState(ok, meta) {
-  ['wd-card','sys-wd-card'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.className = 'mon-card ' + (ok ? 'mon-ok' : 'mon-err');
+
+/* ══ P&L by pair (call with object {XAUUSD: 25.3, EURUSD: -5.1, ...}) ══ */
+function updatePairPnL(data) {
+  const vals = Object.values(data).filter(v => v !== 0);
+  const maxAbs = Math.max(...vals.map(Math.abs), 1);
+  Object.entries(data).forEach(([pair, pnl]) => {
+    const bar = document.getElementById('bar-' + pair);
+    const val = document.getElementById('pnl-' + pair);
+    if (bar) {
+      bar.style.width = (Math.abs(pnl)/maxAbs*100).toFixed(1) + '%';
+      bar.className = 'pair-bar-fill ' + (pnl >= 0 ? 'pos' : 'neg');
+    }
+    if (val) { val.textContent = (pnl >= 0 ? '+$' : '-$') + Math.abs(pnl).toFixed(2); val.className = 'pair-bar-val ' + (pnl >= 0 ? 'pos' : 'neg'); }
   });
-  ['wd-state','sys-wd-state'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) { el.textContent = ok ? 'RUNNING' : 'STOPPED'; el.className = 'mon-state ' + (ok ? 'pos' : 'neg'); }
-  });
-  if (meta) ['wd-meta','sys-wd-meta'].forEach(id => {
-    const el = document.getElementById(id); if (el) el.textContent = meta;
-  });
-  const badge = document.getElementById('sys-watchdog-badge');
-  if (badge) {
-    badge.className = 'badge ' + (ok ? 'b-green' : 'b-red');
-    badge.innerHTML = '<span class="dot ' + (ok?'dot-live':'') + '" style="color:' + (ok?'var(--green)':'var(--red)') + '"></span>' + (ok?'ACTIVE':'DOWN');
-  }
-  setSystemState(ok);
-}
-function setHeartbeatState(ok, meta) {
-  ['hb-card','sys-hb-card'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.className = 'mon-card ' + (ok ? 'mon-ok' : 'mon-err');
-  });
-  ['hb-state','sys-hb-state'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) { el.textContent = ok ? 'ACTIVE' : 'STALLED'; el.className = 'mon-state ' + (ok ? 'pos' : 'neg'); }
-  });
-  if (meta) ['hb-meta','sys-hb-meta'].forEach(id => {
-    const el = document.getElementById(id); if (el) el.textContent = meta;
-  });
-}
-function setSystemState(ok, msg) {
-  const banner = document.getElementById('alive-banner');
-  const status = document.getElementById('system-alive-status');
-  const badge  = document.getElementById('system-overall-badge');
-  const sub    = document.getElementById('system-alive-sub');
-  if (!banner) return;
-  if (ok) {
-    banner.style.borderColor = 'rgba(0,212,255,.2)';
-    if (status) status.textContent = 'SYSTEM AUTONOMOUS';
-    if (badge)  badge.innerHTML = '<span class="dot dot-live" style="color:var(--green)"></span>OK';
-    if (badge)  badge.className = 'badge b-green';
-  } else {
-    banner.style.borderColor = 'rgba(255,56,96,.3)';
-    if (status) status.textContent = 'SYSTEM ALERT';
-    if (badge)  badge.innerHTML = '<span class="dot" style="color:var(--red)"></span>ISSUE';
-    if (badge)  badge.className = 'badge b-red';
-  }
-  if (msg && sub) sub.textContent = msg;
 }
 
-/* ── Session P&L helper ── */
-function updateSessionPnl(session, pnl, trades, wr) {
-  const ids = { val: 'spnl-'+session+'-val', tr: 'spnl-'+session+'-trades', wr: 'spnl-'+session+'-wr' };
-  const valEl = document.getElementById(ids.val);
-  if (valEl) {
-    valEl.textContent = typeof pnl === 'number' ? (pnl >= 0 ? '+$' : '-$') + Math.abs(pnl).toFixed(2) : '—';
-    valEl.className = 'spnl-val ' + (pnl > 0 ? 'pos' : pnl < 0 ? 'neg' : 'muted');
-  }
-  const trEl = document.getElementById(ids.tr);
-  if (trEl) trEl.textContent = (trades || 0) + ' trades';
-  const wrEl = document.getElementById(ids.wr);
-  if (wrEl) { wrEl.textContent = wr ? wr + '% WR' : '— WR'; wrEl.className = 'spnl-wr ' + (wr >= 50 ? 'pos' : wr > 0 ? 'warn' : 'muted'); }
+/* ══ P&L by session ══ */
+function updateSessionPnL(data) {
+  const sessions = ['sydney','tokyo','london','newyork'];
+  sessions.forEach(s => {
+    const d = data[s] || {pnl:0,trades:0};
+    const pEl = document.getElementById('pnl-' + s);
+    const tEl = document.getElementById('trades-' + s);
+    if (pEl) { pEl.textContent = (d.pnl >= 0 ? '+$' : '-$') + Math.abs(d.pnl).toFixed(2); pEl.className = 'spnl-val ' + (d.pnl >= 0 ? 'pos' : 'neg'); }
+    if (tEl) tEl.textContent = d.trades + ' trade' + (d.trades !== 1 ? 's' : '');
+  });
 }
 
-/* ── Pair P&L bar chart helper ── */
-function renderPairPnlChart(data) {
-  const container = document.getElementById('pair-pnl-chart');
-  if (!container) return;
-  if (!data || !data.length) { container.innerHTML = '<div class="ph">No trade data yet</div>'; return; }
-  const maxAbs = Math.max(...data.map(d => Math.abs(d.pnl)), 0.01);
-  container.innerHTML = data.map(d => {
-    const pct = Math.abs(d.pnl) / maxAbs * 100;
-    const cls = d.pnl >= 0 ? 'pos-fill' : 'neg-fill';
-    const col = d.pnl >= 0 ? 'var(--green)' : 'var(--red)';
-    return `<div class="bar-row">
-      <span class="bar-label mono">${d.pair}</span>
-      <div class="bar-track">
-        <div class="bar-fill ${cls}" style="width:${pct.toFixed(1)}%">
-          <span class="bar-val" style="color:${col}">${d.pnl >= 0 ? '+' : ''}$${d.pnl.toFixed(2)}</span>
-        </div>
-      </div>
-      <span class="bar-count">${d.trades}T</span>
-    </div>`;
+/* ══ Win/loss donut ══ */
+function updateDonut(wins, losses) {
+  const total    = wins + losses || 1;
+  const pct      = Math.round(wins / total * 100);
+  const circ     = 175.93;
+  const winDash  = (wins  / total) * circ;
+  const lossDash = (losses/ total) * circ;
+  const d1 = document.getElementById('donut-wins');
+  const d2 = document.getElementById('donut-losses');
+  const pp = document.getElementById('donut-pct');
+  if (d1) d1.style.strokeDashoffset = (circ - winDash).toFixed(2);
+  if (d2) {
+    d2.style.strokeDashoffset = (circ - lossDash).toFixed(2);
+    const lossDeg = -90 + (winDash / circ) * 360;
+    d2.setAttribute('transform', `rotate(${lossDeg} 35 35)`);
+  }
+  if (pp) pp.textContent = pct + '%';
+  const lw = document.getElementById('legend-wins');
+  const ll = document.getElementById('legend-losses');
+  const lt = document.getElementById('legend-total');
+  if (lw) lw.textContent = wins + ' wins';
+  if (ll) ll.textContent = losses + ' losses';
+  if (lt) lt.textContent = total + ' total';
+}
+
+
+/* == WebSocket - Gist service discovery == */
+const GIST_URL = 'https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json';
+let wsConn = null;
+
+function liveValue(...values) {
+  for (const value of values) if (value !== undefined && value !== null) return value;
+  return null;
+}
+
+async function discoverAndConnect() {
+  console.log('[WS] Discovering tunnel URL from Gist...');
+  try {
+    const res = await fetch(GIST_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error('Gist fetch failed: ' + res.status);
+    const d = await res.json();
+    if (!d.tunnel_url) throw new Error('No tunnel_url in Gist data');
+    const wsUrl = 'wss://' + d.tunnel_url.replace(/^https?:\/\//, '') + '/ws';
+    console.log('[WS] Connecting to', wsUrl);
+    wsConn = new WebSocket(wsUrl);
+    wsConn.onopen    = () => { console.log('[WS] Connected'); setHeartbeatState(true, '5s - live'); };
+    wsConn.onmessage = e => { try { applyLiveData(JSON.parse(e.data)); } catch(err) { console.error('[WS] Parse error', err); } };
+    wsConn.onerror   = () => { console.warn('[WS] Error - retry in 10s'); setHeartbeatState(false, 'reconnecting...'); };
+    wsConn.onclose   = () => { console.warn('[WS] Closed - retry in 10s'); setHeartbeatState(false, 'reconnecting...'); setTimeout(discoverAndConnect, 10000); };
+  } catch(err) {
+    console.error('[WS] Discovery failed:', err.message, '- retry in 15s');
+    setHeartbeatState(false, 'no signal');
+    setTimeout(discoverAndConnect, 15000);
+  }
+}
+
+function applyLiveData(d) {
+  if (!d) return;
+  const pipeline = d.pipeline || null;
+  const aiModels = liveValue(d.ai_models, d.ai_online);
+  const watchdog = liveValue(d.watchdog, d.wd_ok);
+  const pnlPair = liveValue(d.pnl_pair, d.pair_pnl);
+  const pnlSession = liveValue(d.pnl_session, d.session_pnl);
+  const positions = liveValue(d.positions, d.open_positions);
+  const history = liveValue(d.history, d.closed_trades, d.recent_trades);
+
+  if (d.balance != null) updateBalance(d.balance);
+  if (d.open_trades != null) updateOpenTrades(d.open_trades);
+  if (pipeline) updatePipeline(liveValue(pipeline.active, pipeline.tradeable, pipeline.open, 0), liveValue(pipeline.total, pipeline.count, 0));
+  if (aiModels != null) updateAIModels(aiModels);
+  if (d.risk_state) setRiskState(d.risk_state);
+  if (watchdog != null) setWatchdogState(watchdog === 'OK' || watchdog === true, d.watchdog_meta || d.wd_meta || '');
+  if (d.heartbeat != null) { pumpHeartbeat(d.heartbeat); setHeartbeatState(true, '5s - live'); }
+  if (pnlPair) updatePairPnL(pnlPair);
+  if (pnlSession) updateSessionPnL(pnlSession);
+  if (d.wins != null && d.losses != null) updateDonut(d.wins, d.losses);
+  if (positions) renderPositions(positions);
+  if (history) renderHistory(history);
+  if (d.regime) updateRegime(d.regime);
+
+  const time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Kuala_Lumpur' });
+  const el = document.getElementById('home-updated');
+  if (el) el.textContent = 'UPDATED: ' + time;
+  const lu = document.getElementById('last-updated-display');
+  if (lu) lu.textContent = time;
+}
+
+function renderPositions(positions) {
+  const tbody = document.getElementById('positions-tbody');
+  if (!tbody || !positions) return;
+  if (!positions.length) { tbody.innerHTML = '<tr><td colspan="10" class="ph">No open positions</td></tr>'; return; }
+  tbody.innerHTML = positions.map(p => {
+    const dir = liveValue(p.dir, p.direction, p.side, '');
+    const pnl = Number(liveValue(p.pnl, p.floating_pnl, 0));
+    return `
+    <tr>
+      <td>${liveValue(p.pair, p.symbol, '-')}</td>
+      <td class="${dir === 'BUY' ? 'pos' : 'neg'}">${dir || '-'}</td>
+      <td>${liveValue(p.lots, p.size, p.volume, '-')}</td>
+      <td>${liveValue(p.entry, p.entry_price, '-')}</td>
+      <td>${liveValue(p.price, p.current_price, '-')}</td>
+      <td>${liveValue(p.sl, p.stop_loss, '-')}</td>
+      <td>${liveValue(p.tp, p.take_profit, '-')}</td>
+      <td class="${pnl >= 0 ? 'pos' : 'neg'}">${pnl >= 0 ? '+' : ''}$${pnl.toFixed(2)}</td>
+      <td>${liveValue(p.duration, p.age, '-')}</td>
+      <td>${liveValue(p.strategy, p.reason, '-')}</td>
+    </tr>`;
   }).join('');
 }
 
-/* ── News renderer helper ── */
-function renderNews(events) {
-  const containers = ['news-feed-display', 'risk-news-display'];
-  if (!events || !events.length) {
-    containers.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.innerHTML = '<div class="ph">No high-impact events in next 12h</div>';
+function renderHistory(history) {
+  const tbody = document.getElementById('shadow-tracker-tbody');
+  if (!tbody || !history) return;
+  if (!history.length) { tbody.innerHTML = '<tr><td colspan="8" class="ph">No data yet</td></tr>'; return; }
+  tbody.innerHTML = history.slice(-20).reverse().map(h => {
+    const dir = liveValue(h.dir, h.direction, h.side, '');
+    const pnl = Number(liveValue(h.pnl, h.realized_pnl, 0));
+    return `
+    <tr>
+      <td>${liveValue(h.pair, h.symbol, '-')}</td>
+      <td class="${dir === 'BUY' ? 'pos' : 'neg'}">${dir || '-'}</td>
+      <td>${liveValue(h.entry, h.entry_price, '-')}</td>
+      <td>${liveValue(h.exit, h.exit_price, '-')}</td>
+      <td class="${pnl >= 0 ? 'pos' : 'neg'}">${pnl >= 0 ? '+' : ''}$${pnl.toFixed(2)}</td>
+      <td>${liveValue(h.session, h.market_session, '-')}</td>
+      <td>${liveValue(h.strategy, h.reason, '-')}</td>
+      <td class="${h.result === 'WIN' ? 'pos' : 'neg'}">${liveValue(h.result, h.outcome, '-')}</td>
+    </tr>`;
+  }).join('');
+}
+
+function updateRegime(regime) {
+  if (!regime) return;
+  Object.entries(regime).forEach(([pair, data]) => {
+    const cells = document.querySelectorAll('.regime-cell');
+    cells.forEach(cell => {
+      const lbl = cell.querySelector('.regime-lbl');
+      if (lbl && lbl.textContent === pair) {
+        const dir = cell.querySelector('.regime-dir');
+        const adx = cell.querySelector('.regime-adx');
+        const direction = liveValue(data.direction, data.trend, 'RANGE');
+        if (dir) dir.textContent = direction === 'UP' ? '↑' : direction === 'DOWN' ? '↓' : '↔';
+        if (adx) adx.textContent = 'ADX ' + liveValue(data.adx, data.adx_value, '-');
+        cell.className = 'regime-cell ' + (direction === 'UP' ? 'trend-up' : direction === 'DOWN' ? 'trend-down' : 'ranging');
+      }
     });
-    return;
-  }
-  const html = events.map(e => {
-    const impact = e.impact || 'low';
-    const impCls = { high:'imp-high', medium:'imp-med', low:'imp-low' }[impact] || 'imp-low';
-    const ccyCls = {
-      USD:'news-ccy-usd', EUR:'news-ccy-eur', GBP:'news-ccy-gbp', JPY:'news-ccy-jpy'
-    }[e.currency] || 'news-ccy-other';
-    return `<div class="news-item">
-      <div class="news-head">
-        <span class="news-time">${e.time || '--:--'} MYT</span>
-        <span class="news-currency ${ccyCls}">${e.currency || '—'}</span>
-        <span class="news-impact ${impCls}">${impact.toUpperCase()}</span>
-        ${e.session ? `<span class="news-session-tag">📍${e.session}</span>` : ''}
-      </div>
-      <div class="news-event">${e.event || '—'}</div>
-      ${e.forecast ? `<div class="news-val">Prev: ${e.previous||'—'} · Fcast: ${e.forecast}</div>` : ''}
-    </div>`;
-  }).join('');
-  containers.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = html;
   });
+}
+
+/* Boot - fire after DOM ready */
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', discoverAndConnect, { once: true });
+} else {
+  discoverAndConnect();
 }
 </script>
 
 <!--
-════════════════════════════════════════════
-PASTE YOUR EXISTING <script> BLOCKS HERE
+═══════════════════════════════════════════════════
+INTEGRATION — paste existing <script> blocks below.
 
-ID / Helper reference:
-  navigate(pageId)                   — page switching
-  switchAccount('demo'|'live',el)   — account tab
-  switchAnalysis('session'|'pair'|'broker',el)
+NEW HELPER FUNCTIONS (call from your existing JS):
   updateBalance(number)
   updateOpenTrades(number)
   updatePipeline(tradeable, total)
   updateAIModels(onlineCount)
   setRiskState('NORMAL'|'WARNING'|'DANGER')
-  setWatchdogState(ok, 'meta')
-  setHeartbeatState(ok, 'meta')
-  setSystemState(ok, 'msg')
-  pumpHeartbeat(0-30)               — call every 5s tick
-  updateSessionPnl('sydney'|'tokyo'|'london'|'ny', pnl, trades, winRate)
-  renderPairPnlChart([{pair,pnl,trades}])
-  renderNews([{time,currency,impact,event,forecast,previous,session}])
+  setWatchdogState(true|false, 'meta text')
+  setHeartbeatState(true|false, 'meta text')
+  setSystemState(true|false, 'message')
+  pumpHeartbeat(value)       ← call every 5s tick
+  updatePairPnL({XAUUSD:25, EURUSD:-5, ...})
+  updateSessionPnL({london:{pnl:30,trades:5}, ...})
+  updateDonut(wins, losses)
+  switchAccount('demo'|'live', el)
 
-All existing IDs preserved. New IDs added:
-  home-balance / home-open / home-ai / home-pipe
-  spnl-{session}-val/trades/wr
-  pair-pnl-chart
-  broker-list / broker-demo-balance / broker-live-balance
-  sess-{session}-time/state
-  sess-active-label
-  sessions-bar
-════════════════════════════════════════════
+MULTI-BROKER READY:
+  Add CTRADER_LIVE_* vars to .env
+  Dispatch 'accountSwitch' event to switch data source
+  Account bar auto-shows all configured accounts
+
+EXISTING WIDGET IDs PRESERVED:
+  open-positions-widget, positions-table, positions-tbody
+  shadow-tracker-widget, shadow-tracker-table, shadow-tracker-tbody
+  trade-quality-widget, quality-stats-display
+  win-rate-display, profit-factor-display, avg-rr-display
+  ai-model-status-widget, ai-models-list
+  pipeline-status-widget, pipeline-pairs-display
+  strategy-registry-widget, strategy-registry-table, strategy-registry-tbody
+  scanner-status-widget, scanner-progress, scanner-badge
+  risk-monitor-widget, risk-state-label, risk-state-badge, risk-details-display
+  currency-exposure-widget, exposure-bars-display, exposure-count-badge
+  news-intelligence-widget, news-feed-display
+  activity-log-widget, activity-log-display
+  departments-widget, departments-display
+  last-updated-display, ai-version-badge, vector-db-count, xgb-model-status
+═══════════════════════════════════════════════════
 -->
-
-
-
-
-
-
-<script>
-function applyLiveData(d) {
-  if (!d) return;
-  if (d.balance !== undefined) updateBalance(d.balance);
-  var openN = d.open_trades !== undefined ? d.open_trades : (d.open_pos || 0);
-  updateOpenTrades(openN);
-  if (d.ai_online !== undefined) updateAIModels(d.ai_online);
-  if (d.pipeline) updatePipeline(d.pipeline.tradeable || 0, d.pipeline.total || 8);
-  if (d.risk_state) setRiskState(d.risk_state);
-  if (d.wd_ok !== undefined) setWatchdogState(d.wd_ok, d.ticks ? 'tick #'+d.ticks : undefined);
-  setHeartbeatState(true, d.ts || undefined);
-  if (d.news) renderNews(d.news);
-  else if (d.news_events) renderNews(d.news_events);
-  if (d.positions) renderPositions(d.positions);
-  if (d.regime) renderRegime(d.regime);
-  if (d.pair_pnl) renderPairPnlChart(d.pair_pnl);
-  if (d.session_pnl) ['sydney','tokyo','london','ny'].forEach(function(s){
-    var x = d.session_pnl[s]; if (x) updateSessionPnl(s, x.pnl||0, x.trades||0, x.wr||0);
-  });
-  if (d.closed_trades) renderClosedTrades(d.closed_trades);
-  if (d.ts) { var el = document.getElementById('last-update-ts'); if (el) el.textContent = d.ts; }
-  if (d.ticks !== undefined) { var e = document.getElementById('sys-ticks'); if (e) e.textContent = d.ticks; }
-  if (d.signals !== undefined) { var e = document.getElementById('sys-signals'); if (e) e.textContent = d.signals; }
-}
-
-function renderPositions(pos) {
-  var el = document.getElementById('positions-tbody');
-  if (!el) return;
-  if (!pos || !pos.length) { el.innerHTML = '<tr><td colspan="7" class="ph">No open positions</td></tr>'; return; }
-  el.innerHTML = pos.map(function(p) {
-    var pnlCls = (p.pnl||0) > 0 ? 'pos' : (p.pnl||0) < 0 ? 'neg' : 'muted';
-    var dirCls = p.direction === 'BUY' ? 'pos' : 'neg';
-    return '<tr>'
-      + '<td class="mono">' + (p.pair||'--') + '</td>'
-      + '<td class="' + dirCls + '">' + (p.direction||'--') + '</td>'
-      + '<td class="mono">' + (p.lots||'--') + '</td>'
-      + '<td class="mono">' + (p.entry||'--') + '</td>'
-      + '<td class="mono">' + (p.sl||'--') + '</td>'
-      + '<td class="mono">' + (p.tp||'--') + '</td>'
-      + '<td class="' + pnlCls + ' mono">' + ((p.pnl||0) >= 0 ? '+$' : '-$') + Math.abs(p.pnl||0).toFixed(2) + '</td>'
-      + '</tr>';
-  }).join('');
-}
-function renderRegime(regime) {
-  var el = document.getElementById('pipeline-pairs-display');
-  if (!el || !regime) return;
-  var pairs = Object.keys(regime);
-  el.innerHTML = pairs.map(function(pair) {
-    var r = regime[pair];
-    var cls = r.tradeable ? 'pos' : 'muted';
-    var dirArrow = r.dir === 'up' ? '▲' : r.dir === 'dn' ? '▼' : '—';
-    return '<div class="trade-row">'
-      + '<span class="mono" style="font-size:10px">' + pair + '</span>'
-      + '<span class="' + cls + '" style="font-size:9px">' + dirArrow + ' ADX ' + (r.adx||0).toFixed(1) + '</span>'
-      + '<span class="badge ' + (r.tradeable ? 'b-green' : 'b-muted') + '" style="font-size:8px">' + (r.tradeable ? 'TRADE' : 'SKIP') + '</span>'
-      + '</div>';
-  }).join('');
-}
-function renderClosedTrades(trades) {
-  var el = document.getElementById('closed-trades-list');
-  if (!el) return;
-  if (!trades.length) { el.innerHTML = '<div class="ph">No closed trades yet</div>'; return; }
-  el.innerHTML = trades.slice(0,20).map(function(t) {
-    var pnl = typeof t.pnl === 'number' ? t.pnl : 0;
-    var pnlCls = pnl > 0 ? 'pos' : pnl < 0 ? 'neg' : 'muted';
-    var pnlStr = pnl !== 0 ? (pnl > 0 ? '+$' : '-$') + Math.abs(pnl).toFixed(2) : '--';
-    var dirCls = t.direction === 'BUY' ? 'pos' : 'neg';
-    return '<div class="trade-row">'
-      + '<span class="mono" style="font-size:10px">' + (t.pair||'--') + '</span>'
-      + '<span class="' + dirCls + '" style="font-size:9px;font-weight:700">' + (t.direction||'--') + '</span>'
-      + '<span class="mono" style="font-size:9px;color:var(--muted2)">' + (t.entry||'--') + '</span>'
-      + '<span class="' + pnlCls + ' mono" style="font-size:10px;font-weight:700">' + pnlStr + '</span>'
-      + '</div>';
-  }).join('');
-}
-</script>
-<script>
-const META_URL = "https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json";
-
-
-
-(async function poll() {
-  try {
-    const d = await fetch("https://gist.githubusercontent.com/Chyuanguy86/3d5cbe1b7063a171ef8fa512f68ffb8d/raw/data.json?nc="+Date.now(),{cache:"no-store"}).then(r=>r.json());
-    console.log("[poll] data:", d.balance, d.ai_online, d.pipeline); applyLiveData(d); pumpHeartbeat(20);
-  } catch(e) { console.warn("[poll]",e); }
-  setTimeout(poll, 10000);
-})();
-</script>
-
 </body>
 </html>
+
