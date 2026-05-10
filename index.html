@@ -1701,6 +1701,40 @@ function applyLiveData(d) {
   }
   if (history) renderHistory(history);
   if (d.regime) updateRegime(d.regime);
+  if (d.regime) {
+    const ppd = document.getElementById("pipeline-pairs-display");
+    if (ppd) {
+      const entries = Object.entries(d.regime);
+      ppd.innerHTML = entries.map(([pair, r]) => {
+        const tradeable = r.tradeable;
+        const dir = r.dir === "up" ? "↑" : r.dir === "dn" ? "↓" : "↔";
+        const adx = (r.adx||0).toFixed(1);
+        const cls = tradeable ? "pos" : "muted2";
+        return "<div style="display:flex;align-items:center;gap:8px;padding:4px 0;"
+          +"border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px">"
+          +"<span class="" + cls + "" style="min-width:60px;font-weight:700">" + pair + "</span>"
+          +"<span class="" + cls + "">" + dir + " ADX " + adx + "</span>"
+          +"<span style="margin-left:auto" class="" + cls + "">"
+          + (tradeable ? "TRADEABLE" : "SKIP") + "</span></div>";
+      }).join("");
+      const sb = document.getElementById("scanner-badge") || document.getElementById("regime-tradeable-badge");
+      const tradeCount = entries.filter(([,r])=>r.tradeable).length;
+      if (sb) sb.textContent = tradeCount + " / " + entries.length + " TRADEABLE";
+    }
+  }
+  const stratBody = document.getElementById("strategy-registry-tbody");
+  const stratBadge = document.getElementById("strategies-badge");
+  if (d.strategies && d.strategies.length > 0) {
+    if (stratBadge) stratBadge.textContent = d.strategies.length + " STRATS";
+    if (stratBody) stratBody.innerHTML = d.strategies.map(s =>
+      "<tr><td>"+s.id+"</td><td>"+s.name+"</td><td>"+(s.scanner||"SMC")+"</td>"
+      +"<td class=\"pos\">"+s.status+"</td><td>"+(s.last_run||"—")+"</td>"
+      +"<td>"+(s.logic||"—")+"</td></tr>"
+    ).join("");
+  } else if (stratBody && stratBody.innerHTML.includes("Loading")) {
+    if (stratBadge) stratBadge.textContent = "0 STRATS";
+    stratBody.innerHTML = "<tr><td colspan=\"6\" class=\"ph\">No strategies registered yet</td></tr>";
+  }
   if (d.vector_count != null) { const e=document.getElementById("vector-db-count"); if(e) e.textContent=d.vector_count; }
   if (d.activity_log && d.activity_log.length) {
     const el=document.getElementById("activity-log-display");
