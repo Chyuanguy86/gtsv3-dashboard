@@ -889,6 +889,8 @@ body::before {
           <div class="regime-cell"><div class="regime-lbl">NZDUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
           <div class="regime-cell"><div class="regime-lbl">USDCAD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
           <div class="regime-cell"><div class="regime-lbl">USDCHF</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">BTCUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">LTCUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
         </div>
       </div>
     </div>
@@ -1090,6 +1092,16 @@ body::before {
             <span class="pair-bar-lbl">USDCHF</span>
             <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-USDCHF"></div></div>
             <span class="pair-bar-val muted2" id="pnl-USDCHF">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">BTCUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-BTCUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-BTCUSD">$—</span>
+          </div>
+          <div class="pair-bar-row">
+            <span class="pair-bar-lbl">LTCUSD</span>
+            <div class="pair-bar-track"><div class="pair-bar-fill pos" style="width:0%" id="bar-LTCUSD"></div></div>
+            <span class="pair-bar-val muted2" id="pnl-LTCUSD">$—</span>
           </div>
         </div>
       </div>
@@ -1623,7 +1635,7 @@ function applyLiveData(d) {
   if (d.heartbeat != null) { pumpHeartbeat(d.heartbeat); setHeartbeatState(true, '5s - live'); }
   if (pnlPair) updatePairPnL(pnlPair);
   if (pnlSession) updateSessionPnL(pnlSession);
-  if (d.wins != null && d.losses != null) updateDonut(d.wins, d.losses);
+  /* wins/losses calculated from closed_trades below */
   if (d.closed_trades && d.closed_trades.length > 0) {
     const ct = d.closed_trades;
     const cWins   = ct.filter(t => (t.pnl||0) > 0).length;
@@ -1632,11 +1644,61 @@ function applyLiveData(d) {
     const byPair = {};
     ct.forEach(t => { const k=t.pair||t.symbol; if(k) byPair[k]=(byPair[k]||0)+(t.pnl||0); });
     if (Object.keys(byPair).length) updatePairPnL(byPair);
+    // Performance metrics
+    const total30 = cWins + cLosses;
+    if (total30 > 0) {
+      const wr = Math.round(cWins / total30 * 100);
+      const wEl = document.getElementById("win-rate-display");
+      if (wEl) { wEl.textContent = wr + "%"; wEl.className = wr >= 50 ? "pos" : "neg"; }
+      const gains   = ct.filter(t=>(t.pnl||0)>0).reduce((s,t)=>s+(t.pnl||0),0);
+      const lossSum = Math.abs(ct.filter(t=>(t.pnl||0)<0).reduce((s,t)=>s+(t.pnl||0),0));
+      const pf = lossSum > 0 ? (gains/lossSum).toFixed(2) : "N/A";
+      const pfEl = document.getElementById("profit-factor-display");
+      if (pfEl) pfEl.textContent = pf;
+      const avgW = cWins   > 0 ? gains/cWins     : 0;
+      const avgL = cLosses > 0 ? lossSum/cLosses : 0;
+      const rr   = avgL > 0 ? (avgW/avgL).toFixed(1)+"R" : "N/A";
+      const rrEl = document.getElementById("avg-rr-display");
+      if (rrEl) rrEl.textContent = rr;
+      const tqb = document.getElementById("trade-quality-badge");
+      if (tqb) tqb.textContent = total30 + " TRADES";
+    }
     const lp = document.getElementById("legend-pnl");
     const tot = ct.reduce((s,t)=>s+(t.pnl||0),0);
     if (lp) { lp.textContent=(tot>=0?"+$":"-$")+Math.abs(tot).toFixed(2); lp.className=tot>=0?"pos":"neg"; }
   }
   if (positions) renderPositions(positions);
+  if (positions && positions.length > 0) {
+    const exp = {};
+    positions.forEach(pos => {
+      const pair = pos.pair||pos.symbol||"";
+      if (pair.length < 6) return;
+      const c1 = pair.slice(0,3); const c2 = pair.slice(3,6);
+      const dir = (pos.direction||pos.dir||"").toUpperCase();
+      const side = dir === "BUY" ? 1 : -1;
+      const lots = pos.lots||pos.size||0;
+      exp[c1] = (exp[c1]||0) + side * lots;
+      exp[c2] = (exp[c2]||0) - side * lots;
+    });
+    const keys = Object.keys(exp).filter(k=>Math.abs(exp[k])>0.0001);
+    const cntEl = document.getElementById("exposure-count-badge");
+    if (cntEl) cntEl.textContent = keys.length + " CCY";
+    const expEl = document.getElementById("exposure-bars-display");
+    if (expEl && keys.length > 0) {
+      const mx = Math.max(...keys.map(k=>Math.abs(exp[k])));
+      expEl.innerHTML = keys.map(k => {
+        const v=exp[k]; const pct=(Math.abs(v)/mx*100).toFixed(1);
+        const cls=v>0?"pos":"neg"; const col=v>0?"var(--cyan)":"var(--red)";
+        return "<div class=\"exp-row\">"
+          +"<div class=\"exp-top\"><span>"+k+"</span>"
+          +"<span class=\""+cls+"\">"+(v>0?"+":"")+v.toFixed(2)+" lots</span></div>"
+          +"<div class=\"exp-track\"><div class=\"exp-fill\" style=\"width:"+pct+"%;background:"+col+"\"></div></div>"
+          +"</div>";
+      }).join("");
+    } else if (expEl && keys.length === 0) {
+      expEl.innerHTML = "<div class=\"ph\">No exposure</div>";
+    }
+  }
   if (history) renderHistory(history);
   if (d.regime) updateRegime(d.regime);
   const _news = liveValue(d.news, d.news_events);
