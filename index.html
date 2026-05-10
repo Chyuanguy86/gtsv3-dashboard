@@ -1616,14 +1616,31 @@ function applyLiveData(d) {
   if (pipeline) updatePipeline(liveValue(pipeline.active, pipeline.tradeable, pipeline.open, 0), liveValue(pipeline.total, pipeline.count, 0));
   if (aiModels != null) updateAIModels(aiModels);
   if (d.risk_state) setRiskState(d.risk_state);
+  if (d.daily_dd    != null) { const e=document.getElementById("daily-dd-val");    if(e){e.textContent=(d.daily_dd||0).toFixed(2)+"%";e.className="risk-mval "+(d.daily_dd>1.5?"neg":d.daily_dd>1?"warn-c":"pos");} }
+  if (d.consec_loss != null) { const e=document.getElementById("consec-loss-val"); if(e) e.textContent=(d.consec_loss||0)+" / 3"; }
+  if (d.open_pos    != null) { const e=document.getElementById("risk-open-val");   if(e) e.textContent=(d.open_pos||0)+" / 3"; }
   if (watchdog != null) setWatchdogState(watchdog === 'OK' || watchdog === true, d.watchdog_meta || d.wd_meta || '');
   if (d.heartbeat != null) { pumpHeartbeat(d.heartbeat); setHeartbeatState(true, '5s - live'); }
   if (pnlPair) updatePairPnL(pnlPair);
   if (pnlSession) updateSessionPnL(pnlSession);
   if (d.wins != null && d.losses != null) updateDonut(d.wins, d.losses);
+  if (d.closed_trades && d.closed_trades.length > 0) {
+    const ct = d.closed_trades;
+    const cWins   = ct.filter(t => (t.pnl||0) > 0).length;
+    const cLosses = ct.filter(t => (t.pnl||0) < 0).length;
+    if (cWins + cLosses > 0) updateDonut(cWins, cLosses);
+    const byPair = {};
+    ct.forEach(t => { const k=t.pair||t.symbol; if(k) byPair[k]=(byPair[k]||0)+(t.pnl||0); });
+    if (Object.keys(byPair).length) updatePairPnL(byPair);
+    const lp = document.getElementById("legend-pnl");
+    const tot = ct.reduce((s,t)=>s+(t.pnl||0),0);
+    if (lp) { lp.textContent=(tot>=0?"+$":"-$")+Math.abs(tot).toFixed(2); lp.className=tot>=0?"pos":"neg"; }
+  }
   if (positions) renderPositions(positions);
   if (history) renderHistory(history);
   if (d.regime) updateRegime(d.regime);
+  const _news = liveValue(d.news, d.news_events);
+  if (_news) renderNews(_news);
 
   const time = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Kuala_Lumpur' });
   const el = document.getElementById('home-updated');
@@ -1685,13 +1702,35 @@ function updateRegime(regime) {
       if (lbl && lbl.textContent === pair) {
         const dir = cell.querySelector('.regime-dir');
         const adx = cell.querySelector('.regime-adx');
-        const direction = liveValue(data.direction, data.trend, 'RANGE');
-        if (dir) dir.textContent = direction === 'UP' ? '↑' : direction === 'DOWN' ? '↓' : '↔';
-        if (adx) adx.textContent = 'ADX ' + liveValue(data.adx, data.adx_value, '-');
-        cell.className = 'regime-cell ' + (direction === 'UP' ? 'trend-up' : direction === 'DOWN' ? 'trend-down' : 'ranging');
+        const d = liveValue(data.dir, data.direction, data.trend, '');
+        const isUp = d === 'up' || d === 'UP';
+        const isDn = d === 'dn' || d === 'DOWN';
+        if (dir)   dir.textContent  = isUp ? '↑' : isDn ? '↓' : '↔';
+        if (adx)  adx.textContent = 'ADX ' + liveValue(data.adx, data.adx_value, '-');
+        cell.className = 'regime-cell ' + (isUp ? 'trend-up' : isDn ? 'trend-down' : 'ranging');
       }
     });
   });
+}
+
+
+function renderNews(events) {
+  if (!events || !events.length) return;
+  const mkHtml = ev => {
+    const imp = (ev.impact||ev.severity||'low').toLowerCase();
+    const cls = imp==='high'?'ni-high':imp==='medium'||imp==='med'?'ni-med':'ni-low';
+    const lbl = imp==='high'?'HI':imp==='medium'||imp==='med'?'MED':'LOW';
+    return '<div class="news-item">'
+      +'<div class="news-impact '+cls+'">'+lbl+'</div>'
+      +'<div class="news-body">'
+      +'<div class="news-time">'+(ev.time||ev.datetime||ev.date||'')+'</div>'
+      +'<div class="news-title">'+(ev.title||ev.event||ev.name||'')+'</div>'
+      +'<div class="news-ccy">'+(ev.currency||ev.ccy||ev.country||'')+'</div>'
+      +'</div></div>';
+  };
+  const h = events.slice(0,8).map(mkHtml).join('');
+  const ids = ['news-feed-display','risk-news-display','home-news-display'];
+  ids.forEach(id => { const el=document.getElementById(id); if(el) el.innerHTML=h; });
 }
 
 /* Boot - fire after DOM ready */
