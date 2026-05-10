@@ -1705,7 +1705,7 @@ function applyLiveData(d) {
   if (d.activity_log && d.activity_log.length) {
     const el=document.getElementById("activity-log-display");
     if(el) el.innerHTML=d.activity_log.slice(-15).reverse().map(ln=>
-      "<div style="font-family:var(--mono);font-size:9px;color:var(--muted2);padding:2px 0;border-bottom:1px solid var(--border)">"+ln+"</div>"
+      `<div style="font-family:var(--mono);font-size:9px;color:var(--muted2);padding:2px 0;border-bottom:1px solid var(--border)">${ln}</div>`
     ).join("");
   }
   const _news = liveValue(d.news, d.news_events);
