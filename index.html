@@ -1378,11 +1378,8 @@ function updateClock() {
   if (mu) mu.textContent = myt.slice(0,5);
   updateSessions();
 }
-setInterval(updateClock, 1000);
-updateClock();
-
-/* ══ Session logic (UTC-based) ══ */
-const SESSIONS = {
+	/* ══ Session logic (UTC-based) ══ */
+	const SESSIONS = {
   sydney:  { start: 21, end: 6,  pill: 'sess-sydney',  card: 'sc-sydney',  st: 'sc-sydney-st',  t: 'sc-sydney-time',  badge: '🌏 SYD', cls: 'session-sydney'  },
   tokyo:   { start: 0,  end: 9,  pill: 'sess-tokyo',   card: 'sc-tokyo',   st: 'sc-tokyo-st',   t: 'sc-tokyo-time',   badge: '🗾 TYO', cls: 'session-tokyo'   },
   london:  { start: 7,  end: 16, pill: 'sess-london',  card: 'sc-london',  st: 'sc-london-st',  t: 'sc-london-time',  badge: '🇬🇧 LON', cls: 'session-london'  },
@@ -1420,10 +1417,12 @@ function updateSessions() {
   const badge = document.getElementById('active-session-badge');
   if (badge) badge.textContent = activeSessions.length > 0 ? activeSessions.join(' + ') + ' OPEN' : 'ALL CLOSED';
 
-  // Update header session pills color glow
-}
-
-/* ══ Heartbeat ══ */
+	  // Update header session pills color glow
+	}
+	setInterval(updateClock, 1000);
+	updateClock();
+	
+	/* ══ Heartbeat ══ */
 const hbData = Array(60).fill(13);
 let hbTick = 0;
 function pumpHeartbeat(v) {
@@ -1746,4 +1745,3 @@ EXISTING WIDGET IDs PRESERVED:
 -->
 </body>
 </html>
-
