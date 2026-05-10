@@ -1707,16 +1707,12 @@ function applyLiveData(d) {
       const entries = Object.entries(d.regime);
       ppd.innerHTML = entries.map(([pair, r]) => {
         const tradeable = r.tradeable;
-        const dir = r.dir === "up" ? "↑" : r.dir === "dn" ? "↓" : "↔";
+        const dir = r.dir === 'up' ? '↑' : r.dir === 'dn' ? '↓' : '↔';
         const adx = (r.adx||0).toFixed(1);
-        const cls = tradeable ? "pos" : "muted2";
-        return "<div style="display:flex;align-items:center;gap:8px;padding:4px 0;"
-          +"border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px">"
-          +"<span class="" + cls + "" style="min-width:60px;font-weight:700">" + pair + "</span>"
-          +"<span class="" + cls + "">" + dir + " ADX " + adx + "</span>"
-          +"<span style="margin-left:auto" class="" + cls + "">"
-          + (tradeable ? "TRADEABLE" : "SKIP") + "</span></div>";
-      }).join("");
+        const cls = tradeable ? 'pos' : 'muted2';
+        const label = tradeable ? 'TRADEABLE' : 'SKIP';
+        return `<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px"><span class="${cls}" style="min-width:60px;font-weight:700">${pair}</span><span class="${cls}">${dir} ADX ${adx}</span><span style="margin-left:auto" class="${cls}">${label}</span></div>`;
+      }).join('');
       const sb = document.getElementById("scanner-badge") || document.getElementById("regime-tradeable-badge");
       const tradeCount = entries.filter(([,r])=>r.tradeable).length;
       if (sb) sb.textContent = tradeCount + " / " + entries.length + " TRADEABLE";
