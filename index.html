@@ -1606,12 +1606,12 @@ async function discoverAndConnect() {
     wsConn = new WebSocket(wsUrl);
     wsConn.onopen    = () => { console.log('[WS] Connected'); setHeartbeatState(true, '5s - live'); };
     wsConn.onmessage = e => { try { applyLiveData(JSON.parse(e.data)); } catch(err) { console.error('[WS] Parse error', err); } };
-    wsConn.onerror   = () => { console.warn('[WS] Error - retry in 10s'); setHeartbeatState(false, 'reconnecting...'); };
-    wsConn.onclose   = () => { console.warn('[WS] Closed - retry in 10s'); setHeartbeatState(false, 'reconnecting...'); setTimeout(discoverAndConnect, 10000); };
+    wsConn.onerror   = () => { console.warn('[WS] Error - retry in 3s'); setHeartbeatState(false, 'reconnecting...'); };
+    wsConn.onclose   = () => { console.warn('[WS] Closed - retry in 3s'); setHeartbeatState(false, 'reconnecting...'); setTimeout(discoverAndConnect, 3000); };
   } catch(err) {
-    console.error('[WS] Discovery failed:', err.message, '- retry in 15s');
+    console.error('[WS] Discovery failed:', err.message, '- retry in 5s');
     setHeartbeatState(false, 'no signal');
-    setTimeout(discoverAndConnect, 15000);
+    setTimeout(discoverAndConnect, 5000);
   }
 }
 
