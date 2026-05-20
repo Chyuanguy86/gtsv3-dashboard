@@ -1,165 +1,91 @@
 {
+  "generated_at": "2026-05-20T22:48:27.055640",
   "version": "GTSv4.2",
-  "timestamp": "2026-05-20T22:21:57.922014",
+  "tunnel_url": "https://once-cook-returning-modified.trycloudflare.com",
+  "ws_url": "wss://once-cook-returning-modified.trycloudflare.com/ws",
+  "balance": 36916.01,
+  "account": "47153895",
   "session": "NY",
   "in_killzone": true,
-  "balance": 36916.16,
-  "pnl_total": 24.93,
-  "trades_closed": 7,
-  "win_rate": 71.4,
-  "open_positions": 0,
-  "tradeable_pairs": 0,
-  "journal_ok": true,
-  "journal_rows": 20,
-  "stack_ok": true,
-  "providers_blocked": [],
-  "pipeline": {
-    "name": "H4+H1+5M SMC Day Trading",
-    "gates": [
-      "H4+H1 aligned",
-      "Kill zone",
-      "Liquidity sweep",
-      "5M OB/FVG"
-    ],
-    "min_rr": 3.0,
-    "adx_floor": 28,
-    "max_concurrent": 2
-  },
-  "pairs": [
+  "open_trades": {},
+  "pipeline": "H4+H1+5M SMC Day Trading",
+  "watchlist": [
     {
       "pair": "EURUSD",
+      "price": 1.15902,
       "h4_bias": "bearish",
       "h1_bias": "bearish",
       "h4_adx": 38.9,
-      "h4_swings": 3,
       "bos": false,
       "tradeable": false,
       "proximity": 0.023,
-      "bos_level": 1.15875,
-      "price": 1.15902
+      "regime": "TREND-DOWN"
     },
     {
       "pair": "GBPUSD",
+      "price": 1.33903,
       "h4_bias": "bullish",
       "h1_bias": "neutral",
       "h4_adx": 32.8,
-      "h4_swings": 1,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "bos_level": null,
-      "price": 1.33903
+      "regime": "TREND-UP"
     },
     {
       "pair": "XAUUSD",
+      "price": 4486.7998,
       "h4_bias": "bearish",
       "h1_bias": "bearish",
       "h4_adx": 21.6,
-      "h4_swings": 3,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "bos_level": null,
-      "price": 4486.7998
+      "regime": "TREND-DOWN"
     },
     {
       "pair": "AUDUSD",
+      "price": 0.71205,
       "h4_bias": "bearish",
       "h1_bias": "bullish",
       "h4_adx": 10.7,
-      "h4_swings": 1,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "bos_level": null,
-      "price": 0.71205
+      "regime": "TREND-DOWN"
     },
     {
       "pair": "NZDUSD",
+      "price": 0.58387,
       "h4_bias": "bearish",
       "h1_bias": "neutral",
       "h4_adx": 10.6,
-      "h4_swings": 3,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "bos_level": null,
-      "price": 0.58387
+      "regime": "TREND-DOWN"
     },
     {
       "pair": "BTCUSD",
+      "price": 77034.0,
       "h4_bias": "neutral",
       "h1_bias": "neutral",
       "h4_adx": 20.6,
-      "h4_swings": 0,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "bos_level": null,
-      "price": 77034.0
+      "regime": "RANGE"
     },
     {
       "pair": "LTCUSD",
+      "price": 53.78,
       "h4_bias": "bearish",
       "h1_bias": "neutral",
       "h4_adx": 23.5,
-      "h4_swings": 1,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "bos_level": null,
-      "price": 53.78
-    },
-    {
-      "pair": "ETHUSD",
-      "h4_bias": "neutral",
-      "h1_bias": "bullish",
-      "h4_adx": 13.3,
-      "h4_swings": 0,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "bos_level": null,
-      "price": 2115.95996
-    },
-    {
-      "pair": "USDJPY",
-      "h4_bias": "bullish",
-      "h1_bias": "neutral",
-      "h4_adx": 21.6,
-      "h4_swings": 1,
-      "bos": true,
-      "tradeable": false,
-      "proximity": null,
-      "bos_level": null,
-      "price": 159.14
-    },
-    {
-      "pair": "USDCAD",
-      "h4_bias": "bullish",
-      "h1_bias": "bullish",
-      "h4_adx": 35.6,
-      "h4_swings": 5,
-      "bos": false,
-      "tradeable": false,
-      "proximity": 0.04,
-      "bos_level": 1.37784,
-      "price": 1.37729
-    },
-    {
-      "pair": "USDCHF",
-      "h4_bias": "neutral",
-      "h1_bias": "neutral",
-      "h4_adx": 43.0,
-      "h4_swings": 0,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "bos_level": null,
-      "price": 0.79056
+      "regime": "TREND-DOWN"
     }
-  ],
-  "tunnel_url": "https://authors-isolation-aerospace-picks.trycloudflare.com",
-  "ws_url": "wss://authors-isolation-aerospace-picks.trycloudflare.com/ws",
-  "generated_at": "2026-05-20T22:35:42.863112"
+  ]
 }
