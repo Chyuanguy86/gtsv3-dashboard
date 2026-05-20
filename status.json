@@ -1,481 +1,162 @@
 {
-  "generated_at": "2026-05-01T20:35:04.238253+08:00",
-  "balance": 5500.0,
-  "account": "47153895",
-  "open_trades": [],
-  "watchlist": [
-    {
-      "pair": "XAUUSD",
-      "price": 4598.05,
-      "rsi": 50.51,
-      "regime": "RANGE",
-      "tradeable": false
-    },
-    {
-      "pair": "EURUSD",
-      "price": 1.17636,
-      "rsi": 69.49,
-      "regime": "TREND_UP",
-      "tradeable": true
-    },
-    {
-      "pair": "GBPUSD",
-      "price": 1.36385,
-      "rsi": 71.62,
-      "regime": "TREND_UP",
-      "tradeable": true
-    },
-    {
-      "pair": "NZDUSD",
-      "price": 0.5903,
-      "rsi": 62.96,
-      "regime": "TREND_UP",
-      "tradeable": true
-    },
-    {
-      "pair": "AUDUSD",
-      "price": 0.72036,
-      "rsi": 64.89,
-      "regime": "TREND_UP",
-      "tradeable": true
-    },
-    {
-      "pair": "USDJPY",
-      "price": 156.49,
-      "rsi": 37.47,
-      "regime": "TREND_DOWN",
-      "tradeable": true
-    },
-    {
-      "pair": "USDCAD",
-      "price": 1.35574,
-      "rsi": 24.13,
-      "regime": "TREND_DOWN",
-      "tradeable": true
-    },
-    {
-      "pair": "USDCHF",
-      "price": 0.7796,
-      "rsi": 29.97,
-      "regime": "TREND_DOWN",
-      "tradeable": true
-    }
-  ],
-  "models": [
-    {
-      "name": "Claude Sonnet 4.6",
-      "key": "claude",
-      "status": "UP",
-      "ms": 2056,
-      "role": "PRIMARY"
-    },
-    {
-      "name": "Gemini 2.5 Flash",
-      "key": "gemini",
-      "status": "DOWN",
-      "ms": 0,
-      "role": "BACKUP 1"
-    },
-    {
-      "name": "Groq Llama 3.3",
-      "key": "groq",
-      "status": "UP",
-      "ms": 2145,
-      "role": "BACKUP 2"
-    },
-    {
-      "name": "Mistral Small",
-      "key": "mistral",
-      "status": "UP",
-      "ms": 721,
-      "role": "BACKUP 3"
-    }
-  ],
-  "strategies": [
-    {
-      "id": "SMC-001",
-      "name": "SMC Trend Follow",
-      "status": "DEMO",
-      "scanner": "A",
-      "pairs": [
-        "EURUSD",
-        "GBPUSD",
-        "USDJPY",
-        "AUDUSD",
-        "NZDUSD",
-        "USDCAD",
-        "USDCHF"
-      ],
-      "min_confidence": 0.65
-    },
-    {
-      "id": "SMC-002",
-      "name": "SMC Structure Break",
-      "status": "DEMO",
-      "scanner": "B",
-      "pairs": [
-        "EURUSD",
-        "GBPUSD",
-        "XAUUSD"
-      ],
-      "min_confidence": 0.68
-    },
-    {
-      "id": "SMC-003",
-      "name": "SMC Gold Specialist",
-      "status": "DEMO",
-      "scanner": "C",
-      "pairs": [
-        "XAUUSD"
-      ],
-      "min_confidence": 0.7
-    }
-  ],
-  "scanners": [
-    {
-      "id": "A",
-      "strategies": [],
-      "last": "--"
-    },
-    {
-      "id": "B",
-      "strategies": [],
-      "last": "--"
-    },
-    {
-      "id": "C",
-      "strategies": [],
-      "last": "--"
-    },
-    {
-      "id": "D",
-      "strategies": [],
-      "last": "--"
-    },
-    {
-      "id": "E",
-      "strategies": [],
-      "last": "--"
-    }
-  ],
-  "departments": [
-    {
-      "name": "Memory & Recording",
-      "agents": [
-        "trade_journal",
-        "memory_agent"
-      ],
-      "ok": 2
-    },
-    {
-      "name": "Market Scanner",
-      "agents": [
-        "regime_detector",
-        "market_scanner",
-        "rule_manager",
-        "review_panel",
-        "portfolio_orchestrator",
-        "execution_agent",
-        "position_monitor"
-      ],
-      "ok": 7
-    },
-    {
-      "name": "Risk Control",
-      "agents": [
-        "correlation_guard",
-        "news_intelligence"
-      ],
-      "ok": 2
-    },
-    {
-      "name": "Strategy Researcher",
-      "agents": [
-        "source_agent",
-        "analysis_agent",
-        "coding_agent",
-        "professional_trader"
-      ],
-      "ok": 4
-    },
-    {
-      "name": "Performance",
-      "agents": [
-        "strategy_improver",
-        "performance_monitor"
-      ],
-      "ok": 2
-    },
-    {
-      "name": "Communications",
-      "agents": [
-        "comms_agent",
-        "manager_agent"
-      ],
-      "ok": 2
-    }
-  ],
-  "news": [],
-  "log": [
-    {
-      "ts": "23:40",
-      "agent": "pipeline",
-      "msg": "raw=1 corr=1 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "23:01",
-      "agent": "pipeline",
-      "msg": "raw=1 corr=1 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "22:01",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "21:01",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "20:01",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "19:01",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "18:01",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "17:01",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "16:01",
-      "agent": "pipeline",
-      "msg": "raw=1 corr=1 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "15:36",
-      "agent": "pipeline",
-      "msg": "raw=0 corr=0 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "15:33",
-      "agent": "pipeline",
-      "msg": "raw=1 corr=1 reviewed=0 executed=0",
-      "ok": true
-    },
-    {
-      "ts": "15:02",
-      "agent": "pipeline",
-      "msg": "raw=2 reviewed=1 approved=1 executed=0",
-      "ok": true
-    }
-  ],
-  "risk": {
-    "daily_dd": 0.0,
-    "slots_used": 0,
-    "slots_total": 5,
-    "consec_losses": 0,
-    "tier": "NORMAL",
-    "risk_mult": 1.0,
-    "can_trade": true,
-    "today_pnl": 0
-  },
-  "metrics": {
-    "total_trades": 0,
-    "win_rate": 0,
-    "expectancy": 0,
-    "profit_factor": 0,
-    "avg_r": 0,
-    "max_r": 0,
-    "min_r": 0,
-    "sharpe_estimate": 0,
-    "kelly_pct": 0
-  },
-  "shadow": {
-    "total": 0,
-    "wins": 0,
-    "losses": 0,
-    "win_rate": 0,
-    "expectancy": 0
-  },
-  "exposure": {},
-  "weights": {
-    "STR-001": {
-      "name": "Malaysian SNR",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-28T04:00:01.411978+08:00"
-    },
-    "STR-003": {
-      "name": "RSI Divergence",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-28T04:00:01.416430+08:00"
-    },
-    "STR-006": {
-      "name": "Supply/Demand Zone Rejection",
-      "weights": {
-        "trending_up": 1.0,
-        "trending_down": 1.0,
-        "ranging": 1.0
-      },
-      "performance": {},
-      "updated": "2026-04-28T04:00:01.417348+08:00"
-    }
-  },
-  "decay": {
-    "last_run": "2026-05-01T15:20:27.422356+08:00",
-    "decaying": [],
-    "healthy": []
-  },
-  "regime_map": {
-    "XAUUSD": {
-      "pair": "XAUUSD",
-      "regime": "RANGE",
-      "adx": 21.5,
-      "plus_di": 20.37,
-      "minus_di": 24.82,
-      "atr": 15.671491,
-      "atr_avg": 16.312169,
-      "session": "LONDON",
-      "tradeable": false,
-      "block_reason": "RANGE",
-      "timestamp": "2026-05-01T20:30:09.104245+08:00"
-    },
-    "EURUSD": {
-      "pair": "EURUSD",
-      "regime": "TREND_UP",
-      "adx": 36.13,
-      "plus_di": 38.27,
-      "minus_di": 10.18,
-      "atr": 0.001005,
-      "atr_avg": 0.001131,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:10.521677+08:00"
-    },
-    "GBPUSD": {
-      "pair": "GBPUSD",
-      "regime": "TREND_UP",
-      "adx": 43.53,
-      "plus_di": 37.92,
-      "minus_di": 11.53,
-      "atr": 0.001325,
-      "atr_avg": 0.00156,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:11.761854+08:00"
-    },
-    "NZDUSD": {
-      "pair": "NZDUSD",
-      "regime": "TREND_UP",
-      "adx": 29.81,
-      "plus_di": 31.63,
-      "minus_di": 16.69,
-      "atr": 0.000626,
-      "atr_avg": 0.00075,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:12.877158+08:00"
-    },
-    "AUDUSD": {
-      "pair": "AUDUSD",
-      "regime": "TREND_UP",
-      "adx": 32.79,
-      "plus_di": 35.07,
-      "minus_di": 15.84,
-      "atr": 0.000755,
-      "atr_avg": 0.000904,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:14.073095+08:00"
-    },
-    "USDJPY": {
-      "pair": "USDJPY",
-      "regime": "TREND_DOWN",
-      "adx": 57.5,
-      "plus_di": 8.73,
-      "minus_di": 37.1,
-      "atr": 0.416501,
-      "atr_avg": 0.464592,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:15.326023+08:00"
-    },
-    "USDCAD": {
-      "pair": "USDCAD",
-      "regime": "TREND_DOWN",
-      "adx": 49.84,
-      "plus_di": 5.95,
-      "minus_di": 31.34,
-      "atr": 0.001267,
-      "atr_avg": 0.001558,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:16.529156+08:00"
-    },
-    "USDCHF": {
-      "pair": "USDCHF",
-      "regime": "TREND_DOWN",
-      "adx": 55.0,
-      "plus_di": 6.64,
-      "minus_di": 33.75,
-      "atr": 0.001094,
-      "atr_avg": 0.001369,
-      "session": "LONDON",
-      "tradeable": true,
-      "block_reason": null,
-      "timestamp": "2026-05-01T20:30:17.895354+08:00"
-    }
-  },
-  "pipeline_stats": {
-    "tradeable": 7,
-    "tradeable_pairs": [
-      "EURUSD",
-      "GBPUSD",
-      "NZDUSD",
-      "AUDUSD",
-      "USDJPY",
-      "USDCAD",
-      "USDCHF"
+  "version": "GTSv4.2",
+  "timestamp": "2026-05-20T22:21:57.922014",
+  "session": "NY",
+  "in_killzone": true,
+  "balance": 36916.16,
+  "pnl_total": 24.93,
+  "trades_closed": 7,
+  "win_rate": 71.4,
+  "open_positions": 0,
+  "tradeable_pairs": 0,
+  "journal_ok": true,
+  "journal_rows": 20,
+  "stack_ok": true,
+  "providers_blocked": [],
+  "pipeline": {
+    "name": "H4+H1+5M SMC Day Trading",
+    "gates": [
+      "H4+H1 aligned",
+      "Kill zone",
+      "Liquidity sweep",
+      "5M OB/FVG"
     ],
-    "aligned": 0,
-    "aligned_pairs": [],
-    "signals": 0
+    "min_rr": 3.0,
+    "adx_floor": 28,
+    "max_concurrent": 2
   },
-  "news_events": []
+  "pairs": [
+    {
+      "pair": "EURUSD",
+      "h4_bias": "bearish",
+      "h1_bias": "bearish",
+      "h4_adx": 38.9,
+      "h4_swings": 3,
+      "bos": false,
+      "tradeable": false,
+      "proximity": 0.023,
+      "bos_level": 1.15875,
+      "price": 1.15902
+    },
+    {
+      "pair": "GBPUSD",
+      "h4_bias": "bullish",
+      "h1_bias": "neutral",
+      "h4_adx": 32.8,
+      "h4_swings": 1,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 1.33903
+    },
+    {
+      "pair": "XAUUSD",
+      "h4_bias": "bearish",
+      "h1_bias": "bearish",
+      "h4_adx": 21.6,
+      "h4_swings": 3,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 4486.7998
+    },
+    {
+      "pair": "AUDUSD",
+      "h4_bias": "bearish",
+      "h1_bias": "bullish",
+      "h4_adx": 10.7,
+      "h4_swings": 1,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 0.71205
+    },
+    {
+      "pair": "NZDUSD",
+      "h4_bias": "bearish",
+      "h1_bias": "neutral",
+      "h4_adx": 10.6,
+      "h4_swings": 3,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 0.58387
+    },
+    {
+      "pair": "BTCUSD",
+      "h4_bias": "neutral",
+      "h1_bias": "neutral",
+      "h4_adx": 20.6,
+      "h4_swings": 0,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 77034.0
+    },
+    {
+      "pair": "LTCUSD",
+      "h4_bias": "bearish",
+      "h1_bias": "neutral",
+      "h4_adx": 23.5,
+      "h4_swings": 1,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 53.78
+    },
+    {
+      "pair": "ETHUSD",
+      "h4_bias": "neutral",
+      "h1_bias": "bullish",
+      "h4_adx": 13.3,
+      "h4_swings": 0,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 2115.95996
+    },
+    {
+      "pair": "USDJPY",
+      "h4_bias": "bullish",
+      "h1_bias": "neutral",
+      "h4_adx": 21.6,
+      "h4_swings": 1,
+      "bos": true,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 159.14
+    },
+    {
+      "pair": "USDCAD",
+      "h4_bias": "bullish",
+      "h1_bias": "bullish",
+      "h4_adx": 35.6,
+      "h4_swings": 5,
+      "bos": false,
+      "tradeable": false,
+      "proximity": 0.04,
+      "bos_level": 1.37784,
+      "price": 1.37729
+    },
+    {
+      "pair": "USDCHF",
+      "h4_bias": "neutral",
+      "h1_bias": "neutral",
+      "h4_adx": 43.0,
+      "h4_swings": 0,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "bos_level": null,
+      "price": 0.79056
+    }
+  ]
 }
