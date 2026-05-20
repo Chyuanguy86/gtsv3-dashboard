@@ -158,5 +158,8 @@
       "bos_level": null,
       "price": 0.79056
     }
-  ]
+  ],
+  "tunnel_url": "https://authors-isolation-aerospace-picks.trycloudflare.com",
+  "ws_url": "wss://authors-isolation-aerospace-picks.trycloudflare.com/ws",
+  "generated_at": "2026-05-20T22:35:42.863112"
 }
