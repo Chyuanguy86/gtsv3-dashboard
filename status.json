@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-21T20:35:13.213179",
+  "generated_at": "2026-05-21T20:59:08.726307",
   "version": "GTSv4.2",
-  "tunnel_url": "https://ray-vat-kennedy-dui.trycloudflare.com",
-  "ws_url": "wss://ray-vat-kennedy-dui.trycloudflare.com/ws",
+  "tunnel_url": "",
+  "ws_url": "",
   "balance": 36916.01,
   "account": "47153895",
   "session": "off-hours",
