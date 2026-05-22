@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-22T21:07:51.005595",
+  "generated_at": "2026-05-22T21:16:12.784961",
   "version": "GTSv4.2",
-  "tunnel_url": "https://aberdeen-sensor-partly-eval.trycloudflare.com",
-  "ws_url": "wss://aberdeen-sensor-partly-eval.trycloudflare.com/ws",
-  "balance": 36916.01,
+  "tunnel_url": "https://impact-others-procedures-location.trycloudflare.com",
+  "ws_url": "wss://impact-others-procedures-location.trycloudflare.com/ws",
+  "balance": 10000.0,
   "account": "47153895",
-  "session": "off-hours",
-  "in_killzone": false,
+  "session": "NY",
+  "in_killzone": true,
   "open_trades": {},
   "pipeline": "H4+H1+5M SMC Day Trading",
   "watchlist": [
