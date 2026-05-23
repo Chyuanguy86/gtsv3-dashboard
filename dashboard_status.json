@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-23T20:44:12.351843",
+  "generated_at": "2026-05-23T21:26:49.598195",
   "version": "GTSv4.2",
   "tunnel_url": "",
   "ws_url": "",
   "balance": 36896.11,
   "account": "47153895",
-  "session": "off-hours",
-  "in_killzone": false,
+  "session": "NY",
+  "in_killzone": true,
   "open_trades": {},
   "pipeline": "H4+H1+5M SMC Day Trading",
   "watchlist": [
@@ -34,7 +34,7 @@
     },
     {
       "pair": "XAUUSD",
-      "price": 4510.5,
+      "price": 4523.2002,
       "h4_bias": "neutral",
       "h1_bias": "bearish",
       "h4_adx": 12.3,
@@ -67,10 +67,10 @@
     },
     {
       "pair": "BTCUSD",
-      "price": 74452.6875,
+      "price": 74938.03906,
       "h4_bias": "neutral",
       "h1_bias": "bearish",
-      "h4_adx": 52.5,
+      "h4_adx": 75.7,
       "bos": false,
       "tradeable": false,
       "proximity": null,
@@ -78,13 +78,13 @@
     },
     {
       "pair": "LTCUSD",
-      "price": 51.86,
+      "price": 52.43,
       "h4_bias": "bearish",
       "h1_bias": "bearish",
-      "h4_adx": 56.7,
-      "bos": true,
-      "tradeable": true,
-      "proximity": -0.771,
+      "h4_adx": 68.0,
+      "bos": false,
+      "tradeable": false,
+      "proximity": 1.755,
       "regime": "TREND-DOWN"
     }
   ]
