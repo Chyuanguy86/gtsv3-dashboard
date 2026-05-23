@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T21:26:49.598195",
+  "generated_at": "2026-05-23T23:07:01.062737",
   "version": "GTSv4.2",
   "tunnel_url": "",
   "ws_url": "",
@@ -67,10 +67,10 @@
     },
     {
       "pair": "BTCUSD",
-      "price": 74938.03906,
+      "price": 75137.28125,
       "h4_bias": "neutral",
       "h1_bias": "bearish",
-      "h4_adx": 75.7,
+      "h4_adx": 63.7,
       "bos": false,
       "tradeable": false,
       "proximity": null,
@@ -78,13 +78,13 @@
     },
     {
       "pair": "LTCUSD",
-      "price": 52.43,
+      "price": 52.46,
       "h4_bias": "bearish",
       "h1_bias": "bearish",
-      "h4_adx": 68.0,
+      "h4_adx": 66.7,
       "bos": false,
       "tradeable": false,
-      "proximity": 1.755,
+      "proximity": 1.811,
       "regime": "TREND-DOWN"
     }
   ]
