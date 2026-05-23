@@ -1,91 +1,60 @@
 {
-  "generated_at": "2026-05-23T15:49:43.489268",
-  "version": "GTSv4.2",
-  "tunnel_url": "https://deer-providing-doe-command.trycloudflare.com",
-  "ws_url": "wss://deer-providing-doe-command.trycloudflare.com/ws",
+  "version": "GTSv4.3 SMC_DAY_V1",
+  "strategy": "SMC_DAY_V1 \u2014 H4\u00b7H1\u00b7M15\u00b7M5",
+  "timestamp": "2026-05-23T15:53:19.191459",
   "balance": 10000.0,
-  "account": "47153895",
-  "session": "London",
-  "in_killzone": true,
-  "open_trades": {},
-  "pipeline": "H4+H1+5M SMC Day Trading",
-  "watchlist": [
-    {
-      "pair": "EURUSD",
+  "pipeline": {
+    "name": "SMC_DAY_V1",
+    "timeframes": "H4 \u00b7 H1 \u00b7 M15 \u00b7 M5",
+    "sessions": "London 15-19 \u00b7 NY 20-00 MYT",
+    "confluence": "7/9 \u00b7 Telegram /approve gate",
+    "pairs": "EURUSD \u00b7 GBPUSD \u00b7 XAUUSD",
+    "min_rr": 2.0,
+    "max_daily": 4,
+    "risk_pct": 1.0,
+    "status": "DEMO"
+  },
+  "live_scores": {
+    "EURUSD": {
+      "score": 4,
+      "direction": "SHORT",
+      "valid": false,
       "price": 1.1605,
-      "h4_bias": "bearish",
-      "h1_bias": "bullish",
-      "h4_adx": 18.9,
-      "bos": false,
-      "tradeable": false,
       "proximity": null,
-      "regime": "TREND-DOWN"
+      "passing": [
+        "h4_bias_clear",
+        "poi_exists",
+        "session_active",
+        "rr_ok"
+      ]
     },
-    {
-      "pair": "GBPUSD",
+    "GBPUSD": {
+      "score": 5,
+      "direction": "LONG",
+      "valid": false,
       "price": 1.34329,
-      "h4_bias": "bullish",
-      "h1_bias": "neutral",
-      "h4_adx": 35.3,
-      "bos": false,
-      "tradeable": false,
       "proximity": 0.147,
-      "regime": "TREND-UP"
+      "passing": [
+        "h4_bias_clear",
+        "poi_exists",
+        "price_at_poi",
+        "session_active",
+        "rr_ok"
+      ]
     },
-    {
-      "pair": "XAUUSD",
+    "XAUUSD": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
       "price": 4510.5,
-      "h4_bias": "neutral",
-      "h1_bias": "bearish",
-      "h4_adx": 12.3,
-      "bos": false,
-      "tradeable": false,
       "proximity": null,
-      "regime": "RANGE"
-    },
-    {
-      "pair": "AUDUSD",
-      "price": 0.71296,
-      "h4_bias": "neutral",
-      "h1_bias": "neutral",
-      "h4_adx": 5.0,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "RANGE"
-    },
-    {
-      "pair": "NZDUSD",
-      "price": 0.58514,
-      "h4_bias": "bullish",
-      "h1_bias": "bearish",
-      "h4_adx": 17.9,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "TREND-UP"
-    },
-    {
-      "pair": "BTCUSD",
-      "price": 75373.02344,
-      "h4_bias": "neutral",
-      "h1_bias": "neutral",
-      "h4_adx": 33.8,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "RANGE"
-    },
-    {
-      "pair": "LTCUSD",
-      "price": 52.63,
-      "h4_bias": "bearish",
-      "h1_bias": "neutral",
-      "h4_adx": 43.2,
-      "bos": true,
-      "tradeable": true,
-      "proximity": -1.216,
-      "regime": "TREND-DOWN"
+      "passing": []
     }
-  ]
+  },
+  "signals_today": 870,
+  "max_score_today": 4,
+  "journal_ok": true,
+  "journal_rows": 22,
+  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com",
+  "ws_url": "wss://named-trailer-battle-colour.trycloudflare.com/ws"
 }
