@@ -1,91 +1,84 @@
 {
-  "generated_at": "2026-05-24T14:02:46.502301",
-  "version": "GTSv4.2",
-  "tunnel_url": "https://elimination-heating-sentence-machines.trycloudflare.com",
-  "ws_url": "wss://elimination-heating-sentence-machines.trycloudflare.com/ws",
+  "version": "GTSv4.3 SMC_DAY_V1",
+  "timestamp": "2026-05-24T14:45:36.578957",
   "balance": 36896.11,
-  "account": "47153895",
   "session": "off-hours",
-  "in_killzone": false,
-  "open_trades": {},
-  "pipeline": "H4+H1+5M SMC Day Trading",
-  "watchlist": [
-    {
-      "pair": "EURUSD",
-      "price": 1.1605,
-      "h4_bias": "bearish",
-      "h1_bias": "bullish",
-      "h4_adx": 18.9,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "TREND-DOWN"
+  "active": false,
+  "auto": true,
+  "pairs": {
+    "EURUSD": {
+      "score": 3,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 1.1605
     },
-    {
-      "pair": "GBPUSD",
-      "price": 1.34329,
-      "h4_bias": "bullish",
-      "h1_bias": "neutral",
-      "h4_adx": 35.3,
-      "bos": false,
-      "tradeable": false,
-      "proximity": 0.147,
-      "regime": "TREND-UP"
+    "GBPUSD": {
+      "score": 4,
+      "direction": "LONG",
+      "valid": false,
+      "price": 1.34329
     },
-    {
-      "pair": "XAUUSD",
-      "price": 4523.2002,
-      "h4_bias": "neutral",
-      "h1_bias": "bearish",
-      "h4_adx": 12.3,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "RANGE"
+    "XAUUSD": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
+      "price": 4523.2002
     },
-    {
-      "pair": "AUDUSD",
-      "price": 0.71296,
-      "h4_bias": "neutral",
-      "h1_bias": "neutral",
-      "h4_adx": 5.0,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "RANGE"
+    "AUDUSD": {
+      "score": 3,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.71296
     },
-    {
-      "pair": "NZDUSD",
-      "price": 0.58514,
-      "h4_bias": "bullish",
-      "h1_bias": "bearish",
-      "h4_adx": 17.9,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "TREND-UP"
+    "NZDUSD": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
+      "price": 0.58514
     },
-    {
-      "pair": "BTCUSD",
-      "price": 76678.89844,
-      "h4_bias": "bearish",
-      "h1_bias": "neutral",
-      "h4_adx": 16.7,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "TREND-DOWN"
+    "USDJPY": {
+      "score": 2,
+      "direction": "LONG",
+      "valid": false,
+      "price": 159.155
     },
-    {
-      "pair": "LTCUSD",
-      "price": 53.35,
-      "h4_bias": "bearish",
-      "h1_bias": "bullish",
-      "h4_adx": 22.2,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "TREND-DOWN"
+    "USDCAD": {
+      "score": 2,
+      "direction": "LONG",
+      "valid": false,
+      "price": 1.382
+    },
+    "USDCHF": {
+      "score": 2,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.7847
+    },
+    "BTCUSD": {
+      "score": 4,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 76697.5625
+    },
+    "LTCUSD": {
+      "score": 3,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 53.42
+    },
+    "ETHUSD": {
+      "score": 4,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 2117.83008
     }
-  ]
+  },
+  "journal": {
+    "ok": true,
+    "verified": 22,
+    "errors": []
+  },
+  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com",
+  "ws_url": "wss://named-trailer-battle-colour.trycloudflare.com/ws",
+  "demo_progress": "0/30 trades"
 }
