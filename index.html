@@ -140,13 +140,10 @@ body::before {
   0%,100% { box-shadow: 0 0 0 0 currentColor; }
   50%      { box-shadow: 0 0 8px 2px rgba(current, 0.3); }
 }
-.session-sydney { color: #94a3b8; border-color: rgba(148,163,184,.25); background: rgba(148,163,184,.05); }
-.session-tokyo  { color: #f59e0b; border-color: rgba(245,158,11,.3);  background: rgba(245,158,11,.06); }
 .session-london { color: #60a5fa; border-color: rgba(96,165,250,.35); background: rgba(96,165,250,.07); }
 .session-newyork{ color: #10b981; border-color: rgba(16,185,129,.35); background: rgba(16,185,129,.07); }
 .session-pill.active-session.session-london { box-shadow: 0 0 10px rgba(96,165,250,.3); }
 .session-pill.active-session.session-newyork{ box-shadow: 0 0 10px rgba(16,185,129,.3); }
-.session-pill.active-session.session-tokyo  { box-shadow: 0 0 10px rgba(245,158,11,.3); }
 
 .header-clock {
   font-family: var(--mono);
@@ -665,23 +662,6 @@ body::before {
 .exp-fill  { height: 100%; background: linear-gradient(90deg, var(--cyan2), var(--cyan)); border-radius: 2px; transition: width .6s; }
 
 /* ══════════════════════════════════════════
-   AI PAGE
-══════════════════════════════════════════ */
-.ai-model-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 12px;
-  background: var(--s2);
-  border-radius: 7px;
-  border: 1px solid var(--border);
-  margin-bottom: 4px;
-}
-.ai-model-name { flex: 1; font-size: 12px; font-weight: 600; }
-.ai-model-tier { font-family: var(--mono); font-size: 8px; color: var(--muted2); }
-.ai-model-ms   { font-family: var(--mono); font-size: 10px; min-width: 50px; text-align: right; }
-
-/* ══════════════════════════════════════════
    PLACEHOLDERS
 ══════════════════════════════════════════ */
 .ph { color: var(--muted); font-size: 10px; text-align: center; padding: 16px; font-style: italic; }
@@ -702,8 +682,6 @@ body::before {
 
   <!-- Session ticker -->
   <div class="session-ticker" id="session-ticker">
-    <div class="session-pill session-sydney" id="sess-sydney">🌏 SYD</div>
-    <div class="session-pill session-tokyo"  id="sess-tokyo">🗾 TYO</div>
     <div class="session-pill session-london" id="sess-london">🇬🇧 LON</div>
     <div class="session-pill session-newyork"id="sess-newyork">🗽 NYC</div>
   </div>
@@ -755,18 +733,6 @@ body::before {
       </div>
       <div class="card-body">
         <div class="session-grid">
-          <div class="session-card" id="sc-sydney" style="color:#94a3b8;border-color:rgba(148,163,184,.2)">
-            <div class="session-name" style="color:inherit">SYDNEY</div>
-            <div class="session-time" id="sc-sydney-time">—</div>
-            <div class="session-pairs" style="font-size:7px">AUD NZD</div>
-            <div class="session-status" id="sc-sydney-st">CLOSED</div>
-          </div>
-          <div class="session-card" id="sc-tokyo" style="color:#f59e0b;border-color:rgba(245,158,11,.2)">
-            <div class="session-name" style="color:inherit">TOKYO</div>
-            <div class="session-time" id="sc-tokyo-time">—</div>
-            <div class="session-pairs" style="font-size:7px">JPY AUD</div>
-            <div class="session-status" id="sc-tokyo-st">CLOSED</div>
-          </div>
           <div class="session-card" id="sc-london" style="color:#60a5fa;border-color:rgba(96,165,250,.2)">
             <div class="session-name" style="color:inherit">LONDON</div>
             <div class="session-time" id="sc-london-time">—</div>
@@ -860,11 +826,7 @@ body::before {
       </div>
       <div class="kpi kpi-green">
         <div class="kpi-lbl">Open Trades</div>
-        <div class="kpi-val" id="home-open-trades">0<span style="font-size:11px;opacity:.5">/5</span></div>
-      </div>
-      <div class="kpi kpi-cyan">
-        <div class="kpi-lbl">AI Models</div>
-        <div class="kpi-val" id="home-ai">0/4</div>
+        <div class="kpi-val" id="home-open-trades">0<span style="font-size:11px;opacity:.5">/2</span></div>
       </div>
       <div class="kpi kpi-purple">
         <div class="kpi-lbl">Pipeline</div>
@@ -881,17 +843,17 @@ body::before {
       <div class="card-body">
         <div class="regime-strip" id="regime-strip">
           <!-- filled by JS or existing widget -->
-          <div class="regime-cell"><div class="regime-lbl">XAUUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">EURUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">GBPUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">USDJPY</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">AUDUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">NZDUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">USDCAD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">USDCHF</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">BTCUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">LTCUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
-          <div class="regime-cell"><div class="regime-lbl">ETHUSD</div><div class="regime-dir">—</div><div class="regime-adx">ADX—</div></div>
+          <div class="regime-cell"><div class="regime-lbl">XAUUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">EURUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">GBPUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">USDJPY</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">AUDUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">NZDUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">USDCAD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">USDCHF</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">BTCUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">LTCUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
+          <div class="regime-cell"><div class="regime-lbl">ETHUSD</div><div class="regime-dir">—</div><div class="regime-adx">0/9</div></div>
         </div>
       </div>
     </div>
@@ -1012,16 +974,6 @@ body::before {
       <div class="card-body">
         <div class="analytics-section">
           <div class="session-pnl-grid" id="session-pnl-grid">
-            <div class="spnl-cell">
-              <div class="spnl-name">SYDNEY</div>
-              <div class="spnl-val muted2" id="pnl-sydney">$—</div>
-              <div class="spnl-trades" id="trades-sydney">— trades</div>
-            </div>
-            <div class="spnl-cell">
-              <div class="spnl-name">TOKYO</div>
-              <div class="spnl-val muted2" id="pnl-tokyo">$—</div>
-              <div class="spnl-trades" id="trades-tokyo">— trades</div>
-            </div>
             <div class="spnl-cell">
               <div class="spnl-name">LONDON</div>
               <div class="spnl-val muted2" id="pnl-london">$—</div>
@@ -1146,7 +1098,7 @@ body::before {
 
     <div style="padding:2px 0 6px">
       <div style="font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--red)">RISK</div>
-      <div style="font-size:10px;color:var(--muted2)">1% per trade · 3 max concurrent · 2% daily DD</div>
+      <div style="font-size:10px;color:var(--muted2)">1% per trade · 2 max concurrent · 2% daily DD</div>
     </div>
 
     <div id="risk-monitor-widget">
@@ -1156,7 +1108,7 @@ body::before {
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" style="display:none">
       <div class="card-head">
         <span class="card-title">Risk Metrics</span>
         <span class="badge b-green" id="risk-state-badge">NORMAL</span>
@@ -1200,23 +1152,6 @@ body::before {
     <div style="padding:2px 0 6px">
       <div style="font-family:var(--display);font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--gold)">SYSTEM</div>
       <div style="font-size:10px;color:var(--muted2)">Autonomous SMC_DAY_V1 · auto-execute · self-audit</div>
-    </div>
-
-    <!-- AI Models -->
-    <div class="card">
-      <div class="card-head">
-        <span class="card-title">AI Model Status</span>
-        <span class="badge b-cyan" id="ai-status-badge">4 MODELS</span>
-      </div>
-      <div class="card-body" id="ai-model-status-widget">
-        <div id="ai-models-list">
-          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--gold)"></span><span class="ai-model-name">Mistral Small</span><span class="ai-model-tier">FREE · TIER 1</span><span class="ai-model-ms muted2">—ms</span></div>
-          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--green)"></span><span class="ai-model-name">Groq Llama 3.3</span><span class="ai-model-tier">FREE · TIER 2</span><span class="ai-model-ms muted2">—ms</span></div>
-          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--cyan)"></span><span class="ai-model-name">Gemini 2.5 Flash</span><span class="ai-model-tier">FREE · TIER 3</span><span class="ai-model-ms muted2">—ms</span></div>
-          <div class="ai-model-row"><span class="gdot gdot-pulse" style="color:var(--green)"></span><span class="ai-model-name">NVIDIA Llama 3.1</span><span class="ai-model-tier">FREE · TIER 4</span><span class="ai-model-ms muted2">—ms</span></div>
-          <div class="ai-model-row"><span class="gdot" style="color:var(--muted2)"></span><span class="ai-model-name">Claude Sonnet</span><span class="ai-model-tier">PAID · FALLBACK</span><span class="ai-model-ms muted2">—ms</span></div>
-        </div>
-      </div>
     </div>
 
     <!-- Scanner + Pipeline -->
@@ -1395,8 +1330,6 @@ function updateClock() {
 }
 	/* ══ Session logic (UTC-based) ══ */
 	const SESSIONS = {
-  sydney:  { start: 21, end: 6,  pill: 'sess-sydney',  card: 'sc-sydney',  st: 'sc-sydney-st',  t: 'sc-sydney-time',  badge: '🌏 SYD', cls: 'session-sydney'  },
-  tokyo:   { start: 0,  end: 9,  pill: 'sess-tokyo',   card: 'sc-tokyo',   st: 'sc-tokyo-st',   t: 'sc-tokyo-time',   badge: '🗾 TYO', cls: 'session-tokyo'   },
   london:  { start: 7,  end: 16, pill: 'sess-london',  card: 'sc-london',  st: 'sc-london-st',  t: 'sc-london-time',  badge: '🇬🇧 LON', cls: 'session-london'  },
   newyork: { start: 12, end: 21, pill: 'sess-newyork', card: 'sc-newyork', st: 'sc-newyork-st', t: 'sc-newyork-time', badge: '🗽 NYC', cls: 'session-newyork' },
 };
@@ -1425,7 +1358,7 @@ function updateSessions() {
     if (isActive) activeSessions.push(name.toUpperCase());
 
     // Time in each tz
-    const tzMap = { sydney:'Australia/Sydney', tokyo:'Asia/Tokyo', london:'Europe/London', newyork:'America/New_York' };
+    const tzMap = { london:'Europe/London', newyork:'America/New_York' };
     if (tEl) tEl.textContent = now.toLocaleTimeString('en-GB', { timeZone: tzMap[name], hour:'2-digit', minute:'2-digit', hour12:false });
   });
 
@@ -1513,7 +1446,7 @@ function updateBalance(v) {
 }
 function updateOpenTrades(n) {
   const el = document.getElementById('home-open-trades');
-  if (el) el.innerHTML = n + '<span style="font-size:11px;opacity:.5">/5</span>';
+  if (el) el.innerHTML = n + '<span style="font-size:11px;opacity:.5">/2</span>';
   ['open-trades-value','open-trades-display'].forEach(id => { const e = document.getElementById(id); if(e) e.textContent = n; });
   const b = document.getElementById('nav-pos-badge');
   if (b) { b.style.display = n > 0 ? 'flex' : 'none'; b.textContent = n; }
@@ -1527,12 +1460,6 @@ function updatePipeline(n, total) {
   const b = document.getElementById('regime-tradeable-badge');
   if (b) b.textContent = n + ' TRADEABLE';
 }
-function updateAIModels(n) {
-  ['home-ai','ai-models-value','ai-models-display'].forEach(id => {
-    const el = document.getElementById(id); if (el) el.textContent = n + '/4';
-  });
-}
-
 /* ══ P&L by pair (call with object {XAUUSD: 25.3, EURUSD: -5.1, ...}) ══ */
 function updatePairPnL(data) {
   const vals = Object.values(data).filter(v => v !== 0);
@@ -1550,7 +1477,7 @@ function updatePairPnL(data) {
 
 /* ══ P&L by session ══ */
 function updateSessionPnL(data) {
-  const sessions = ['sydney','tokyo','london','newyork'];
+  const sessions = ['london','newyork'];
   sessions.forEach(s => {
     const d = data[s] || {pnl:0,trades:0};
     const pEl = document.getElementById('pnl-' + s);
@@ -1634,28 +1561,31 @@ async function discoverAndConnect() {
 function applyLiveData(d) {
   if (!d) return;
   const pipeline = d.pipeline || null;
-  const aiModels = liveValue(d.ai_models, d.ai_online);
+  const risk = d.risk || {};
   const watchdog = liveValue(d.watchdog, d.wd_ok);
   const pnlPair = liveValue(d.pnl_pair, d.pair_pnl);
   const pnlSession = liveValue(d.pnl_session, d.session_pnl);
   const positions = liveValue(d.positions, d.open_positions);
-  const history = liveValue(d.history, d.closed_trades, d.recent_trades);
+  const history = liveValue(d.trade_history, []);
 
   if (d.balance != null) updateBalance(d.balance);
-  if (d.open_trades != null) updateOpenTrades(d.open_trades);
+  if (risk.open_positions != null) updateOpenTrades(risk.open_positions);
+  else if (d.open_trades != null) updateOpenTrades(d.open_trades);
   if (pipeline) updatePipeline(liveValue(pipeline.active, pipeline.tradeable, pipeline.open, 0), liveValue(pipeline.total, pipeline.count, 0));
-  if (aiModels != null) updateAIModels(aiModels);
   if (d.risk_state) setRiskState(d.risk_state);
-  if (d.daily_dd    != null) { const e=document.getElementById("daily-dd-val");    if(e){e.textContent=(d.daily_dd||0).toFixed(2)+"%";e.className="risk-mval "+(d.daily_dd>1.5?"neg":d.daily_dd>1?"warn-c":"pos");} }
-  if (d.consec_loss != null) { const e=document.getElementById("consec-loss-val"); if(e) e.textContent=(d.consec_loss||0)+" / 3"; }
-  if (d.open_pos    != null) { const e=document.getElementById("risk-open-val");   if(e) e.textContent=(d.open_pos||0)+" / 3"; }
+  if (risk.daily_dd_pct != null) { const e=document.getElementById("daily-dd-val"); if(e){e.textContent=(risk.daily_dd_pct||0).toFixed(2)+"%";e.className="risk-mval "+(risk.daily_dd_pct>1.5?"neg":risk.daily_dd_pct>1?"warn-c":"pos");} }
+  else if (d.daily_dd != null) { const e=document.getElementById("daily-dd-val"); if(e){e.textContent=(d.daily_dd||0).toFixed(2)+"%";e.className="risk-mval "+(d.daily_dd>1.5?"neg":d.daily_dd>1?"warn-c":"pos");} }
+  if (risk.consec_losses != null) { const e=document.getElementById("consec-loss-val"); if(e) e.textContent=(risk.consec_losses||0)+" / "+(risk.max_consec||2); }
+  else if (d.consec_loss != null) { const e=document.getElementById("consec-loss-val"); if(e) e.textContent=(d.consec_loss||0)+" / 2"; }
+  if (risk.open_positions != null) { const e=document.getElementById("risk-open-val"); if(e) e.textContent=(risk.open_positions||0)+" / "+(risk.max_concurrent||2); }
+  else if (d.open_pos != null) { const e=document.getElementById("risk-open-val"); if(e) e.textContent=(d.open_pos||0)+" / 2"; }
   if (watchdog != null) setWatchdogState(watchdog === 'OK' || watchdog === true, d.watchdog_meta || d.wd_meta || '');
   if (d.heartbeat != null) { pumpHeartbeat(d.heartbeat); setHeartbeatState(true, '5s - live'); }
   if (pnlPair) updatePairPnL(pnlPair);
   if (pnlSession) updateSessionPnL(pnlSession);
-  /* wins/losses calculated from closed_trades below */
-  if (d.closed_trades && d.closed_trades.length > 0) {
-    const ct = d.closed_trades;
+  /* wins/losses calculated from GTSv4 trade_history below */
+  if (history && history.length > 0) {
+    const ct = history;
     const cWins   = ct.filter(t => (t.pnl||0) > 0).length;
     const cLosses = ct.filter(t => (t.pnl||0) < 0).length;
     if (cWins + cLosses > 0) updateDonut(cWins, cLosses);
@@ -1718,21 +1648,23 @@ function applyLiveData(d) {
     }
   }
   if (history) renderHistory(history);
-  if (d.regime) updateRegime(d.regime);
-  if (d.regime) {
+  const regimeData = d.regime || d.pairs;
+  if (regimeData) updateRegime(regimeData);
+  if (regimeData) {
     const ppd = document.getElementById("pipeline-pairs-display");
     if (ppd) {
-      const entries = Object.entries(d.regime);
+      const entries = Object.entries(regimeData);
       ppd.innerHTML = entries.map(([pair, r]) => {
-        const tradeable = r.tradeable;
-        const dir = r.dir === 'up' ? '↑' : r.dir === 'dn' ? '↓' : '↔';
-        const adx = (r.adx||0).toFixed(1);
+        const tradeable = r.tradeable || r.valid;
+        const rawDir = (r.dir || r.direction || '').toString().toUpperCase();
+        const dir = rawDir === 'UP' || rawDir === 'LONG' ? '↑' : rawDir === 'DN' || rawDir === 'DOWN' || rawDir === 'SHORT' ? '↓' : '↔';
+        const score = liveValue(r.score, r.confluence_score, 0);
         const cls = tradeable ? 'pos' : 'muted2';
         const label = tradeable ? 'TRADEABLE' : 'SKIP';
-        return `<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px"><span class="${cls}" style="min-width:60px;font-weight:700">${pair}</span><span class="${cls}">${dir} ADX ${adx}</span><span style="margin-left:auto" class="${cls}">${label}</span></div>`;
+        return `<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:10px"><span class="${cls}" style="min-width:60px;font-weight:700">${pair}</span><span class="${cls}">${dir} ${score}/9</span><span style="margin-left:auto" class="${cls}">${label}</span></div>`;
       }).join('');
       const sb = document.getElementById("scanner-badge") || document.getElementById("regime-tradeable-badge");
-      const tradeCount = entries.filter(([,r])=>r.tradeable).length;
+      const tradeCount = entries.filter(([,r])=>r.tradeable || r.valid).length;
       if (sb) sb.textContent = tradeCount + " / " + entries.length + " TRADEABLE";
     }
   }
@@ -1818,11 +1750,12 @@ function updateRegime(regime) {
       if (lbl && lbl.textContent === pair) {
         const dir = cell.querySelector('.regime-dir');
         const adx = cell.querySelector('.regime-adx');
-        const d = liveValue(data.dir, data.direction, data.trend, '');
-        const isUp = d === 'up' || d === 'UP';
-        const isDn = d === 'dn' || d === 'DOWN';
+        const d = liveValue(data.dir, data.direction, data.trend, '').toString().toUpperCase();
+        const isUp = d === 'UP' || d === 'LONG';
+        const isDn = d === 'DN' || d === 'DOWN' || d === 'SHORT';
+        const score = liveValue(data.score, data.confluence_score, 0);
         if (dir)   dir.textContent  = isUp ? '↑' : isDn ? '↓' : '↔';
-        if (adx)  adx.textContent = 'ADX ' + liveValue(data.adx, data.adx_value, '-');
+        if (adx)  adx.textContent = score + '/9';
         cell.className = 'regime-cell ' + (isUp ? 'trend-up' : isDn ? 'trend-down' : 'ranging');
       }
     });
@@ -1886,7 +1819,6 @@ EXISTING WIDGET IDs PRESERVED:
   shadow-tracker-widget, shadow-tracker-table, shadow-tracker-tbody
   trade-quality-widget, quality-stats-display
   win-rate-display, profit-factor-display, avg-rr-display
-  ai-model-status-widget, ai-models-list
   pipeline-status-widget, pipeline-pairs-display
   strategy-registry-widget, strategy-registry-table, strategy-registry-tbody
   scanner-status-widget, scanner-progress, scanner-badge

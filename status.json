@@ -1,77 +1,126 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-24T15:47:47.104341",
+  "timestamp": "2026-05-24T23:26:13.089544",
   "balance": 36896.11,
   "auto": true,
+  "session": {
+    "active": true,
+    "name": "NY",
+    "london": true,
+    "newyork": true,
+    "sydney": false,
+    "tokyo": false
+  },
+  "risk": {
+    "daily_dd_pct": 0.0,
+    "consec_losses": 0,
+    "max_consec": 2,
+    "open_positions": 0,
+    "max_concurrent": 2,
+    "risk_per_trade": 1.0,
+    "circuit_breaker": "ARMED",
+    "trailing_stop": "ACTIVE"
+  },
   "pairs": {
     "EURUSD": {
-      "score": 3,
-      "direction": "SHORT",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 1.1605
+      "price": 1.1605,
+      "proximity": null,
+      "bos_level": null
     },
     "GBPUSD": {
-      "score": 4,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 1.34329
+      "price": 1.34329,
+      "proximity": 0.147,
+      "bos_level": 1.34526
     },
     "XAUUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 4523.2002
+      "price": 4523.2002,
+      "proximity": null,
+      "bos_level": null
     },
     "AUDUSD": {
-      "score": 3,
-      "direction": "SHORT",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 0.71296
+      "price": 0.71296,
+      "proximity": null,
+      "bos_level": null
     },
     "NZDUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.58514
+      "price": 0.58514,
+      "proximity": null,
+      "bos_level": null
     },
     "USDJPY": {
-      "score": 2,
-      "direction": "LONG",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 159.155
+      "price": 159.155,
+      "proximity": null,
+      "bos_level": null
     },
     "USDCAD": {
       "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.382
+      "price": 1.382,
+      "proximity": null,
+      "bos_level": null
     },
     "USDCHF": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.7847
+      "price": 0.7847,
+      "proximity": null,
+      "bos_level": null
     },
     "BTCUSD": {
-      "score": 4,
-      "direction": "SHORT",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 76734.88281
+      "price": 76698.61719,
+      "proximity": null,
+      "bos_level": null
     },
     "LTCUSD": {
-      "score": 4,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 53.33
-    },
-    "ETHUSD": {
       "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 2118.70996
+      "price": 53.14,
+      "proximity": null,
+      "bos_level": null
+    },
+    "ETHUSD": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
+      "price": 2106.94995,
+      "proximity": null,
+      "bos_level": null
     }
   },
-  "smc_trades": 0,
+  "performance": {
+    "smc_trades": 0,
+    "win_rate": 0,
+    "avg_rr": 0,
+    "sharpe": 0,
+    "max_dd": 0,
+    "target_trades": 100,
+    "live_ready": false
+  },
+  "trade_history": [],
   "journal": {
     "ok": true,
     "verified": 22,
