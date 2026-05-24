@@ -1,131 +1,91 @@
 {
-  "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-24T23:26:13.089544",
-  "balance": 36896.11,
-  "auto": true,
-  "session": {
-    "active": true,
-    "name": "NY",
-    "london": true,
-    "newyork": true,
-    "sydney": false,
-    "tokyo": false
-  },
-  "risk": {
-    "daily_dd_pct": 0.0,
-    "consec_losses": 0,
-    "max_consec": 2,
-    "open_positions": 0,
-    "max_concurrent": 2,
-    "risk_per_trade": 1.0,
-    "circuit_breaker": "ARMED",
-    "trailing_stop": "ACTIVE"
-  },
-  "pairs": {
-    "EURUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
+  "generated_at": "2026-05-25T07:08:45.694141",
+  "version": "GTSv4.2",
+  "tunnel_url": "https://quality-balance-pixels-admitted.trycloudflare.com",
+  "ws_url": "wss://quality-balance-pixels-admitted.trycloudflare.com/ws",
+  "balance": 10000.0,
+  "account": "47153895",
+  "session": "off-hours",
+  "in_killzone": false,
+  "open_trades": {},
+  "pipeline": "H4+H1+5M SMC Day Trading",
+  "watchlist": [
+    {
+      "pair": "EURUSD",
       "price": 1.1605,
+      "h4_bias": "bearish",
+      "h1_bias": "bullish",
+      "h4_adx": 18.9,
+      "bos": false,
+      "tradeable": false,
       "proximity": null,
-      "bos_level": null
+      "regime": "TREND-DOWN"
     },
-    "GBPUSD": {
-      "score": 3,
-      "direction": "LONG",
-      "valid": false,
+    {
+      "pair": "GBPUSD",
       "price": 1.34329,
+      "h4_bias": "bullish",
+      "h1_bias": "neutral",
+      "h4_adx": 35.3,
+      "bos": false,
+      "tradeable": false,
       "proximity": 0.147,
-      "bos_level": 1.34526
+      "regime": "TREND-UP"
     },
-    "XAUUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
+    {
+      "pair": "XAUUSD",
       "price": 4523.2002,
+      "h4_bias": "neutral",
+      "h1_bias": "bearish",
+      "h4_adx": 12.3,
+      "bos": false,
+      "tradeable": false,
       "proximity": null,
-      "bos_level": null
+      "regime": "RANGE"
     },
-    "AUDUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
+    {
+      "pair": "AUDUSD",
       "price": 0.71296,
+      "h4_bias": "neutral",
+      "h1_bias": "neutral",
+      "h4_adx": 5.0,
+      "bos": false,
+      "tradeable": false,
       "proximity": null,
-      "bos_level": null
+      "regime": "RANGE"
     },
-    "NZDUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
+    {
+      "pair": "NZDUSD",
       "price": 0.58514,
+      "h4_bias": "bullish",
+      "h1_bias": "bearish",
+      "h4_adx": 17.9,
+      "bos": false,
+      "tradeable": false,
       "proximity": null,
-      "bos_level": null
+      "regime": "TREND-UP"
     },
-    "USDJPY": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 159.155,
+    {
+      "pair": "BTCUSD",
+      "price": 76436.29688,
+      "h4_bias": "neutral",
+      "h1_bias": "neutral",
+      "h4_adx": 12.9,
+      "bos": false,
+      "tradeable": false,
       "proximity": null,
-      "bos_level": null
+      "regime": "RANGE"
     },
-    "USDCAD": {
-      "score": 2,
-      "direction": "LONG",
-      "valid": false,
-      "price": 1.382,
+    {
+      "pair": "LTCUSD",
+      "price": 52.41,
+      "h4_bias": "bearish",
+      "h1_bias": "bearish",
+      "h4_adx": 33.7,
+      "bos": true,
+      "tradeable": false,
       "proximity": null,
-      "bos_level": null
-    },
-    "USDCHF": {
-      "score": 2,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 0.7847,
-      "proximity": null,
-      "bos_level": null
-    },
-    "BTCUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 76698.61719,
-      "proximity": null,
-      "bos_level": null
-    },
-    "LTCUSD": {
-      "score": 3,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 53.14,
-      "proximity": null,
-      "bos_level": null
-    },
-    "ETHUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 2106.94995,
-      "proximity": null,
-      "bos_level": null
+      "regime": "TREND-DOWN"
     }
-  },
-  "performance": {
-    "smc_trades": 0,
-    "win_rate": 0,
-    "avg_rr": 0,
-    "sharpe": 0,
-    "max_dd": 0,
-    "target_trades": 100,
-    "live_ready": false
-  },
-  "trade_history": [],
-  "journal": {
-    "ok": true,
-    "verified": 22,
-    "errors": []
-  },
-  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com",
-  "ws_url": "wss://named-trailer-battle-colour.trycloudflare.com/ws"
+  ]
 }
