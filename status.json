@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-25T21:09:25.175394",
+  "generated_at": "2026-05-26T21:33:51.964256",
   "version": "GTSv4.2",
-  "tunnel_url": "https://assure-fascinating-alexandria-and.trycloudflare.com",
-  "ws_url": "wss://assure-fascinating-alexandria-and.trycloudflare.com/ws",
-  "balance": 10000.0,
+  "tunnel_url": "https://bali-travesti-resistant-immune.trycloudflare.com",
+  "ws_url": "wss://bali-travesti-resistant-immune.trycloudflare.com/ws",
+  "balance": 36896.11,
   "account": "47153895",
   "session": "off-hours",
   "in_killzone": false,
@@ -12,24 +12,24 @@
   "watchlist": [
     {
       "pair": "EURUSD",
-      "price": 1.1605,
-      "h4_bias": "bearish",
+      "price": 1.16442,
+      "h4_bias": "bullish",
       "h1_bias": "bullish",
-      "h4_adx": 18.9,
+      "h4_adx": 23.6,
       "bos": false,
       "tradeable": false,
       "proximity": null,
-      "regime": "TREND-DOWN"
+      "regime": "TREND-UP"
     },
     {
       "pair": "GBPUSD",
-      "price": 1.34329,
+      "price": 1.35027,
       "h4_bias": "bullish",
       "h1_bias": "neutral",
-      "h4_adx": 35.3,
+      "h4_adx": 76.5,
       "bos": false,
       "tradeable": false,
-      "proximity": 0.147,
+      "proximity": 0.05,
       "regime": "TREND-UP"
     },
     {
@@ -45,10 +45,10 @@
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71296,
+      "price": 0.71757,
       "h4_bias": "neutral",
-      "h1_bias": "neutral",
-      "h4_adx": 5.0,
+      "h1_bias": "bullish",
+      "h4_adx": 36.5,
       "bos": false,
       "tradeable": false,
       "proximity": null,
@@ -56,36 +56,36 @@
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58514,
-      "h4_bias": "bullish",
-      "h1_bias": "bearish",
-      "h4_adx": 17.9,
-      "bos": false,
-      "tradeable": false,
-      "proximity": null,
-      "regime": "TREND-UP"
-    },
-    {
-      "pair": "BTCUSD",
-      "price": 76436.29688,
+      "price": 0.58723,
       "h4_bias": "neutral",
       "h1_bias": "neutral",
-      "h4_adx": 12.9,
+      "h4_adx": 11.1,
       "bos": false,
       "tradeable": false,
       "proximity": null,
       "regime": "RANGE"
     },
     {
+      "pair": "BTCUSD",
+      "price": 77265.38281,
+      "h4_bias": "bullish",
+      "h1_bias": "bullish",
+      "h4_adx": 52.2,
+      "bos": false,
+      "tradeable": false,
+      "proximity": 0.698,
+      "regime": "TREND-UP"
+    },
+    {
       "pair": "LTCUSD",
-      "price": 52.41,
-      "h4_bias": "bearish",
-      "h1_bias": "bearish",
-      "h4_adx": 33.7,
-      "bos": true,
+      "price": 52.72,
+      "h4_bias": "neutral",
+      "h1_bias": "bullish",
+      "h4_adx": 7.0,
+      "bos": false,
       "tradeable": false,
       "proximity": null,
-      "regime": "TREND-DOWN"
+      "regime": "RANGE"
     }
   ]
 }
