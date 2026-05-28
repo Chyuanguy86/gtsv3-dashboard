@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-28T21:18:18.629868",
+  "timestamp": "2026-05-28T21:56:31.972304",
   "balance": 34173.01,
   "auto": true,
   "session": {
@@ -21,7 +21,7 @@
       "price": 1.1632
     },
     "GBPUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
       "price": 1.34167
@@ -39,7 +39,7 @@
       "price": 0.71266
     },
     "NZDUSD": {
-      "score": 4,
+      "score": 5,
       "direction": "SHORT",
       "valid": false,
       "price": 0.59007

@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-28T21:18:18.629868",
+  "timestamp": "2026-05-28T22:01:15.591047",
   "balance": 34173.01,
   "auto": true,
   "session": {
@@ -8,82 +8,77 @@
     "active": true
   },
   "pairs": {
-    "XAUUSD": {
-      "score": 2,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 4410.7998
-    },
     "EURUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1.1632
+      "price": 1.16333
     },
     "GBPUSD": {
       "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.34167
+      "price": 1.34133
     },
-    "USDJPY": {
+    "XAUUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 159.381
+      "price": 4458.0
     },
     "AUDUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.71266
+      "price": 0.71301
     },
     "NZDUSD": {
-      "score": 4,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.59007
+      "price": 0.59053
+    },
+    "USDJPY": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
+      "price": 159.455
     },
     "USDCAD": {
       "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.38479
+      "price": 1.3844
     },
     "USDCHF": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.78775
+      "price": 0.78716
     },
     "BTCUSD": {
-      "score": 3,
-      "direction": "LONG",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 73372.85156
+      "price": 72884.21094
     },
     "LTCUSD": {
-      "score": 2,
-      "direction": "SHORT",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 50.63
+      "price": 50.91
     },
     "ETHUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1985.10999
+      "price": 1978.43005
     }
   },
   "performance": {
-    "smc_trades": 5
+    "smc_trades": 5,
+    "target": 100,
+    "live_ready": false
   },
-  "pipeline": {
-    "name": "SMC_DAY_V1",
-    "timeframes": "H4 \u00b7 H1 \u00b7 M15 \u00b7 M5",
-    "confluence": "6/7 edge + hard gates",
-    "risk_pct": 1.0
-  },
-  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com",
-  "ws_url": "wss://named-trailer-battle-colour.trycloudflare.com/ws"
+  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com"
 }
