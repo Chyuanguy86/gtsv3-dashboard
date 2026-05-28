@@ -1,130 +1,88 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-24T23:26:13.089544",
-  "balance": 36896.11,
+  "timestamp": "2026-05-28T21:18:18.629868",
+  "balance": 34173.01,
   "auto": true,
   "session": {
-    "active": true,
     "name": "NY",
-    "london": true,
-    "newyork": true,
-    "sydney": false,
-    "tokyo": false
-  },
-  "risk": {
-    "daily_dd_pct": 0.0,
-    "consec_losses": 0,
-    "max_consec": 2,
-    "open_positions": 0,
-    "max_concurrent": 2,
-    "risk_per_trade": 1.0,
-    "circuit_breaker": "ARMED",
-    "trailing_stop": "ACTIVE"
+    "active": true
   },
   "pairs": {
+    "XAUUSD": {
+      "score": 2,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 4410.7998
+    },
     "EURUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1.1605,
-      "proximity": null,
-      "bos_level": null
+      "price": 1.1632
     },
     "GBPUSD": {
-      "score": 3,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.34329,
-      "proximity": 0.147,
-      "bos_level": 1.34526
-    },
-    "XAUUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 4523.2002,
-      "proximity": null,
-      "bos_level": null
-    },
-    "AUDUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 0.71296,
-      "proximity": null,
-      "bos_level": null
-    },
-    "NZDUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 0.58514,
-      "proximity": null,
-      "bos_level": null
+      "price": 1.34167
     },
     "USDJPY": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 159.155,
-      "proximity": null,
-      "bos_level": null
+      "price": 159.381
+    },
+    "AUDUSD": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
+      "price": 0.71266
+    },
+    "NZDUSD": {
+      "score": 4,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.59007
     },
     "USDCAD": {
       "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.382,
-      "proximity": null,
-      "bos_level": null
+      "price": 1.38479
     },
     "USDCHF": {
-      "score": 2,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 0.7847,
-      "proximity": null,
-      "bos_level": null
-    },
-    "BTCUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 76698.61719,
-      "proximity": null,
-      "bos_level": null
+      "price": 0.78775
+    },
+    "BTCUSD": {
+      "score": 3,
+      "direction": "LONG",
+      "valid": false,
+      "price": 73372.85156
     },
     "LTCUSD": {
-      "score": 3,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 53.14,
-      "proximity": null,
-      "bos_level": null
+      "price": 50.63
     },
     "ETHUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 2106.94995,
-      "proximity": null,
-      "bos_level": null
+      "price": 1985.10999
     }
   },
   "performance": {
-    "smc_trades": 0,
-    "win_rate": 0,
-    "avg_rr": 0,
-    "sharpe": 0,
-    "max_dd": 0,
-    "target_trades": 100,
-    "live_ready": false
+    "smc_trades": 5
   },
-  "trade_history": [],
-  "journal": {
-    "ok": true,
-    "verified": 22,
-    "errors": []
+  "pipeline": {
+    "name": "SMC_DAY_V1",
+    "timeframes": "H4 \u00b7 H1 \u00b7 M15 \u00b7 M5",
+    "confluence": "6/7 edge + hard gates",
+    "risk_pct": 1.0
   },
   "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com",
   "ws_url": "wss://named-trailer-battle-colour.trycloudflare.com/ws"
