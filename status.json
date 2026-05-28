@@ -1,21 +1,92 @@
 {
-  "generated_at": "2026-05-26T21:33:51.964256",
+  "generated_at": "2026-05-28T08:17:55.629248",
   "version": "GTSv4.2",
-  "tunnel_url": "https://bali-travesti-resistant-immune.trycloudflare.com",
-  "ws_url": "wss://bali-travesti-resistant-immune.trycloudflare.com/ws",
-  "balance": 36896.11,
+  "tunnel_url": "https://peoples-brings-stolen-types.trycloudflare.com",
+  "ws_url": "wss://peoples-brings-stolen-types.trycloudflare.com/ws",
+  "balance": 10000.0,
   "account": "47153895",
-  "session": "off-hours",
-  "in_killzone": false,
-  "open_trades": {},
+  "session": "Asia",
+  "in_killzone": true,
+  "open_trades": {
+    "CT-221903387": {
+      "trade": {
+        "pair": "USDCHF",
+        "direction": "SELL",
+        "lots": 2.19,
+        "entry": 0.7870600000000001,
+        "sl": 0.78768,
+        "tp": 0.78569,
+        "risk_amt": 100.0,
+        "risk_pct": 1.0
+      },
+      "opened_at": 1779924678.970602,
+      "ai_score": 99
+    },
+    "CT-221905595": {
+      "trade": {
+        "pair": "USDCHF",
+        "direction": "SELL",
+        "lots": 2.165,
+        "entry": 0.78705,
+        "sl": 0.78768,
+        "tp": 0.78569,
+        "risk_amt": 100.0,
+        "risk_pct": 1.0
+      },
+      "opened_at": 1779924678.970659,
+      "ai_score": 99
+    },
+    "CT-221906698": {
+      "trade": {
+        "pair": "NZDUSD",
+        "direction": "SELL",
+        "lots": 1.52,
+        "entry": 0.58998,
+        "sl": 0.5909599999999999,
+        "tp": 0.58654,
+        "risk_amt": 100.0,
+        "risk_pct": 1.0
+      },
+      "opened_at": 1779924678.9706821,
+      "ai_score": 99
+    },
+    "CT-221912642": {
+      "trade": {
+        "pair": "USDCHF",
+        "direction": "SELL",
+        "lots": 2.125,
+        "entry": 0.7870349999999999,
+        "sl": 0.78768,
+        "tp": 0.78569,
+        "risk_amt": 100.0,
+        "risk_pct": 1.0
+      },
+      "opened_at": 1779924678.970696,
+      "ai_score": 99
+    },
+    "CT-221915100": {
+      "trade": {
+        "pair": "NZDUSD",
+        "direction": "SELL",
+        "lots": 3.5,
+        "entry": 0.590135,
+        "sl": 0.5909599999999999,
+        "tp": 0.58654,
+        "risk_amt": 100.0,
+        "risk_pct": 1.0
+      },
+      "opened_at": 1779924678.970709,
+      "ai_score": 99
+    }
+  },
   "pipeline": "H4+H1+5M SMC Day Trading",
   "watchlist": [
     {
       "pair": "EURUSD",
-      "price": 1.16442,
+      "price": 1.16293,
       "h4_bias": "bullish",
       "h1_bias": "bullish",
-      "h4_adx": 23.6,
+      "h4_adx": 3.6,
       "bos": false,
       "tradeable": false,
       "proximity": null,
@@ -23,32 +94,32 @@
     },
     {
       "pair": "GBPUSD",
-      "price": 1.35027,
+      "price": 1.34288,
       "h4_bias": "bullish",
-      "h1_bias": "neutral",
-      "h4_adx": 76.5,
+      "h1_bias": "bearish",
+      "h4_adx": 75.1,
       "bos": false,
       "tradeable": false,
-      "proximity": 0.05,
+      "proximity": null,
       "regime": "TREND-UP"
     },
     {
       "pair": "XAUUSD",
-      "price": 4523.2002,
-      "h4_bias": "neutral",
-      "h1_bias": "bearish",
-      "h4_adx": 12.3,
+      "price": 4488.5,
+      "h4_bias": "bearish",
+      "h1_bias": "neutral",
+      "h4_adx": 52.8,
       "bos": false,
       "tradeable": false,
-      "proximity": null,
-      "regime": "RANGE"
+      "proximity": 1.281,
+      "regime": "TREND-DOWN"
     },
     {
       "pair": "AUDUSD",
-      "price": 0.71757,
+      "price": 0.71423,
       "h4_bias": "neutral",
-      "h1_bias": "bullish",
-      "h4_adx": 36.5,
+      "h1_bias": "bearish",
+      "h4_adx": 44.8,
       "bos": false,
       "tradeable": false,
       "proximity": null,
@@ -56,32 +127,32 @@
     },
     {
       "pair": "NZDUSD",
-      "price": 0.58723,
+      "price": 0.59011,
+      "h4_bias": "bearish",
+      "h1_bias": "bullish",
+      "h4_adx": 31.6,
+      "bos": false,
+      "tradeable": false,
+      "proximity": null,
+      "regime": "TREND-DOWN"
+    },
+    {
+      "pair": "BTCUSD",
+      "price": 74958.0,
       "h4_bias": "neutral",
       "h1_bias": "neutral",
-      "h4_adx": 11.1,
+      "h4_adx": 36.7,
       "bos": false,
       "tradeable": false,
       "proximity": null,
       "regime": "RANGE"
     },
     {
-      "pair": "BTCUSD",
-      "price": 77265.38281,
-      "h4_bias": "bullish",
-      "h1_bias": "bullish",
-      "h4_adx": 52.2,
-      "bos": false,
-      "tradeable": false,
-      "proximity": 0.698,
-      "regime": "TREND-UP"
-    },
-    {
       "pair": "LTCUSD",
-      "price": 52.72,
+      "price": 52.33,
       "h4_bias": "neutral",
       "h1_bias": "bullish",
-      "h4_adx": 7.0,
+      "h4_adx": 6.3,
       "bos": false,
       "tradeable": false,
       "proximity": null,
