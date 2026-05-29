@@ -1,84 +1,90 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-28T22:01:15.591047",
+  "timestamp": "2026-05-29T19:31:26.097171",
   "balance": 34173.01,
   "auto": true,
   "session": {
-    "name": "NY",
-    "active": true
+    "name": "off-hours",
+    "active": false
   },
   "pairs": {
-    "EURUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 1.16333
-    },
-    "GBPUSD": {
-      "score": 2,
-      "direction": "LONG",
-      "valid": false,
-      "price": 1.34133
-    },
     "XAUUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 4458.0
+      "price": 4554.0
     },
-    "AUDUSD": {
+    "EURUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.71301
+      "price": 1.16414
     },
-    "NZDUSD": {
-      "score": 3,
-      "direction": "SHORT",
+    "GBPUSD": {
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 0.59053
+      "price": 1.34187
     },
     "USDJPY": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 159.455
+      "price": 159.255
+    },
+    "AUDUSD": {
+      "score": 5,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.71577
+    },
+    "NZDUSD": {
+      "score": 0,
+      "direction": null,
+      "valid": false,
+      "price": 0.59666
     },
     "USDCAD": {
-      "score": 2,
-      "direction": "LONG",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 1.3844
+      "price": 1.38082
     },
     "USDCHF": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.78716
+      "price": 0.7837
     },
     "BTCUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "LONG",
       "valid": false,
-      "price": 72884.21094
+      "price": 73757.27344
     },
     "LTCUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 50.91
+      "price": 51.83
     },
     "ETHUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1978.43005
+      "price": 2012.78003
     }
   },
   "performance": {
-    "smc_trades": 5,
-    "target": 100,
-    "live_ready": false
+    "smc_trades": 6
   },
-  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com"
+  "pipeline": {
+    "name": "SMC_DAY_V1",
+    "timeframes": "H4 \u00b7 H1 \u00b7 M15 \u00b7 M5",
+    "confluence": "6/7 edge + hard gates",
+    "risk_pct": 1.0
+  },
+  "tunnel_url": "https://phones-soul-newsletter-came.trycloudflare.com",
+  "ws_url": "wss://phones-soul-newsletter-came.trycloudflare.com/ws",
+  "generated_at": "2026-05-29T19:36:14.669473"
 }
