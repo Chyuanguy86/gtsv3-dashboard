@@ -1,78 +1,78 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-29T19:31:26.097171",
+  "timestamp": "2026-05-30T21:44:23.436856",
   "balance": 34173.01,
   "auto": true,
   "session": {
-    "name": "off-hours",
-    "active": false
+    "name": "NY",
+    "active": true
   },
   "pairs": {
     "XAUUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "SHORT",
       "valid": false,
-      "price": 4554.0
+      "price": 4593.0
     },
     "EURUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1.16414
+      "price": 1.16591
     },
     "GBPUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1.34187
+      "price": 1.3457
     },
     "USDJPY": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "LONG",
       "valid": false,
       "price": 159.255
     },
     "AUDUSD": {
-      "score": 5,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.71577
+      "price": 0.7186
     },
     "NZDUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.59666
+      "price": 0.59902
     },
     "USDCAD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 1.38082
+      "price": 1.3793
     },
     "USDCHF": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 0.7837
+      "price": 0.78075
     },
     "BTCUSD": {
-      "score": 3,
-      "direction": "LONG",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 73757.27344
+      "price": 73425.03906
     },
     "LTCUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 51.83
+      "price": 52.43
     },
     "ETHUSD": {
       "score": 0,
       "direction": null,
       "valid": false,
-      "price": 2012.78003
+      "price": 2012.01001
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://phones-soul-newsletter-came.trycloudflare.com",
-  "ws_url": "wss://phones-soul-newsletter-came.trycloudflare.com/ws",
-  "generated_at": "2026-05-29T19:36:14.669473"
+  "tunnel_url": "https://guidelines-field-join-directories.trycloudflare.com",
+  "ws_url": "wss://guidelines-field-join-directories.trycloudflare.com/ws",
+  "generated_at": "2026-05-30T21:44:35.265147"
 }
