@@ -1,90 +1,117 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-31T18:13:45.090833",
-  "balance": 34173.01,
+  "timestamp": "2026-06-02T00:19:56.861795",
+  "balance": 10000.0,
   "auto": true,
-  "session": {
-    "name": "off-hours",
-    "active": false
-  },
+  "session": "off-hours",
   "pairs": {
-    "XAUUSD": {
-      "score": 4,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 4593.0
-    },
     "EURUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "LONG",
       "valid": false,
-      "price": 1.16591
+      "price": 1.16144,
+      "trend_bias": "BULLISH",
+      "trend_source": "D1 (H4 ranging)"
     },
     "GBPUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "SHORT",
       "valid": false,
-      "price": 1.3457
+      "price": 1.34165,
+      "trend_bias": "BEARISH",
+      "trend_source": "H4"
     },
-    "USDJPY": {
+    "XAUUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 159.255
+      "price": 4494.7002,
+      "trend_bias": "RANGING",
+      "trend_source": "D1 (H4 ranging)"
     },
     "AUDUSD": {
+      "score": 3,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.71434,
+      "trend_bias": "BULLISH",
+      "trend_source": "D1 (H4 ranging)"
+    },
+    "NZDUSD": {
+      "score": 2,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.59193,
+      "trend_bias": "BULLISH",
+      "trend_source": "H4"
+    },
+    "USDJPY": {
+      "score": 3,
+      "direction": "LONG",
+      "valid": false,
+      "price": 159.752,
+      "trend_bias": "BULLISH",
+      "trend_source": "H4"
+    },
+    "USDCAD": {
+      "score": 2,
+      "direction": "LONG",
+      "valid": false,
+      "price": 1.38432,
+      "trend_bias": "BULLISH",
+      "trend_source": "D1 (H4 ranging)"
+    },
+    "USDCHF": {
+      "score": 3,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.78802,
+      "trend_bias": "BEARISH",
+      "trend_source": "H4"
+    },
+    "BTCUSD": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.7186
-    },
-    "NZDUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 0.59902
-    },
-    "USDCAD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 1.3793
-    },
-    "USDCHF": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 0.78075
-    },
-    "BTCUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 73859.21875
-    },
-    "LTCUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 52.47
+      "price": 71592.13281,
+      "trend_bias": "BEARISH",
+      "trend_source": "H4"
     },
     "ETHUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "SHORT",
       "valid": false,
-      "price": 2024.01001
+      "price": 1968.59998,
+      "trend_bias": "BEARISH",
+      "trend_source": "D1 (H4 ranging)"
+    },
+    "LTCUSD": {
+      "score": 3,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 50.84,
+      "trend_bias": "BEARISH",
+      "trend_source": "D1 (H4 ranging)"
     }
   },
   "performance": {
-    "smc_trades": 6
+    "smc_trades": 9,
+    "target": 100
   },
-  "pipeline": {
-    "name": "SMC_DAY_V1",
-    "timeframes": "H4 \u00b7 H1 \u00b7 M15 \u00b7 M5",
-    "confluence": "6/7 edge + hard gates",
-    "risk_pct": 1.0
+  "journal": {
+    "ok": true,
+    "verified": 37,
+    "errors": []
   },
-  "tunnel_url": "https://extensive-interfaces-rings-inclusion.trycloudflare.com",
-  "ws_url": "wss://extensive-interfaces-rings-inclusion.trycloudflare.com/ws",
-  "generated_at": "2026-05-31T18:16:38.058465"
+  "tunnel_url": "https://named-trailer-battle-colour.trycloudflare.com",
+  "strategies": {
+    "SMC_DAY_V1": {
+      "active": true,
+      "threshold": "7/9"
+    },
+    "AMT_SCALP_V1": {
+      "active": true,
+      "threshold": "7/10"
+    }
+  }
 }

@@ -1,82 +1,82 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-05-28T21:56:31.972304",
-  "balance": 34173.01,
+  "timestamp": "2026-06-02T00:19:16.866002",
+  "balance": 10000.0,
   "auto": true,
   "session": {
-    "name": "NY",
-    "active": true
+    "name": "off-hours",
+    "active": false
   },
   "pairs": {
     "XAUUSD": {
-      "score": 2,
-      "direction": "SHORT",
+      "score": 4,
+      "direction": "LONG",
       "valid": false,
-      "price": 4410.7998
+      "price": 4494.7002
     },
     "EURUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 1.1632
-    },
-    "GBPUSD": {
       "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 1.34167
+      "price": 1.16144
     },
-    "USDJPY": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 159.381
-    },
-    "AUDUSD": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 0.71266
-    },
-    "NZDUSD": {
-      "score": 5,
+    "GBPUSD": {
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.59007
+      "price": 1.34165
+    },
+    "USDJPY": {
+      "score": 2,
+      "direction": "LONG",
+      "valid": false,
+      "price": 159.752
+    },
+    "AUDUSD": {
+      "score": 3,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.71434
+    },
+    "NZDUSD": {
+      "score": 2,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.59193
     },
     "USDCAD": {
       "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.38479
+      "price": 1.38432
     },
     "USDCHF": {
-      "score": 0,
-      "direction": null,
-      "valid": false,
-      "price": 0.78775
-    },
-    "BTCUSD": {
-      "score": 3,
-      "direction": "LONG",
-      "valid": false,
-      "price": 73372.85156
-    },
-    "LTCUSD": {
-      "score": 2,
+      "score": 5,
       "direction": "SHORT",
       "valid": false,
-      "price": 50.63
+      "price": 0.78802
+    },
+    "BTCUSD": {
+      "score": 4,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 71592.13281
+    },
+    "LTCUSD": {
+      "score": 4,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 50.84
     },
     "ETHUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 3,
+      "direction": "SHORT",
       "valid": false,
-      "price": 1985.10999
+      "price": 1968.59998
     }
   },
   "performance": {
-    "smc_trades": 5
+    "smc_trades": 9
   },
   "pipeline": {
     "name": "SMC_DAY_V1",
