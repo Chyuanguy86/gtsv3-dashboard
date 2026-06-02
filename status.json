@@ -1,82 +1,82 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-02T13:23:09.108903",
-  "balance": 10000.0,
+  "timestamp": "2026-06-02T21:24:37.420235",
+  "balance": 33981.57,
   "auto": true,
   "session": {
-    "name": "off-hours",
-    "active": false
+    "name": "NY",
+    "active": true
   },
   "pairs": {
     "XAUUSD": {
-      "score": 3,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 4543.3999
+      "price": 4564.2002
     },
     "EURUSD": {
-      "score": 5,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.16414
+      "price": 1.16455
     },
     "GBPUSD": {
       "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 1.34646
+      "price": 1.34686
     },
     "USDJPY": {
-      "score": 2,
+      "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 159.73
+      "price": 159.711
     },
     "AUDUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.71649
+      "price": 0.71803
     },
     "NZDUSD": {
-      "score": 3,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 0.59354
+      "price": 0.59259
     },
     "USDCAD": {
       "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.38441
+      "price": 1.3852
     },
     "USDCHF": {
-      "score": 2,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 0.78617
+      "price": 0.78578
     },
     "BTCUSD": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 70695.36719
+      "price": 69341.64844
     },
     "LTCUSD": {
-      "score": 4,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 49.8
+      "price": 49.12
     },
     "ETHUSD": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 1993.88
+      "price": 1965.96997
     }
   },
   "performance": {
-    "smc_trades": 9
+    "smc_trades": 10
   },
   "pipeline": {
     "name": "SMC_DAY_V1",
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://records-cingular-trusts-portrait.trycloudflare.com",
-  "ws_url": "wss://records-cingular-trusts-portrait.trycloudflare.com/ws",
-  "generated_at": "2026-06-02T13:27:05.545383"
+  "tunnel_url": "https://million-backing-quarterly-separately.trycloudflare.com",
+  "ws_url": "wss://million-backing-quarterly-separately.trycloudflare.com/ws",
+  "generated_at": "2026-06-02T21:29:00.649595"
 }
