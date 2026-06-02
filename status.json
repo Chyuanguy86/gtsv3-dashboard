@@ -1,7 +1,7 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-02T13:06:30.962350",
-  "balance": 33978.42,
+  "timestamp": "2026-06-02T13:23:09.108903",
+  "balance": 10000.0,
   "auto": true,
   "session": {
     "name": "off-hours",
@@ -9,7 +9,7 @@
   },
   "pairs": {
     "XAUUSD": {
-      "score": 4,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
       "price": 4543.3999
@@ -27,19 +27,19 @@
       "price": 1.34646
     },
     "USDJPY": {
-      "score": 3,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
       "price": 159.73
     },
     "AUDUSD": {
-      "score": 3,
+      "score": 4,
       "direction": "LONG",
       "valid": false,
       "price": 0.71649
     },
     "NZDUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
       "price": 0.59354
@@ -51,25 +51,25 @@
       "price": 1.38441
     },
     "USDCHF": {
-      "score": 3,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
       "price": 0.78617
     },
     "BTCUSD": {
-      "score": 3,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
       "price": 70695.36719
     },
     "LTCUSD": {
-      "score": 2,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
       "price": 49.8
     },
     "ETHUSD": {
-      "score": 3,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
       "price": 1993.88
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://arena-bond-simplified-educators.trycloudflare.com",
-  "ws_url": "wss://arena-bond-simplified-educators.trycloudflare.com/ws",
-  "generated_at": "2026-06-02T13:09:45.383630"
+  "tunnel_url": "https://records-cingular-trusts-portrait.trycloudflare.com",
+  "ws_url": "wss://records-cingular-trusts-portrait.trycloudflare.com/ws",
+  "generated_at": "2026-06-02T13:27:05.545383"
 }
