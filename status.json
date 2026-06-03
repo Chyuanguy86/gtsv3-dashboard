@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-03T22:02:46.086933",
+  "timestamp": "2026-06-03T22:18:00.215741",
   "balance": 10000.0,
   "auto": true,
   "session": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://portfolio-ranked-snap-syntax.trycloudflare.com",
-  "ws_url": "wss://portfolio-ranked-snap-syntax.trycloudflare.com/ws",
-  "generated_at": "2026-06-03T22:02:59.876296"
+  "tunnel_url": "https://measure-eventually-hosted-valium.trycloudflare.com",
+  "ws_url": "wss://measure-eventually-hosted-valium.trycloudflare.com/ws",
+  "generated_at": "2026-06-03T22:19:49.474920"
 }
