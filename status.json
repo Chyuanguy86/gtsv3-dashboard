@@ -1,7 +1,7 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-02T21:24:37.420235",
-  "balance": 33981.57,
+  "timestamp": "2026-06-03T22:02:46.086933",
+  "balance": 10000.0,
   "auto": true,
   "session": {
     "name": "NY",
@@ -9,70 +9,70 @@
   },
   "pairs": {
     "XAUUSD": {
-      "score": 2,
+      "score": 6,
       "direction": "LONG",
       "valid": false,
-      "price": 4564.2002
+      "price": 4519.2002
     },
     "EURUSD": {
-      "score": 2,
+      "score": 6,
       "direction": "LONG",
       "valid": false,
-      "price": 1.16455
+      "price": 1.1636
     },
     "GBPUSD": {
-      "score": 3,
-      "direction": "LONG",
-      "valid": false,
-      "price": 1.34686
-    },
-    "USDJPY": {
-      "score": 5,
-      "direction": "LONG",
-      "valid": false,
-      "price": 159.711
-    },
-    "AUDUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.71803
+      "price": 1.34662
+    },
+    "USDJPY": {
+      "score": 4,
+      "direction": "LONG",
+      "valid": false,
+      "price": 159.867
+    },
+    "AUDUSD": {
+      "score": 6,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.71839
     },
     "NZDUSD": {
-      "score": 2,
+      "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.59259
+      "price": 0.59256
     },
     "USDCAD": {
-      "score": 2,
+      "score": 6,
       "direction": "LONG",
       "valid": false,
-      "price": 1.3852
+      "price": 1.3836
     },
     "USDCHF": {
-      "score": 3,
-      "direction": "LONG",
+      "score": 5,
+      "direction": "SHORT",
       "valid": false,
-      "price": 0.78578
+      "price": 0.78653
     },
     "BTCUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 69341.64844
+      "price": 67801.10938
     },
     "LTCUSD": {
-      "score": 2,
+      "score": 5,
       "direction": "SHORT",
       "valid": false,
-      "price": 49.12
+      "price": 48.29
     },
     "ETHUSD": {
-      "score": 2,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1965.96997
+      "price": 1906.85999
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://million-backing-quarterly-separately.trycloudflare.com",
-  "ws_url": "wss://million-backing-quarterly-separately.trycloudflare.com/ws",
-  "generated_at": "2026-06-02T21:29:00.649595"
+  "tunnel_url": "https://portfolio-ranked-snap-syntax.trycloudflare.com",
+  "ws_url": "wss://portfolio-ranked-snap-syntax.trycloudflare.com/ws",
+  "generated_at": "2026-06-03T22:02:59.876296"
 }
