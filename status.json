@@ -1,78 +1,78 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-03T22:18:00.215741",
-  "balance": 10000.0,
+  "timestamp": "2026-06-07T00:19:09.368141",
+  "balance": 33958.89,
   "auto": true,
   "session": {
-    "name": "NY",
-    "active": true
+    "name": "off-hours",
+    "active": false
   },
   "pairs": {
     "XAUUSD": {
-      "score": 6,
-      "direction": "LONG",
+      "score": 5,
+      "direction": "SHORT",
       "valid": false,
-      "price": 4519.2002
+      "price": 4365.2998
     },
     "EURUSD": {
-      "score": 6,
-      "direction": "LONG",
+      "score": 5,
+      "direction": "SHORT",
       "valid": false,
-      "price": 1.1636
+      "price": 1.15274
     },
     "GBPUSD": {
-      "score": 4,
-      "direction": "LONG",
+      "score": 0,
+      "direction": null,
       "valid": false,
-      "price": 1.34662
+      "price": 1.33362
     },
     "USDJPY": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 159.867
+      "price": 160.293
     },
     "AUDUSD": {
-      "score": 6,
-      "direction": "LONG",
+      "score": 3,
+      "direction": "SHORT",
       "valid": false,
-      "price": 0.71839
+      "price": 0.70497
     },
     "NZDUSD": {
-      "score": 4,
-      "direction": "LONG",
-      "valid": false,
-      "price": 0.59256
-    },
-    "USDCAD": {
-      "score": 6,
-      "direction": "LONG",
-      "valid": false,
-      "price": 1.3836
-    },
-    "USDCHF": {
       "score": 5,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.78653
+      "price": 0.57981
+    },
+    "USDCAD": {
+      "score": 3,
+      "direction": "LONG",
+      "valid": false,
+      "price": 1.3937
+    },
+    "USDCHF": {
+      "score": 4,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.7962
     },
     "BTCUSD": {
       "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 67801.10938
+      "price": 60763.73047
     },
     "LTCUSD": {
-      "score": 5,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 48.29
+      "price": 42.71
     },
     "ETHUSD": {
-      "score": 4,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 1906.85999
+      "price": 1556.04004
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://measure-eventually-hosted-valium.trycloudflare.com",
-  "ws_url": "wss://measure-eventually-hosted-valium.trycloudflare.com/ws",
-  "generated_at": "2026-06-03T22:19:49.474920"
+  "tunnel_url": "https://climbing-generates-newest-physical.trycloudflare.com",
+  "ws_url": "wss://climbing-generates-newest-physical.trycloudflare.com/ws",
+  "generated_at": "2026-06-07T00:19:26.612942"
 }
