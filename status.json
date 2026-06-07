@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-07T00:19:09.368141",
+  "timestamp": "2026-06-07T11:49:35.078591",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -9,13 +9,13 @@
   },
   "pairs": {
     "XAUUSD": {
-      "score": 5,
+      "score": 6,
       "direction": "SHORT",
       "valid": false,
       "price": 4365.2998
     },
     "EURUSD": {
-      "score": 5,
+      "score": 6,
       "direction": "SHORT",
       "valid": false,
       "price": 1.15274
@@ -27,31 +27,31 @@
       "price": 1.33362
     },
     "USDJPY": {
-      "score": 4,
+      "score": 5,
       "direction": "LONG",
       "valid": false,
       "price": 160.293
     },
     "AUDUSD": {
-      "score": 3,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
       "price": 0.70497
     },
     "NZDUSD": {
-      "score": 5,
+      "score": 6,
       "direction": "SHORT",
       "valid": false,
       "price": 0.57981
     },
     "USDCAD": {
-      "score": 3,
+      "score": 4,
       "direction": "LONG",
       "valid": false,
       "price": 1.3937
     },
     "USDCHF": {
-      "score": 4,
+      "score": 5,
       "direction": "LONG",
       "valid": false,
       "price": 0.7962
@@ -60,19 +60,19 @@
       "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 60763.73047
+      "price": 61510.0
     },
     "LTCUSD": {
-      "score": 3,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 42.71
+      "price": 42.02
     },
     "ETHUSD": {
-      "score": 3,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1556.04004
+      "price": 1592.51001
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://climbing-generates-newest-physical.trycloudflare.com",
-  "ws_url": "wss://climbing-generates-newest-physical.trycloudflare.com/ws",
-  "generated_at": "2026-06-07T00:19:26.612942"
+  "tunnel_url": "https://built-prompt-marble-medicare.trycloudflare.com",
+  "ws_url": "wss://built-prompt-marble-medicare.trycloudflare.com/ws",
+  "generated_at": "2026-06-07T11:49:46.679840"
 }
