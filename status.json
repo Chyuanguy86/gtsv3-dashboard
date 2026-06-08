@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-07T12:14:45.662669",
+  "timestamp": "2026-06-09T00:17:06.629851",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -9,70 +9,70 @@
   },
   "pairs": {
     "XAUUSD": {
-      "score": 6,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 4365.2998
+      "price": 4357.5
     },
     "EURUSD": {
-      "score": 6,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.15274
+      "price": 1.1546
     },
     "GBPUSD": {
-      "score": 0,
-      "direction": null,
+      "score": 6,
+      "direction": "LONG",
       "valid": false,
-      "price": 1.33362
+      "price": 1.33535
     },
     "USDJPY": {
-      "score": 5,
+      "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 160.293
+      "price": 160.02699
     },
     "AUDUSD": {
-      "score": 4,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.70497
+      "price": 0.70602
     },
     "NZDUSD": {
-      "score": 6,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.57981
+      "price": 0.5819
     },
     "USDCAD": {
+      "score": 3,
+      "direction": "LONG",
+      "valid": false,
+      "price": 1.39402
+    },
+    "USDCHF": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 1.3937
+      "price": 0.79635
     },
-    "USDCHF": {
+    "BTCUSD": {
+      "score": 4,
+      "direction": "LONG",
+      "valid": false,
+      "price": 63732.05859
+    },
+    "LTCUSD": {
       "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 0.7962
-    },
-    "BTCUSD": {
-      "score": 3,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 61510.0
-    },
-    "LTCUSD": {
-      "score": 4,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 42.02
+      "price": 42.93
     },
     "ETHUSD": {
       "score": 4,
-      "direction": "SHORT",
+      "direction": "LONG",
       "valid": false,
-      "price": 1592.51001
+      "price": 1680.91003
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://laid-basement-hosts-compound.trycloudflare.com",
-  "ws_url": "wss://laid-basement-hosts-compound.trycloudflare.com/ws",
-  "generated_at": "2026-06-07T12:16:48.980214"
+  "tunnel_url": "https://officers-surgical-abu-collective.trycloudflare.com",
+  "ws_url": "wss://officers-surgical-abu-collective.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T00:21:02.152848"
 }
