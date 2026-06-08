@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T00:17:06.629851",
+  "timestamp": "2026-06-09T03:08:18.452438",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -9,70 +9,70 @@
   },
   "pairs": {
     "XAUUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 4357.5
+      "price": 4366.8999
     },
     "EURUSD": {
-      "score": 2,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.1546
+      "price": 1.1542
     },
     "GBPUSD": {
-      "score": 6,
+      "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 1.33535
+      "price": 1.3349
     },
     "USDJPY": {
-      "score": 4,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 160.02699
+      "price": 160.161
     },
     "AUDUSD": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.70602
+      "price": 0.70527
     },
     "NZDUSD": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.5819
+      "price": 0.5816
     },
     "USDCAD": {
-      "score": 3,
+      "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 1.39402
+      "price": 1.3943
     },
     "USDCHF": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.79635
+      "price": 0.79724
     },
     "BTCUSD": {
-      "score": 4,
-      "direction": "LONG",
-      "valid": false,
-      "price": 63732.05859
-    },
-    "LTCUSD": {
       "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 42.93
+      "price": 63552.67969
+    },
+    "LTCUSD": {
+      "score": 4,
+      "direction": "LONG",
+      "valid": false,
+      "price": 43.41
     },
     "ETHUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 1680.91003
+      "price": 1686.02002
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://officers-surgical-abu-collective.trycloudflare.com",
-  "ws_url": "wss://officers-surgical-abu-collective.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T00:21:02.152848"
+  "tunnel_url": "https://kansas-intellectual-garlic-filtering.trycloudflare.com",
+  "ws_url": "wss://kansas-intellectual-garlic-filtering.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T03:09:18.902589"
 }
