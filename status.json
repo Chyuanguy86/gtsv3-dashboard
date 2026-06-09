@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T21:24:17.422426",
+  "timestamp": "2026-06-09T21:59:06.963108",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://aircraft-shift-landing-requests.trycloudflare.com",
-  "ws_url": "wss://aircraft-shift-landing-requests.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T21:26:21.348074"
+  "tunnel_url": "https://columns-photo-lie-noted.trycloudflare.com",
+  "ws_url": "wss://columns-photo-lie-noted.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T22:01:42.565888"
 }
