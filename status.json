@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T13:49:11.633717",
+  "timestamp": "2026-06-09T20:13:33.394146",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -12,28 +12,28 @@
       "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 4353.6001
+      "price": 4354.2002
     },
     "EURUSD": {
-      "score": 4,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.15487
+      "price": 1.15607
     },
     "GBPUSD": {
-      "score": 4,
+      "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.33606
+      "price": 1.33903
     },
     "USDJPY": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 160.18401
+      "price": 160.144
     },
     "AUDUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
       "price": 0.70577
@@ -42,37 +42,37 @@
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.58302
+      "price": 0.58346
     },
     "USDCAD": {
-      "score": 2,
-      "direction": "LONG",
+      "score": 7,
+      "direction": "SHORT",
       "valid": false,
-      "price": 1.394
+      "price": 1.39354
     },
     "USDCHF": {
-      "score": 4,
+      "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 0.79692
+      "price": 0.79623
     },
     "BTCUSD": {
       "score": 6,
       "direction": "LONG",
       "valid": false,
-      "price": 63208.85938
+      "price": 62873.03125
     },
     "LTCUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 42.82
+      "price": 42.8
     },
     "ETHUSD": {
       "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 1685.5
+      "price": 1678.90002
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://consequence-wise-ink-warranty.trycloudflare.com",
-  "ws_url": "wss://consequence-wise-ink-warranty.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T13:53:55.570148"
+  "tunnel_url": "https://along-guides-thinking-set.trycloudflare.com",
+  "ws_url": "wss://along-guides-thinking-set.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T20:16:56.846883"
 }
