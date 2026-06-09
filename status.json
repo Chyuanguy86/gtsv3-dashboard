@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T12:49:02.661116",
+  "timestamp": "2026-06-09T13:24:48.336383",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -12,67 +12,67 @@
       "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 4347.3999
+      "price": 4353.6001
     },
     "EURUSD": {
       "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.1538
+      "price": 1.15487
     },
     "GBPUSD": {
-      "score": 6,
-      "direction": "LONG",
+      "score": 4,
+      "direction": "SHORT",
       "valid": false,
-      "price": 1.33422
+      "price": 1.33606
     },
     "USDJPY": {
-      "score": 5,
-      "direction": "LONG",
-      "valid": false,
-      "price": 160.23
-    },
-    "AUDUSD": {
-      "score": 3,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 0.70507
-    },
-    "NZDUSD": {
-      "score": 3,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 0.58106
-    },
-    "USDCAD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 1.39518
+      "price": 160.18401
     },
-    "USDCHF": {
-      "score": 5,
+    "AUDUSD": {
+      "score": 2,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.70577
+    },
+    "NZDUSD": {
+      "score": 2,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 0.58302
+    },
+    "USDCAD": {
+      "score": 2,
       "direction": "LONG",
       "valid": false,
-      "price": 0.79777
+      "price": 1.394
+    },
+    "USDCHF": {
+      "score": 4,
+      "direction": "LONG",
+      "valid": false,
+      "price": 0.79692
     },
     "BTCUSD": {
       "score": 6,
       "direction": "LONG",
       "valid": false,
-      "price": 62714.55078
+      "price": 63208.85938
     },
     "LTCUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 42.4
+      "price": 42.82
     },
     "ETHUSD": {
-      "score": 5,
+      "score": 3,
       "direction": "LONG",
       "valid": false,
-      "price": 1668.95996
+      "price": 1685.5
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://village-strap-gel-mathematics.trycloudflare.com",
-  "ws_url": "wss://village-strap-gel-mathematics.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T12:49:05.748043"
+  "tunnel_url": "https://mineral-summer-quickly-clearance.trycloudflare.com",
+  "ws_url": "wss://mineral-summer-quickly-clearance.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T13:29:17.600856"
 }
