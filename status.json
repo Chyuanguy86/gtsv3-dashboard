@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T21:59:06.963108",
+  "timestamp": "2026-06-09T22:19:43.566745",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -12,67 +12,67 @@
       "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 4354.2002
+      "price": 4371.6001
     },
     "EURUSD": {
+      "score": 3,
+      "direction": "SHORT",
+      "valid": false,
+      "price": 1.15714
+    },
+    "GBPUSD": {
       "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.15768
-    },
-    "GBPUSD": {
-      "score": 2,
-      "direction": "SHORT",
-      "valid": false,
-      "price": 1.33903
+      "price": 1.33989
     },
     "USDJPY": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 160.144
+      "price": 160.194
     },
     "AUDUSD": {
       "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.70577
+      "price": 0.70527
     },
     "NZDUSD": {
       "score": 2,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.58346
+      "price": 0.58377
     },
     "USDCAD": {
-      "score": 7,
-      "direction": "SHORT",
+      "score": 3,
+      "direction": "LONG",
       "valid": false,
-      "price": 1.39354
+      "price": 1.39381
     },
     "USDCHF": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.79567
+      "price": 0.79591
     },
     "BTCUSD": {
-      "score": 6,
-      "direction": "LONG",
+      "score": 4,
+      "direction": "SHORT",
       "valid": false,
-      "price": 62873.03125
+      "price": 62244.12109
     },
     "LTCUSD": {
-      "score": 4,
-      "direction": "LONG",
+      "score": 3,
+      "direction": "SHORT",
       "valid": false,
-      "price": 42.8
+      "price": 42.62
     },
     "ETHUSD": {
-      "score": 3,
-      "direction": "LONG",
+      "score": 4,
+      "direction": "SHORT",
       "valid": false,
-      "price": 1678.90002
+      "price": 1665.82996
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://columns-photo-lie-noted.trycloudflare.com",
-  "ws_url": "wss://columns-photo-lie-noted.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T22:01:42.565888"
+  "tunnel_url": "https://announce-rebel-indoor-insulation.trycloudflare.com",
+  "ws_url": "wss://announce-rebel-indoor-insulation.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T22:22:33.258964"
 }
