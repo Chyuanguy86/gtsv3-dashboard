@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T03:08:18.452438",
+  "timestamp": "2026-06-09T11:08:26.159763",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -9,70 +9,70 @@
   },
   "pairs": {
     "XAUUSD": {
-      "score": 3,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 4366.8999
+      "price": 4347.3999
     },
     "EURUSD": {
       "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.1542
+      "price": 1.1538
     },
     "GBPUSD": {
+      "score": 6,
+      "direction": "LONG",
+      "valid": false,
+      "price": 1.33422
+    },
+    "USDJPY": {
       "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 1.3349
-    },
-    "USDJPY": {
-      "score": 3,
-      "direction": "LONG",
-      "valid": false,
-      "price": 160.161
+      "price": 160.23
     },
     "AUDUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.70527
+      "price": 0.70507
     },
     "NZDUSD": {
-      "score": 2,
+      "score": 3,
       "direction": "SHORT",
       "valid": false,
-      "price": 0.5816
+      "price": 0.58106
     },
     "USDCAD": {
-      "score": 2,
-      "direction": "LONG",
-      "valid": false,
-      "price": 1.3943
-    },
-    "USDCHF": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.79724
+      "price": 1.39518
     },
-    "BTCUSD": {
+    "USDCHF": {
       "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 63552.67969
+      "price": 0.79777
+    },
+    "BTCUSD": {
+      "score": 6,
+      "direction": "LONG",
+      "valid": false,
+      "price": 62714.55078
     },
     "LTCUSD": {
       "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 43.41
+      "price": 42.4
     },
     "ETHUSD": {
-      "score": 4,
+      "score": 5,
       "direction": "LONG",
       "valid": false,
-      "price": 1686.02002
+      "price": 1668.95996
     }
   },
   "performance": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://kansas-intellectual-garlic-filtering.trycloudflare.com",
-  "ws_url": "wss://kansas-intellectual-garlic-filtering.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T03:09:18.902589"
+  "tunnel_url": "https://grades-alice-newfoundland-declined.trycloudflare.com",
+  "ws_url": "wss://grades-alice-newfoundland-declined.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T11:10:53.200200"
 }
