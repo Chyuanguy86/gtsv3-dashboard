@@ -1,11 +1,11 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T20:48:03.953252",
+  "timestamp": "2026-06-09T21:24:17.422426",
   "balance": 33958.89,
   "auto": true,
   "session": {
-    "name": "off-hours",
-    "active": false
+    "name": "NY",
+    "active": true
   },
   "pairs": {
     "XAUUSD": {
@@ -15,10 +15,10 @@
       "price": 4354.2002
     },
     "EURUSD": {
-      "score": 2,
+      "score": 4,
       "direction": "SHORT",
       "valid": false,
-      "price": 1.15607
+      "price": 1.15768
     },
     "GBPUSD": {
       "score": 2,
@@ -51,10 +51,10 @@
       "price": 1.39354
     },
     "USDCHF": {
-      "score": 5,
+      "score": 4,
       "direction": "LONG",
       "valid": false,
-      "price": 0.79623
+      "price": 0.79567
     },
     "BTCUSD": {
       "score": 6,
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://marker-directions-ceiling-possess.trycloudflare.com",
-  "ws_url": "wss://marker-directions-ceiling-possess.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T20:51:16.219955"
+  "tunnel_url": "https://aircraft-shift-landing-requests.trycloudflare.com",
+  "ws_url": "wss://aircraft-shift-landing-requests.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T21:26:21.348074"
 }
