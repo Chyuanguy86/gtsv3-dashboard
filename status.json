@@ -1,6 +1,6 @@
 {
   "version": "GTSv4.3 SMC_DAY_V1",
-  "timestamp": "2026-06-09T20:13:33.394146",
+  "timestamp": "2026-06-09T20:32:59.353506",
   "balance": 33958.89,
   "auto": true,
   "session": {
@@ -84,7 +84,7 @@
     "confluence": "6/7 edge + hard gates",
     "risk_pct": 1.0
   },
-  "tunnel_url": "https://along-guides-thinking-set.trycloudflare.com",
-  "ws_url": "wss://along-guides-thinking-set.trycloudflare.com/ws",
-  "generated_at": "2026-06-09T20:16:56.846883"
+  "tunnel_url": "https://communicate-pursuant-referred-performing.trycloudflare.com",
+  "ws_url": "wss://communicate-pursuant-referred-performing.trycloudflare.com/ws",
+  "generated_at": "2026-06-09T20:35:46.978933"
 }
